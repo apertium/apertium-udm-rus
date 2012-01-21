@@ -1,0 +1,27 @@
+* text=auto !eol
+/AUTHORS -text
+/COPYING -text
+/ChangeLog -text
+/Makefile.am -text
+/NEWS -text
+/README -text
+/apertium-udm-rus.rus-udm.lrx -text
+/apertium-udm-rus.rus-udm.rlx -text
+/apertium-udm-rus.rus-udm.t1x -text
+/apertium-udm-rus.rus-udm.t2x -text
+/apertium-udm-rus.rus-udm.t3x -text
+/apertium-udm-rus.rus.lexc -text
+/apertium-udm-rus.rus.twol -text
+/apertium-udm-rus.udm-rus.dix -text
+/apertium-udm-rus.udm-rus.lrx -text
+/apertium-udm-rus.udm-rus.rlx -text
+/apertium-udm-rus.udm-rus.t1x -text
+/apertium-udm-rus.udm-rus.t2x -text
+/apertium-udm-rus.udm-rus.t3x -text
+/apertium-udm-rus.udm.lexc -text
+/apertium-udm-rus.udm.twol -text
+/autogen.sh -text
+/configure.ac -text
+/modes.xml -text
+/rus-udm.prob -text svneol=unset#unset
+/udm-rus.prob -text svneol=unset#unset
