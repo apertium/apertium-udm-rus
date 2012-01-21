@@ -24,4 +24,6 @@
 /configure.ac -text
 /modes.xml -text
 /rus-udm.prob -text svneol=unset#unset
+text/fin.txt -text
+text/udm.txt -text svneol=unset#application/octet-stream
 /udm-rus.prob -text svneol=unset#unset
