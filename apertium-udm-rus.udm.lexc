@@ -273,6 +273,7 @@ LEXICON Narechija
 
 кытын ADV-ITG ; ! "где" 
 али ADV ; ! ""
+туж ADV ; ! ""
 
 LEXICON Soobstvennoe
 
@@ -336,7 +337,7 @@ LEXICON Punktuacija
 ,%<cm%>:, # ;
 %?%<sent%>:%? # ; 
 %'%<apos%>:%' # ;
-%"%<sent%>:%" # ;
+!%"%<sent%>:%" # ;
 
 
 LEXICON Prilagatelnoe
@@ -368,6 +369,7 @@ LEXICON Nouns
 тылобурдо N1 ; ! ""
 пӧйшур N1 ; ! ""
 йыр N1 ; ! ""
+ву N1 ; ! ""
 ву N1 ; ! ""
 
 LEXICON Poslelog

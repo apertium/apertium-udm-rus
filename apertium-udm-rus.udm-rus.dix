@@ -20,6 +20,7 @@
     <sdef n="sg"  c=""/>
     <sdef n="pers"  c=""/>
     <sdef n="cm"  c=""/>
+    <sdef n="guio"  c=""/>
     <sdef n="sent"  c=""/>
   </sdefs>
   <section id="main" type="standard">
@@ -35,14 +36,15 @@
 
     <e><p><l>кытын<s n="adv"/><s n="itg"/></l><r>где<s n="adv"/><s n="itg"/></r></p></e>
     <e><p><l>али<s n="adv"/></l><r>сейчас<s n="adv"/></r></p></e>
-
+    <e><p><l>туж<s n="adv"/></l><r>очень<s n="adv"/></r></p></e>
     <e><p><l>чебер<s n="adj"/></l><r>красивый<s n="adj"/></r></p></e>
 
     <!-- Раздел: Предлог -->
     <e><p><l>но<s n="cnjcoo"/></l><r>и<s n="cnjcoo"/></r></p></e>
     
+    <e><p><l>-<s n="guio"/></l><r>-<s n="guio"/></r></p></e>
     <e><p><l>,<s n="cm"/></l><r>,<s n="cm"/></r></p></e>
-    <e><re>[.\?;:!]+</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
+    <e><re>[.\?;:"!]+</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
 
 
   </section>
