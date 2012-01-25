@@ -29,8 +29,8 @@
         <file name="apertium-udm-rus.udm-rus.t3x"/>
         <file name="udm-rus.t3x.bin"/>
       </program>
-      <program name="hfst-proc $1">
-        <file name="udm-rus.autogen.hfst"/>
+      <program name="lt-proc $1">
+        <file name="udm-rus.autogen.bin"/>
       </program>
     </pipeline>
   </mode>
@@ -62,8 +62,8 @@
         <file name="apertium-udm-rus.udm-rus.t3x"/>
         <file name="udm-rus.t3x.bin"/>
       </program>
-      <program name="hfst-proc -d">
-        <file name="udm-rus.autogen.hfst"/>
+      <program name="lt-proc -d">
+        <file name="udm-rus.autogen.bin"/>
       </program>
     </pipeline>
   </mode>
@@ -223,7 +223,7 @@
 
   <mode name="rus-udm" install="yes">
     <pipeline>
-      <program name="hfst-proc">
+      <program name="lt-proc">
         <file name="rus-udm.automorf.hfst"/>
       </program>
       <program name="apertium-tagger -g $2">
@@ -283,16 +283,16 @@
   
   <mode name="rus-udm-morph" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
-        <file name="rus-udm.automorf.hfst"/>
+      <program name="lt-proc -w">
+        <file name="rus-udm.automorf.bin"/>
       </program>
     </pipeline>
   </mode>
 
   <mode name="rus-udm-tagger" install="no">
     <pipeline>
-      <program name="hfst-proc">
-        <file name="rus-udm.automorf.hfst"/>
+      <program name="lt-proc -w">
+        <file name="rus-udm.automorf.bin"/>
       </program>
       <program name="apertium-tagger -g $2">
         <file name="rus-udm.prob"/>
@@ -303,8 +303,8 @@
 
   <mode name="rus-udm-biltrans" install="no">
     <pipeline>
-      <program name="hfst-proc">
-        <file name="rus-udm.automorf.hfst"/>
+      <program name="lt-proc -w">
+        <file name="rus-udm.automorf.bin"/>
       </program>
       <program name="apertium-tagger -g $2">
         <file name="rus-udm.prob"/>
@@ -318,8 +318,8 @@
 
   <mode name="rus-udm-lex" install="no">
     <pipeline>
-      <program name="hfst-proc">
-        <file name="rus-udm.automorf.hfst"/>
+      <program name="lt-proc -w">
+        <file name="rus-udm.automorf.bin"/>
       </program>
       <program name="apertium-tagger -g $2">
         <file name="rus-udm.prob"/>
@@ -336,8 +336,8 @@
 
   <mode name="rus-udm-transfer" install="no">
     <pipeline>
-      <program name="hfst-proc">
-        <file name="rus-udm.automorf.hfst"/>
+      <program name="lt-proc -w">
+        <file name="rus-udm.automorf.bin"/>
       </program>
       <program name="apertium-tagger -g $2">
         <file name="rus-udm.prob"/>
@@ -355,8 +355,8 @@
 
   <mode name="rus-udm-interchunk" install="no">
     <pipeline>
-      <program name="hfst-proc">
-        <file name="rus-udm.automorf.hfst"/>
+      <program name="lt-proc -w">
+        <file name="rus-udm.automorf.bin"/>
       </program>
       <program name="apertium-tagger -g $2">
         <file name="rus-udm.prob"/>
@@ -378,8 +378,8 @@
 
   <mode name="rus-udm-postchunk" install="no">
     <pipeline>
-      <program name="hfst-proc">
-        <file name="rus-udm.automorf.hfst"/>
+      <program name="lt-proc -w">
+        <file name="rus-udm.automorf.bin"/>
       </program>
       <program name="apertium-tagger -g $2">
         <file name="rus-udm.prob"/>

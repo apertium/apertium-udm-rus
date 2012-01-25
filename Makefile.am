@@ -11,8 +11,8 @@ PREFIX2=$(LANG2)-$(LANG1)
 BASENAME=apertium-$(PREFIX1)
 
 TARGETS_COMMON = $(PREFIX1).autobil.bin $(PREFIX2).autobil.bin \
-	$(PREFIX1).automorf.hfst $(PREFIX1).autogen.hfst $(PREFIX1).t1x.bin  \
-	$(PREFIX2).automorf.hfst $(PREFIX2).autogen.hfst $(PREFIX2).t1x.bin  \
+	$(PREFIX1).automorf.hfst $(PREFIX1).autogen.bin $(PREFIX1).t1x.bin  \
+	$(PREFIX2).automorf.bin $(PREFIX2).autogen.hfst $(PREFIX2).t1x.bin  \
         $(PREFIX1).t2x.bin $(PREFIX1).t3x.bin \
         $(PREFIX2).t2x.bin $(PREFIX2).t3x.bin \
         $(PREFIX1).rlx.bin $(PREFIX2).rlx.bin \
@@ -57,35 +57,13 @@ $(PREFIX1).automorf.hfst: .deps/$(LANG1).LR.hfst
 ## rus transducer
 ###############################################################################
 
-.deps/$(LANG2).twol.hfst: $(BASENAME).$(LANG2).twol
-	if [ ! -d .deps ]; then mkdir .deps; fi
-	hfst-twolc $< -o $@
- 
-.deps/$(LANG2).RL.lexc: $(BASENAME).$(LANG2).lexc
-	if [ ! -d .deps ]; then mkdir .deps; fi
-	cat $< | grep -v 'Dir/LR' > $@
- 
-.deps/$(LANG2).LR.lexc: $(BASENAME).$(LANG2).lexc
-	if [ ! -d .deps ]; then mkdir .deps; fi
-	cat $< | grep -v 'Dir/RL' > $@
+$(PREFIX1).autogen.bin: $(BASENAME).$(LANG2).dix
+	apertium-validate-dictionary $<
+	lt-comp rl $< $@
 
-.deps/$(LANG2).RL.lexc.hfst: .deps/$(LANG2).RL.lexc
-	hfst-lexc --format foma $< -o $@
-
-.deps/$(LANG2).LR.lexc.hfst: .deps/$(LANG2).LR.lexc
-	hfst-lexc --format foma $< -o $@
-
-.deps/$(LANG2).RL.hfst: .deps/$(LANG2).RL.lexc.hfst .deps/$(LANG2).twol.hfst
-	hfst-compose-intersect -1 .deps/$(LANG2).RL.lexc.hfst -2 .deps/$(LANG2).twol.hfst -o $@
-
-.deps/$(LANG2).LR.hfst: .deps/$(LANG2).LR.lexc.hfst .deps/$(LANG2).twol.hfst
-	hfst-compose-intersect -1 .deps/$(LANG2).LR.lexc.hfst -2 .deps/$(LANG2).twol.hfst -o $@
-
-$(PREFIX1).autogen.hfst: .deps/$(LANG2).RL.hfst
-	hfst-fst2fst -O $< -o $@
-
-$(PREFIX2).automorf.hfst: .deps/$(LANG2).LR.hfst
-	hfst-invert $< | hfst-fst2fst -O -o $@
+$(PREFIX2).automorf.bin: $(BASENAME).$(LANG2).dix
+	apertium-validate-dictionary $< 
+	lt-comp lr $< $@
 
 ###############################################################################
 ## Debugging transducers (for testvoc)
@@ -207,8 +185,8 @@ apertium_udm_rusdir=$(prefix)/share/apertium/$(BASENAME)/
 
 apertium_udm_rus_DATA=$(PREFIX1).autobil.bin $(PREFIX2).autobil.bin \
                     $(PREFIX1).prob $(PREFIX2).prob \
-		    $(PREFIX1).autogen.hfst $(PREFIX2).autogen.hfst \
-		    $(PREFIX1).automorf.hfst $(PREFIX2).automorf.hfst \
+		    $(PREFIX1).autogen.bin $(PREFIX2).autogen.hfst \
+		    $(PREFIX1).automorf.hfst $(PREFIX2).automorf.bin \
 		    $(PREFIX1).t1x.bin $(PREFIX2).t1x.bin \
 		    $(PREFIX1).t2x.bin $(PREFIX2).t2x.bin \
 		    $(PREFIX1).t3x.bin $(PREFIX2).t3x.bin \

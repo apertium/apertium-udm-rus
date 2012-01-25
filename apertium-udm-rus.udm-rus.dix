@@ -2,11 +2,16 @@
   <alphabet/>
   <sdefs>
     <sdef n="n"  c="Имя существительное"/>
+
+    <sdef n="f"  c=""/>
+    <sdef n="nn"  c=""/>
+    <sdef n="aa"  c=""/>
+
   </sdefs>
   <section id="main" type="standard">
     <!-- Раздел: Имя Существительное -->
 
-    <e><p><l>пуны<s n="n"/></l><r>собака<s n="n"/></r></p></e>
+    <e><p><l>пуны<s n="n"/></l><r>собака<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
 
   </section>
-</dictionary>
+</dictionary>   
