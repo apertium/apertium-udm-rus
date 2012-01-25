@@ -7,6 +7,7 @@ Multichar_Symbols
 %<adj%> !
 
 %<prn%>
+%<qst%>
 %<np%>
 %<cnjcoo%>
 %<cnjsub%>
@@ -61,6 +62,11 @@ Mestomenija ;
 Glagoly ;
 Punktuacija ;
 Prilagatelnoe ;
+
+LEXICON K ! Clitics
+
+%+а%<qst%>:%-а # ;
+# ;
 
 LEXICON PRON-PERS-P1-SG
 
@@ -165,15 +171,6 @@ LEXICON GLAGOL-UG  ! отрицательные формы
 %<neg%>%<past%>%<p2%>%<pl%>:ӧд # ; 
 %<neg%>%<past%>%<p3%>%<pl%>:ӧз # ; 
 
-
-LEXICON NP-ANT-F
-
-%<np%>%<ant%>%<f%>%<sg%>%<nom%>: # ;
-
-LEXICON NP-ANT-M
-
-%<np%>%<ant%>%<m%>%<sg%>%<nom%>: # ;
-
 LEXICON CC 
 
 %<cnjcoo%>: # ;
@@ -197,26 +194,26 @@ LEXICON POST-INDECL
 
 LEXICON CASE
 
-%<nom%>: # ;
-%<dat%>:%>лы # ;
-%<gen%>:%>лэн # ;
-%<ine%>:%>ын # ;
+%<nom%>: K ;
+%<dat%>:%>лы K ;
+%<gen%>:%>лэн K ;
+%<ine%>:%>ын K ;
 
 LEXICON CASE-MNZH
 
-%<ill%>:%>ы # ;
-%<ins%>:%>ын # ;
-%<acc%>:%>тыз # ; ! Dir/LR
-%<acc%>:%>ыз # ;
-%<pro%>:%>ытӥ # ; ! Dir/LR
-%<pro%>:%>тӥ # ;
+%<ill%>:%>ы K ;
+%<ins%>:%>ын K ;
+%<acc%>:%>тыз K ; ! Dir/LR
+%<acc%>:%>ыз K ;
+%<pro%>:%>ытӥ K ; ! Dir/LR
+%<pro%>:%>тӥ K ;
 
 LEXICON CASE-ED
 
-%<ill%>:%>%{E%} # ;
-%<ins%>:%>%{E%}н # ;
-%<acc%>:%>%{E%}з # ;
-%<pro%>:%>%{E%}тӥ # ;
+%<ill%>:%>%{E%} K ;
+%<ins%>:%>%{E%}н K ;
+%<acc%>:%>%{E%}з K ;
+%<pro%>:%>%{E%}тӥ K ;
 
 LEXICON NUMBER
 
@@ -224,6 +221,15 @@ LEXICON NUMBER
 %<pl%>:%>%{j%}ос CASE ;
 %<sg%>: CASE-ED ;
 %<pl%>:%>%{j%}ос CASE-MNZH ;
+
+
+LEXICON NP-ANT-F
+
+%<np%>%<ant%>%<f%>: NUMBER ;
+
+LEXICON NP-ANT-M
+
+%<np%>%<ant%>%<m%>: NUMBER ;
 
 
 LEXICON A1
@@ -234,7 +240,7 @@ LEXICON N1
 
 %<n%>: NUMBER ; 
 
-LEXICON Post 
+LEXICON POST-DECL
 
 %<post%>: NUMBER ;
 
@@ -251,6 +257,8 @@ cямен POST-INDECL ;
 cяpыcь POST-INDECL ; 
 ӵоже POST-INDECL ; 
 ӵош POST-INDECL ; 
+
+дор POST-DECL ;
 
 LEXICON Sojuzy
  
@@ -271,10 +279,17 @@ LEXICON Mestomenija
 
 LEXICON Narechija
 
+а%<qst%>:а # ;
+
 кытын ADV-ITG ; ! "где" 
 али ADV ; ! ""
 туж ADV ; ! ""
 шудо ADV ; ! ""
+туннэ ADV ; ! ""
+шуныт ADV ; ! ""
+котьку ADV ; ! ""
+
+ик ADV ; ! ""
 
 LEXICON Soobstvennoe
 
@@ -314,6 +329,7 @@ LEXICON Glagoly
 лыдъяськыны:лыдъяськ GLAGOL-1-TV;  ! "считать"
 луыны:лу GLAGOL-1-TV ; ! "быть"
 кылзӥськыны:кылзӥськ GLAGOL-1-TV ; ! "вслушиваться"
+бызьыны:бызь GLAGOL-1-TV ; !
 !кельшыны
 !изьыны
 !дугдыны
@@ -322,28 +338,11 @@ LEXICON Glagoly
 !вераны
 !ватскыны
 !вамышъяны
-бызьыны:бызь GLAGOL-1-TV ; !
-
-
-
-
-LEXICON Punktuacija
-
-.%<sent%>:. # ;
-%;%<sent%>:%; # ;
-%:%<sent%>:%: # ;
-%!%<sent%>:%! # ;
-%-%<guio%>:%- # ;
-%—%<guio%>:%— # ;
-,%<cm%>:, # ;
-%?%<sent%>:%? # ; 
-%'%<apos%>:%' # ;
-!%"%<sent%>:%" # ;
-
 
 LEXICON Prilagatelnoe
 
 чебер A1 ; ! ""
+шуныт A1 ; ! ""
 
 LEXICON Nouns
 
@@ -371,9 +370,18 @@ LEXICON Nouns
 пӧйшур N1 ; ! ""
 йыр N1 ; ! ""
 ву N1 ; ! ""
-ву N1 ; ! ""
 
-LEXICON Poslelog
 
-дор Post ;
 
+LEXICON Punktuacija
+
+.%<sent%>:. # ;
+%;%<sent%>:%; # ;
+%:%<sent%>:%: # ;
+%!%<sent%>:%! # ;
+%-%<guio%>:%- # ;
+%—%<guio%>:%— # ;
+,%<cm%>:, # ;
+%?%<sent%>:%? # ; 
+%'%<apos%>:%' # ;
+!%"%<sent%>:%" # ;

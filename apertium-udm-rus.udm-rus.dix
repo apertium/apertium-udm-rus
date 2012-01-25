@@ -6,9 +6,19 @@
     <sdef n="np"  c="Имя собственное"/>
     <sdef n="f"  c=""/>
     <sdef n="adv"  c=""/>
+    <sdef n="imperf"  c=""/>
+    <sdef n="perf"  c=""/>
+    <sdef n="dual"  c=""/>
     <sdef n="adj"  c=""/>
+    <sdef n="vblex"  c=""/>
+    <sdef n="vbmod"  c=""/>
+    <sdef n="v"  c=""/>
+    <sdef n="tv"  c=""/>
+    <sdef n="part"  c=""/>
+    <sdef n="qst"  c=""/>
     <sdef n="itg"  c=""/>
     <sdef n="m"  c=""/>
+    <sdef n="mf"  c=""/>
     <sdef n="nt"  c=""/>
     <sdef n="ant"  c=""/>
     <sdef n="nn"  c=""/>
@@ -21,6 +31,7 @@
     <sdef n="GD"  c=""/>
     <sdef n="ND"  c=""/>
     <sdef n="sg"  c=""/>
+    <sdef n="pl"  c=""/>
     <sdef n="pers"  c=""/>
     <sdef n="cm"  c=""/>
     <sdef n="guio"  c=""/>
@@ -33,25 +44,79 @@
     </pardef>
   </pardefs>
   <section id="main" type="standard">
+    <!-- Раздел: Союзы -->
+    <e><p><l>но<s n="cnjcoo"/></l><r>и<s n="cnjcoo"/></r></p></e>
 
+    <e><p><l>а<s n="qst"/></l><r>ли<s n="part"/></r></p></e>
+
+    <e><p><l>мон<s n="prn"/><s n="pers"/><s n="p1"/><s n="sg"/></l><r>prpers<s n="prn"/><s n="pers"/><s n="p1"/><s n="mf"/><s n="sg"/></r></p></e>
+    <e><p><l>тон<s n="prn"/><s n="pers"/><s n="p2"/><s n="sg"/></l><r>prpers<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/><s n="sg"/></r></p></e>
     <e><p><l>со<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/></l><r>prpers<s n="prn"/><s n="pers"/><s n="p3"/><s n="GD"/><s n="sg"/></r></p></e>
+    <e><p><l>тӥ<s n="prn"/><s n="pers"/><s n="p2"/><s n="pl"/></l><r>prpers<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/><s n="pl"/></r></p></e>
+    <e><p><l>соос<s n="prn"/><s n="pers"/><s n="p3"/><s n="pl"/></l><r>prpers<s n="prn"/><s n="pers"/><s n="p3"/><s n="mf"/><s n="pl"/></r></p></e>
+
+    <e><p><l>ма<s n="prn"/><s n="itg"/></l><r>что<s n="prn"/><s n="itg"/></r></p></e>
+    <e><p><l>кин<s n="prn"/><s n="itg"/></l><r>кто<s n="prn"/><s n="itg"/></r></p></e>
 
     <!-- Раздел: Имя Существительное -->
     <e><p><l>пуны<s n="n"/></l><r>собака<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
-    <e><p><l>Маша<s n="np"/><s n="ant"/><s n="f"/></l><r>Маша<s n="np"/><s n="ant"/><s n="f"/></r></p></e>
-    <e><p><l>Ваня<s n="np"/><s n="ant"/><s n="m"/></l><r>Ваня<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
     <e><p><l>сад<s n="n"/></l><r>сад<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
     <e><p><l>укно<s n="n"/></l><r>окно<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
     <e><p><l>урам<s n="n"/></l><r>улица<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
+    <e><p><l>ӝӧк<s n="n"/></l><r>стол<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
+    <e><p><l>куазь<s n="n"/></l><r>погода<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
+    <e><p><l>валэктон<s n="n"/></l><r>ответ<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
+    <e><p><l>корка<s n="n"/></l><r>дом<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
+
+    <e><p><l>Маша<s n="np"/><s n="ant"/><s n="f"/></l><r>Маша<s n="np"/><s n="ant"/><s n="f"/></r></p></e>
+    <e><p><l>Ваня<s n="np"/><s n="ant"/><s n="m"/></l><r>Ваня<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
 
     <e><p><l>кытын<s n="adv"/><s n="itg"/></l><r>где<s n="adv"/><s n="itg"/></r></p></e>
     <e><p><l>али<s n="adv"/></l><r>сейчас<s n="adv"/></r></p></e>
-    <e><p><l>шудо<s n="adv"/></l><r>счастливый<s n="adj"/><s n="short"/></r></p><par n="gen_num"/></e>
     <e><p><l>туж<s n="adv"/></l><r>очень<s n="adv"/></r></p></e>
-    <e><p><l>чебер<s n="adj"/></l><r>красивый<s n="adj"/></r></p><par n="gen_num"/></e>
+    <e><p><l>туннэ<s n="adv"/></l><r>сегодня<s n="adv"/></r></p></e>
+    <e><p><l>котьку<s n="adv"/></l><r>всегда<s n="adv"/></r></p></e>
+    <e><p><l>ик<s n="adv"/></l><r>же<s n="part"/></r></p></e>
 
-    <!-- Раздел: Предлог -->
-    <e><p><l>но<s n="cnjcoo"/></l><r>и<s n="cnjcoo"/></r></p></e>
+    <e><p><l>шудо<s n="adv"/></l><r>счастливый<s n="adj"/><s n="short"/></r></p><par n="gen_num"/></e>
+    <e><p><l>шуныт<s n="adv"/></l><r>тёплый<s n="adj"/><s n="short"/></r></p><par n="gen_num"/></e>
+
+    <e><p><l>чебер<s n="adj"/></l><r>красивый<s n="adj"/></r></p><par n="gen_num"/></e>
+    <e><p><l>шуныт<s n="adj"/></l><r>тёплый<s n="adj"/></r></p><par n="gen_num"/></e>
+
+    <e><p><l>сиыны<s n="v"/><s n="tv"/></l><r>есть<s n="vblex"/></r></p></e>
+    <e><p><l>быгатыны<s n="v"/><s n="tv"/></l><r>мочь<s n="vbmod"/><s n="dual"/><s n="tv"/></r></p></e>
+
+    <e><p><l>тодыны<s n="v"/><s n="tv"/></l><r>знать<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>кыpӟаны<s n="v"/><s n="tv"/></l><r>петь<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>шудыны<s n="v"/><s n="tv"/></l><r>играть<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>адӟыны<s n="v"/><s n="tv"/></l><r>видеть<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>шуыны<s n="v"/><s n="tv"/></l><r>сказать<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>шедьтыны<s n="v"/><s n="tv"/></l><r>найти<s n="vblex"/><s n="perf"/></r></p></e>
+    <e><p><l>учкыны<s n="v"/><s n="tv"/></l><r>смотреть<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>улыны<s n="v"/><s n="tv"/></l><r>жить<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>кылыны<s n="v"/><s n="tv"/></l><r>услышать<s n="vblex"/><s n="perf"/></r></p></e>
+    <e><p><l>кылӥськыны<s n="v"/><s n="tv"/></l><r>слышаться<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>карыны<s n="v"/><s n="tv"/></l><r>делать<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>яратыны<s n="v"/><s n="tv"/></l><r>любить<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>юыны<s n="v"/><s n="tv"/></l><r>пить<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>юаны<s n="v"/><s n="tv"/></l><r>спросить<s n="vblex"/><s n="perf"/></r></p></e>
+    <e><p><l>утчаны<s n="v"/><s n="tv"/></l><r>искать<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>утчаськыны<s n="v"/><s n="tv"/></l><r>разыскивать<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>тыршыны<s n="v"/><s n="tv"/></l><r>стараться<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>серекъяны<s n="v"/><s n="tv"/></l><r>смеяться<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>пытсаны<s n="v"/><s n="tv"/></l><r>закрыть<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>пырыны<s n="v"/><s n="tv"/></l><r>заходить<s n="vblex"/><s n="perf"/></r></p></e>
+    <e><p><l>пукыны<s n="v"/><s n="tv"/></l><r>сидеть<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>мыняны<s n="v"/><s n="tv"/></l><r>улыбаться<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>малпаны<s n="v"/><s n="tv"/></l><r>думать<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>лыктыны<s n="v"/><s n="tv"/></l><r>приходить<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>лыдъяськыны<s n="v"/><s n="tv"/></l><r>считать<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>луыны<s n="v"/><s n="tv"/></l><r>быть<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>кылзӥськыны<s n="v"/><s n="tv"/></l><r>вслушиваться<s n="vblex"/><s n="imperf"/></r></p></e>
+
+
+    <!-- Раздел: Пунктуация -->
     
     <e><p><l>-<s n="guio"/></l><r>-<s n="guio"/></r></p></e>
     <e><p><l>,<s n="cm"/></l><r>,<s n="cm"/></r></p></e>

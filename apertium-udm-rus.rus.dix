@@ -155,7 +155,7 @@
       <e><p><l>е</l><r><s n="sg"/><s n="dat"/></r></p></e>
       <e><p><l>у</l><r><s n="sg"/><s n="acc"/></r></p></e>
       <e><p><l>ей</l><r><s n="sg"/><s n="ins"/></r></p></e>
-      <e><p><l>ею</l><r><s n="sg"/><s n="ins"/></r></p></e>
+      <e r="LR"><p><l>ею</l><r><s n="sg"/><s n="ins"/></r></p></e>
       <e><p><l>е</l><r><s n="sg"/><s n="prp"/></r></p></e>
     </pardef>
 	
@@ -165,7 +165,7 @@
       <e><p><l>и</l><r><s n="sg"/><s n="dat"/></r></p></e>
       <e><p><l>ю</l><r><s n="sg"/><s n="acc"/></r></p></e>
       <e><p><l>ей</l><r><s n="sg"/><s n="ins"/></r></p></e>
-      <e><p><l>ею</l><r><s n="sg"/><s n="ins"/></r></p></e>
+      <e r="LR"><p><l>ею</l><r><s n="sg"/><s n="ins"/></r></p></e>
       <e><p><l>е</l><r><s n="sg"/><s n="prp"/></r></p></e>
     </pardef>
 
@@ -302,9 +302,9 @@
     </pardef>
 
     <pardef n="/же__part">
-      <e r="LR"><p><l>же</l><r>же<s n="part"/></r></p></e>
-      <e r="LR"><p><l>ж</l><r>же<s n="part"/></r></p></e>
-      <e r="RL"><p><l><a/>же</l><r>же<s n="part"/></r></p></e>
+      <e><p><l>же</l><r>же<s n="part"/></r></p></e>
+      <!--<e r="LR"><p><l>ж</l><r>же<s n="part"/></r></p></e>-->
+      <!--<e r="RL"><p><l><a/>же</l><r>же<s n="part"/></r></p></e>-->
     </pardef>
 
     <!-- SECTION: Conjunctions -->
@@ -14520,7 +14520,9 @@
     <e lm="английский"><i>английск</i><par n="английск/ий__adj"/></e>
 	<e lm="большой" a="slasher"><i>больш</i><par n="больш/ой__adj"/></e>
 	<e lm="счастливый" a="slasher"><i>счастлив</i><par n="счастлив/ый__adj"/></e>
+	<e lm="красивый" a="slasher"><i>красив</i><par n="счастлив/ый__adj"/></e>
 	<e lm="старый" a="slasher"><i>стар</i><par n="стар/ый__adj"/></e>
+	<e lm="тёплый" a="slasher"><i>тёпл</i><par n="стар/ый__adj"/></e>
 	<e lm="хороший" a="slasher"><i>хорош</i><par n="хорош/ий__adj"/></e>
     <e lm="армейский"><i>армейск</i><par n="английск/ий__adj"/></e>
     <e lm="артиллерийский"><i>артиллерийск</i><par n="английск/ий__adj"/></e>

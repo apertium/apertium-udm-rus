@@ -61,6 +61,7 @@
   <section-def-vars>
     <def-var n="number"/>
     <def-var n="current_verb"/>
+    <def-var n="caseFirstWord"/>
     <def-var n="current_sn_type"/>
   </section-def-vars>
   <section-def-macros>
@@ -126,6 +127,8 @@
           <chunk name="n" case="caseFirstWord">
             <tags>
               <tag><var n="current_sn_type"/></tag>
+                <tag><clip pos="1" side="tl" part="a_gen"/></tag>
+                <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -155,6 +158,8 @@
           <chunk name="a_n" case="caseFirstWord">
             <tags>
               <tag><var n="current_sn_type"/></tag>
+                <tag><clip pos="1" side="tl" part="a_gen"/></tag>
+                <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -165,6 +170,31 @@
             </lu>
           </chunk>
         </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: ADJ">
+      <pattern>
+        <pattern-item n="adj"/>
+      </pattern>
+      <action>
+            <let><clip pos="1" side="tl" part="a_adj"/><lit-tag v="adj.short"/></let>
+            <out>
+              <chunk name="SA" case="caseFirstWord">
+               <tags>
+                <tag><lit-tag v="SA"/></tag>
+                <tag><clip pos="1" side="tl" part="a_gen"/></tag>
+                <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
+               </tags>
+               <lu>
+                 <clip pos="1" side="tl" part="lem"/>
+                 <clip pos="1" side="tl" part="a_adj"/>
+                 <clip pos="1" side="tl" part="a_gen" link-to="2"/>
+                 <clip pos="1" side="tl" part="a_nbr" link-to="3"/>
+               </lu>
+              </chunk>
+            </out>
       </action>
     </rule>
 
