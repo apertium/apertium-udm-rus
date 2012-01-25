@@ -9,20 +9,29 @@
     <sdef n="adj"  c=""/>
     <sdef n="itg"  c=""/>
     <sdef n="m"  c=""/>
+    <sdef n="nt"  c=""/>
     <sdef n="ant"  c=""/>
     <sdef n="nn"  c=""/>
     <sdef n="aa"  c=""/>
     <sdef n="prn"  c=""/>
     <sdef n="p1"  c=""/>
+    <sdef n="short"  c=""/>
     <sdef n="p2"  c=""/>
     <sdef n="p3"  c=""/>
     <sdef n="GD"  c=""/>
+    <sdef n="ND"  c=""/>
     <sdef n="sg"  c=""/>
     <sdef n="pers"  c=""/>
     <sdef n="cm"  c=""/>
     <sdef n="guio"  c=""/>
     <sdef n="sent"  c=""/>
   </sdefs>
+  <pardefs>
+    <pardef n="gen_num">
+       <e r="RL"><p><l></l><r></r></p></e>
+      <e r="LR"><p><l></l><r><s n="GD"/><s n="ND"/></r></p></e>
+    </pardef>
+  </pardefs>
   <section id="main" type="standard">
 
     <e><p><l>со<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/></l><r>prpers<s n="prn"/><s n="pers"/><s n="p3"/><s n="GD"/><s n="sg"/></r></p></e>
@@ -32,12 +41,14 @@
     <e><p><l>Маша<s n="np"/><s n="ant"/><s n="f"/></l><r>Маша<s n="np"/><s n="ant"/><s n="f"/></r></p></e>
     <e><p><l>Ваня<s n="np"/><s n="ant"/><s n="m"/></l><r>Ваня<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
     <e><p><l>сад<s n="n"/></l><r>сад<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
+    <e><p><l>укно<s n="n"/></l><r>окно<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
     <e><p><l>урам<s n="n"/></l><r>улица<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 
     <e><p><l>кытын<s n="adv"/><s n="itg"/></l><r>где<s n="adv"/><s n="itg"/></r></p></e>
     <e><p><l>али<s n="adv"/></l><r>сейчас<s n="adv"/></r></p></e>
+    <e><p><l>шудо<s n="adv"/></l><r>счастливый<s n="adj"/><s n="short"/></r></p><par n="gen_num"/></e>
     <e><p><l>туж<s n="adv"/></l><r>очень<s n="adv"/></r></p></e>
-    <e><p><l>чебер<s n="adj"/></l><r>красивый<s n="adj"/></r></p></e>
+    <e><p><l>чебер<s n="adj"/></l><r>красивый<s n="adj"/></r></p><par n="gen_num"/></e>
 
     <!-- Раздел: Предлог -->
     <e><p><l>но<s n="cnjcoo"/></l><r>и<s n="cnjcoo"/></r></p></e>

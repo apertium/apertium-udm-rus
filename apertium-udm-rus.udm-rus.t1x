@@ -8,6 +8,10 @@
     <def-cat n="prn">
       <cat-item tags="prn.pers.*"/>
     </def-cat>
+    <def-cat n="adv">
+      <cat-item tags="adv"/>
+      <cat-item tags="adv.*"/>
+    </def-cat>
     <def-cat n="adj">
       <cat-item tags="adj"/>
       <cat-item tags="adj.*"/>
@@ -17,6 +21,14 @@
     </def-cat>
   </section-def-cats>
   <section-def-attrs>
+    <def-attr n="a_adj">
+      <attr-item tags="adj"/>
+      <attr-item tags="adj.short"/>
+    </def-attr>
+    <def-attr n="a_adv">
+      <attr-item tags="adv"/>
+      <attr-item tags="adj.short"/>
+    </def-attr>
     <def-attr n="a_nom">
       <attr-item tags="n"/>
     </def-attr>
@@ -53,6 +65,7 @@
   </section-def-vars>
   <section-def-macros>
     <def-macro n="default_gender1" npar="1">
+          <let><var n="current_sn_type"/><lit-tag v="SN"/></let>
           <choose> 
             <when>
                <test> 
@@ -90,6 +103,8 @@
           <chunk name="n" case="caseFirstWord">
             <tags>
               <tag><var n="current_sn_type"/></tag>
+                <tag><clip pos="1" side="tl" part="a_gen"/></tag>
+                <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -131,7 +146,11 @@
         </call-macro>
         <call-macro n="conv_case1">
           <with-param pos="2"/>
-        </call-macro>
+        </call-macro><!--
+        <call-macro n="concord1">
+          <with-param pos="2"/>
+          <with-param pos="1"/>
+        </call-macro>-->
         <out>
           <chunk name="a_n" case="caseFirstWord">
             <tags>
@@ -146,6 +165,50 @@
             </lu>
           </chunk>
         </out>
+      </action>
+    </rule>
+
+
+
+    <rule comment="REGLA: ADV">
+      <pattern>
+        <pattern-item n="adv"/>
+      </pattern>
+      <action>
+        <choose>
+          <when>
+            <test>
+              <equal><clip pos="1" side="tl" part="a_adv"/><lit-tag v="adj.short"/></equal>
+            </test>
+            <out>
+              <chunk name="SA" case="caseFirstWord">
+               <tags>
+                <tag><lit-tag v="SA"/></tag>
+                <tag><clip pos="1" side="tl" part="a_gen"/></tag>
+                <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
+               </tags>
+               <lu>
+                 <clip pos="1" side="tl" part="lem"/>
+                 <clip pos="1" side="tl" part="a_adj"/>
+                 <clip pos="1" side="tl" part="a_gen" link-to="2"/>
+                 <clip pos="1" side="tl" part="a_nbr" link-to="3"/>
+               </lu>
+              </chunk>
+            </out>
+          </when>
+          <otherwise>
+            <out>
+              <chunk name="ADV" case="caseFirstWord">
+               <tags>
+                <tag><lit-tag v="ADV"/></tag>
+               </tags>
+               <lu>
+                 <clip pos="1" side="tl" part="whole"/>
+               </lu>
+              </chunk>
+            </out>
+          </otherwise>
+        </choose>
       </action>
     </rule>
 

@@ -13,6 +13,12 @@
     <def-cat n="SENT">
       <cat-item tags="SENT"/>
     </def-cat>
+    <def-cat n="ADV">
+      <cat-item tags="ADV"/>
+    </def-cat>
+    <def-cat n="SA">
+      <cat-item tags="SA.*"/>
+    </def-cat>
   </section-def-cats>
   <section-def-attrs>
     <def-attr n="a_nbr">
@@ -20,6 +26,13 @@
       <attr-item tags="pl"/>
       <attr-item tags="sp"/>
       <attr-item tags="ND"/>
+    </def-attr>
+    <def-attr n="a_gen">
+      <attr-item tags="f"/>
+      <attr-item tags="nt"/>
+      <attr-item tags="mfn"/>
+      <attr-item tags="m"/>
+      <attr-item tags="GD"/>
     </def-attr>
     <def-attr n="a_cas">
       <attr-item tags="nom"/>
@@ -41,6 +54,24 @@
         <var n="POST"/>
         <lit v=""/>
       </let>
+    </def-macro>
+    <def-macro n="concord1" npar="2"> <!-- npar = number of parameters -->
+          <choose> 
+            <when>
+               <test> 
+                  <equal><clip pos="2" part="a_gen"/><lit-tag v="GD"/></equal>
+               </test>
+               <let><clip pos="2" part="a_gen"/><clip pos="1" part="a_gen"/></let>
+            </when> 
+          </choose>
+          <choose> 
+            <when>
+               <test> 
+                  <equal><clip pos="2" part="a_nbr"/><lit-tag v="ND"/></equal>
+               </test>
+               <let><clip pos="2" part="a_nbr"/><clip pos="1" part="a_nbr"/></let>
+            </when> 
+          </choose>
     </def-macro>
   </section-def-macros>
   <section-rules>
@@ -65,6 +96,47 @@
             <clip pos="1" part="lem"/>
             <clip pos="1" part="tags"/>
             <clip pos="1" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: SN ADV ADV SA">
+      <pattern>
+        <pattern-item n="SN"/>
+        <pattern-item n="ADV"/>
+        <pattern-item n="ADV"/>
+        <pattern-item n="SA"/>
+      </pattern>
+      <action>
+        <call-macro n="concord1">
+          <with-param pos="1"/>
+          <with-param pos="4"/>
+        </call-macro>
+        <out>
+          <chunk>
+            <clip pos="1" part="lem"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+          </chunk>
+          <b pos="2"/>
+          <chunk>
+            <clip pos="3" part="lem"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+          </chunk>
+          <b pos="3"/>
+          <chunk>
+            <clip pos="4" part="lem"/>
+            <clip pos="4" part="tags"/>
+            <clip pos="4" part="chcontent"/>
           </chunk>
         </out>
       </action>
