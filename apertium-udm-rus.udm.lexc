@@ -2,21 +2,333 @@
 Multichar_Symbols
 
 %<n%>   ! Имя существительное · Noun
+%<dat%> !
+%<gen%> !
+
+%<prn%>
+%<np%>
+%<cnjcoo%>
+%<cnjsub%>
+%<v%>
+%<post%>
+
+%<pers%>
+%<ant%> 
+%<itg%>
+%<neg%>
+
+%<pres%> 
+
+%<tv%>
+%<iv%>
+
+%<p1%>
+%<p2%>
+%<p3%>
+
+%<f%>
+%<m%>
+
+%<nom%>
+%<gen%>
 %<dat%>
-%<sg%>
-%<ill%>
+%<acc%>
+%<abe%>
+%<abl%>
+%<ins%>
+%<advl%>
+%<approx%>
+
+%<sent%>
+%<cm%>
+%<apos%>
+%<guio%>
 
 %{E%}   ! э or е
+%>
+%{j%}   ! 
 
 LEXICON Root
 
 Nouns ; 
 
+Sojuzy ; 
+Poslelogy ; 
+Soobstvennoe ; 
+Narechija ; 
+Mestomenija ; 
+Glagoly ;
+Punktuacija ;
+
+LEXICON PRON-PERS-P1-SG
+
+%<prn%>%<pers%>%<p1%>%<sg%>%<nom%>: # ;
+
+LEXICON PRON-PERS-P2-SG
+
+%<prn%>%<pers%>%<p2%>%<sg%>%<nom%>: # ;
+
+LEXICON PRON-PERS-P3-SG
+
+%<prn%>%<pers%>%<p3%>%<sg%>%<nom%>: # ;
+%<prn%>%<pers%>%<p3%>%<sg%>%<gen%>:лэн # ;
+%<prn%>%<pers%>%<p3%>%<sg%>%<acc%>:е # ;
+%<prn%>%<pers%>%<p3%>%<sg%>%<abl%>:лэсь # ;
+%<prn%>%<pers%>%<p3%>%<sg%>%<dat%>:ы # ;
+%<prn%>%<pers%>%<p3%>%<sg%>%<ins%>:ин # ;
+%<prn%>%<pers%>%<p3%>%<sg%>%<abe%>:тэк # ;
+%<prn%>%<pers%>%<p3%>%<sg%>%<advl%>:я # ;
+%<prn%>%<pers%>%<p3%>%<sg%>%<approx%>:лань # ;
+
+LEXICON PRON-PERS-P1-PL
+
+%<prn%>%<pers%>%<p1%>%<pl%>%<nom%>: # ;
+
+LEXICON PRON-PERS-P2-PL
+
+%<prn%>%<pers%>%<p2%>%<pl%>%<nom%>: # ;
+
+LEXICON PRON-PERS-P3-PL
+
+%<prn%>%<pers%>%<p3%>%<pl%>%<nom%>: # ;
+%<prn%>%<pers%>%<p3%>%<pl%>%<gen%>:лэн # ;
+%<prn%>%<pers%>%<p3%>%<pl%>%<acc%>:ыз # ;
+%<prn%>%<pers%>%<p3%>%<pl%>%<acc%>:ты # ;
+%<prn%>%<pers%>%<p3%>%<pl%>%<abl%>:лэсь # ;
+%<prn%>%<pers%>%<p3%>%<pl%>%<dat%>:лы # ;
+%<prn%>%<pers%>%<p3%>%<pl%>%<ins%>:ын # ;
+%<prn%>%<pers%>%<p3%>%<pl%>%<abe%>:тэк # ;
+%<prn%>%<pers%>%<p3%>%<pl%>%<advl%>:ъя # ;
+%<prn%>%<pers%>%<p3%>%<pl%>%<approx%>:лань # ;
+
+
+LEXICON PRON-ITG-MA
+
+%<prn%>%<itg%>%<nom%>:ма # ;
+%<prn%>%<itg%>%<acc%>:мае # ;
+%<prn%>%<itg%>%<gen%>:малэн # ;
+%<prn%>%<itg%>%<abl%>:малэсь # ;
+%<prn%>%<itg%>%<dat%>:малы # ;
+%<prn%>%<itg%>%<ins%>:маин # ;
+%<prn%>%<itg%>%<abe%>:матэк # ;
+%<prn%>%<itg%>%<advl%>:мая # ;
+%<prn%>%<itg%>%<ine%>:кытын # ;
+%<prn%>%<itg%>%<ill%>:кытчы # ;
+%<prn%>%<itg%>%<ela%>:кытысь # ;
+%<prn%>%<itg%>%<egr%>:кытысен # ;
+%<prn%>%<itg%>%<term%>:кытчыозь # ;
+%<prn%>%<itg%>%<pro%>:кытӥ # ;
+%<prn%>%<itg%>%<approx%>:малань # ;
+
+
+LEXICON PRON-ITG-KIN
+
+%<prn%>%<itg%>%<nom%>: # ; 
+%<prn%>%<itg%>%<gen%>:лэн # ; 
+%<prn%>%<itg%>%<dat%>:лы # ; 
+%<prn%>%<itg%>%<acc%>:э # ; 
+%<prn%>%<itg%>%<ins%>:эн # ; 
+%<prn%>%<itg%>%<abe%>:тэк # ; 
+%<prn%>%<itg%>%<abl%>:лэсь # ; 
+%<prn%>%<itg%>%<advl%>:ъя # ; 
+%<prn%>%<itg%>%<approx%>:лань # ; 
+
+LEXICON GLAGOL-1-TV
+
+%<v%>%<tv%>%<inf%>:ыны # ; 
+
+%<v%>%<tv%>%<pres%>%<p1%>%<sg%>:ӥcько # ; 
+%<v%>%<tv%>%<pres%>%<p2%>%<sg%>:ӥcькод # ; 
+%<v%>%<tv%>%<pres%>%<p3%>%<sg%>:э # ; 
+%<v%>%<tv%>%<pres%>%<p1%>%<pl%>:ӥcькомы # ; 
+%<v%>%<tv%>%<pres%>%<p2%>%<pl%>:ӥcькоды # ; 
+%<v%>%<tv%>%<pres%>%<p3%>%<pl%>:о # ; 
+
+LEXICON GLAGOL-2-TV
+
+%<v%>%<tv%>%<inf%>:аны # ; 
+
+LEXICON GLAGOL-UG  ! отрицательные формы
+
+%<neg%>%<pres%>%<p1%>%<sg%>:уг # ; 
+%<neg%>%<pres%>%<p2%>%<sg%>:уд # ; 
+%<neg%>%<pres%>%<p3%>%<sg%>:уз # ; 
+%<neg%>%<pres%>%<p1%>%<pl%>:ум # ; 
+%<neg%>%<pres%>%<p2%>%<pl%>:уд # ; 
+%<neg%>%<pres%>%<p3%>%<pl%>:уз # ; 
+%<neg%>%<past%>%<p1%>%<sg%>:ӧй # ; 
+%<neg%>%<past%>%<p2%>%<sg%>:ӧд # ; 
+%<neg%>%<past%>%<p3%>%<sg%>:ӧз # ; 
+%<neg%>%<past%>%<p1%>%<pl%>:ӧм # ; 
+%<neg%>%<past%>%<p2%>%<pl%>:ӧд # ; 
+%<neg%>%<past%>%<p3%>%<pl%>:ӧз # ; 
+
+
+LEXICON NP-ANT-F
+
+%<np%>%<ant%>%<f%>%<sg%>%<nom%>: # ;
+
+LEXICON NP-ANT-M
+
+%<np%>%<ant%>%<m%>%<sg%>%<nom%>: # ;
+
+LEXICON CC 
+
+%<cnjcoo%>: # ;
+
+LEXICON CS
+
+%<cnjsub%>: # ;
+
+
+LEXICON ADV-ITG
+
+%<adv%>%<itg%>: # ;
+
+LEXICON ADV 
+
+%<adv%>: # ;
+
+LEXICON POST-INDECL 
+
+%<post%>: # ;
+
+LEXICON CASE
+
+%<nom%>: # ;
+%<dat%>:%>лы # ;
+%<gen%>:%>лэн # ;
+%<ine%>:%>ын # ;
+
+LEXICON CASE-MNZH
+
+%<ill%>:%>ы # ;
+%<ins%>:%>ын # ;
+%<acc%>:%>тыз # ; ! Dir/LR
+%<acc%>:%>ыз # ;
+%<pro%>:%>ытӥ # ; ! Dir/LR
+%<pro%>:%>тӥ # ;
+
+LEXICON CASE-ED
+
+%<ill%>:%>%{E%} # ;
+%<ins%>:%>%{E%}н # ;
+%<acc%>:%>%{E%}з # ;
+%<pro%>:%>%{E%}тӥ # ;
+
+LEXICON NUMBER
+
+%<sg%>: CASE ;
+%<pl%>:%>%{j%}ос CASE ;
+%<sg%>: CASE-ED ;
+%<pl%>:%>%{j%}ос CASE-MNZH ;
+
 LEXICON N1
 
-%<n%>%<sg%>%<nom%>: # ;
-%<n%>%<sg%>%<dat%>:%>лы # ;
-%<n%>%<sg%>%<ill%>:%>%{E%} # ;
+%<n%>: NUMBER ; 
+
+LEXICON Post 
+
+%<post%>: NUMBER ;
+
+
+LEXICON Poslelogy
+
+аpтэ POST-INDECL ; 
+беpе POST-INDECL ; 
+быдэ POST-INDECL ; 
+валче POST-INDECL ; 
+дыpъя POST-INDECL ; 
+кyзя POST-INDECL ; 
+cямен POST-INDECL ; 
+cяpыcь POST-INDECL ; 
+ӵоже POST-INDECL ; 
+ӵош POST-INDECL ; 
+
+LEXICON Sojuzy
+ 
+но CC ;  ! "и"
+ден CS ; ! ""
+
+LEXICON Mestomenija 
+
+кин PRON-ITG-KIN ; ! "кто"
+ма: PRON-ITG-MA ;  ! "что"
+
+мон PRON-PERS-P1-SG ; 
+тон PRON-PERS-P2-SG ; 
+со PRON-PERS-P3-SG ; 
+ми PRON-PERS-P1-PL ; 
+тӥ PRON-PERS-P2-PL ; 
+соос PRON-PERS-P3-PL ; 
+
+LEXICON Narechija
+
+кытын ADV-ITG ; ! "где" 
+
+LEXICON Soobstvennoe
+
+Маша NP-ANT-F ;
+Ваня NP-ANT-M ;
+
+LEXICON Glagoly
+
+уг: GLAGOL-UG ;
+
+тодыны:тод GLAGOL-1-TV ; ! "знать"
+!кыpӟаны:кыpӟа GLAGOL-2-TV ; ! "петь"
+шудыны:шуд GLAGOL-1-TV;  ! "играть"
+адӟыны:адӟ GLAGOL-1-TV ; ! "видеть"
+шуыны:шу GLAGOL-1-TV;  ! "сказать"
+шедьтыны:шедьт GLAGOL-1-TV ; ! "найти"
+учкыны:учк GLAGOL-1-TV ; ! "смотреть"
+улыны:ул GLAGOL-1-TV;  ! "жить"
+кылыны:кыл GLAGOL-1-TV;  ! "услышать"
+кылӥськыны:кылӥськ GLAGOL-1-TV ; ! "слышаться"
+карыны:кар GLAGOL-1-TV ; ! "делать"
+быгатыны:быгат GLAGOL-1-TV ; ! "мочь"
+яратыны:ярат GLAGOL-1-TV;  ! "любить"
+юыны:ю GLAGOL-1-TV;  ! "пить"
+юаны:юа GLAGOL-2-TV;  ! "спросить"
+утчаны:утч GLAGOL-2-TV ; ! "искать"
+утчаськыны:утчаськ GLAGOL-1-TV ; ! "разыскивать"
+тыршыны:тырш GLAGOL-1-TV ; ! "стараться"
+сиыны:си GLAGOL-1-TV ; ! "есть"
+серекъяны:серекъя GLAGOL-2-TV ; ! "смеяться"
+пытсаны:пытса GLAGOL-2-TV ; ! "закрыть"
+пырыны:пыр GLAGOL-1-TV ; ! "заходить"
+пукыны:пук GLAGOL-1-TV ; ! "сидеть"
+мыняны:мыня GLAGOL-2-TV ; ! "улыбаться"
+малпаны:малпа GLAGOL-2-TV ; ! "думать"
+лыктыны:лыкт GLAGOL-1-TV ; ! "приходить"
+лыдъяськыны:лыдъяськ GLAGOL-1-TV;  ! "считать"
+луыны:лу GLAGOL-1-TV ; ! "быть"
+кылзӥськыны:кылзӥськ GLAGOL-1-TV ; ! "вслушиваться"
+!кельшыны
+!изьыны
+!дугдыны
+!вуыны
+!вераськыны
+!вераны
+!ватскыны
+!вамышъяны
+бызьыны:бызь GLAGOL-1-TV ; !
+
+
+
+
+LEXICON Punktuacija
+
+.%<sent%>:. # ;
+%;%<sent%>:%; # ;
+%:%<sent%>:%: # ;
+%!%<sent%>:%! # ;
+%-%<guio%>:%- # ;
+%—%<guio%>:%— # ;
+,%<cm%>:, # ;
+%?%<sent%>:%? # ; 
+%'%<apos%>:%' # ;
+%"%<sent%>:%" # ;
 
 LEXICON Nouns
 
@@ -44,4 +356,8 @@ LEXICON Nouns
 пӧйшур N1 ; ! ""
 йыр N1 ; ! ""
 ву N1 ; ! ""
+
+LEXICON Poslelog
+
+дор Post ;
 

@@ -2,16 +2,35 @@
   <alphabet/>
   <sdefs>
     <sdef n="n"  c="Имя существительное"/>
-
+    <sdef n="cnjcoo"  c="Союз"/>
+    <sdef n="np"  c="Имя собственное"/>
     <sdef n="f"  c=""/>
+    <sdef n="adv"  c=""/>
+    <sdef n="itg"  c=""/>
+    <sdef n="m"  c=""/>
+    <sdef n="ant"  c=""/>
     <sdef n="nn"  c=""/>
     <sdef n="aa"  c=""/>
 
+    <sdef n="cm"  c=""/>
+    <sdef n="sent"  c=""/>
   </sdefs>
   <section id="main" type="standard">
     <!-- Раздел: Имя Существительное -->
-
     <e><p><l>пуны<s n="n"/></l><r>собака<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
+    <e><p><l>Маша<s n="np"/><s n="ant"/><s n="f"/></l><r>Маша<s n="np"/><s n="ant"/><s n="f"/></r></p></e>
+    <e><p><l>Ваня<s n="np"/><s n="ant"/><s n="m"/></l><r>Ваня<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
+    <e><p><l>сад<s n="n"/></l><r>сад<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
+    <e><p><l>урам<s n="n"/></l><r>улица<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
+
+    <e><p><l>кытын<s n="adv"/><s n="itg"/></l><r>где<s n="adv"/><s n="itg"/></r></p></e>
+
+    <!-- Раздел: Предлог -->
+    <e><p><l>но<s n="cnjcoo"/></l><r>и<s n="cnjcoo"/></r></p></e>
+    
+    <e><p><l>,<s n="cm"/></l><r>,<s n="cm"/></r></p></e>
+    <e><re>[.\?;:!]+</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
+
 
   </section>
 </dictionary>   

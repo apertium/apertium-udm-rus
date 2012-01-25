@@ -6,6 +6,10 @@
       <cat-item tags="SN"/>
       <cat-item tags="SN.*"/>
     </def-cat>
+    <def-cat n="SN_LOC">
+      <cat-item tags="SN.INE"/>
+      <cat-item tags="SN.INE.*"/>
+    </def-cat>
     <def-cat n="SENT">
       <cat-item tags="SENT"/>
     </def-cat>
@@ -40,12 +44,23 @@
     </def-macro>
   </section-def-macros>
   <section-rules>
-    <rule comment="REGLA: SN">
+
+
+    <rule comment="REGLA: SN_LOC">
       <pattern>
-        <pattern-item n="SN"/>
+        <pattern-item n="SN_LOC"/>
       </pattern>
       <action>
         <out>
+          <chunk>
+            <lit v="prep"/>
+            <lit-tag  v="pr"/>
+            <lit v="{"/>
+            <lit v="^в"/>
+            <lit-tag  v="pr"/>
+            <lit v="$}"/>
+          </chunk>
+          <b/>
           <chunk>
             <clip pos="1" part="lem"/>
             <clip pos="1" part="tags"/>
@@ -54,6 +69,8 @@
         </out>
       </action>
     </rule>
+
+
   </section-rules>
 </interchunk>
 
