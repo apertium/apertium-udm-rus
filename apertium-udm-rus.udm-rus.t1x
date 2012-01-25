@@ -5,6 +5,13 @@
     <def-cat n="nom">
       <cat-item tags="n.*"/>
     </def-cat>
+    <def-cat n="prn">
+      <cat-item tags="prn.pers.*"/>
+    </def-cat>
+    <def-cat n="adj">
+      <cat-item tags="adj"/>
+      <cat-item tags="adj.*"/>
+    </def-cat>
     <def-cat n="sent">
       <cat-item tags="sent"/>
     </def-cat>
@@ -13,7 +20,7 @@
     <def-attr n="a_nom">
       <attr-item tags="n"/>
     </def-attr>
-    <def-attr n="a_cas">
+    <def-attr n="a_cas"> <!-- сад<n><sg><ine> -->
       <attr-item tags="nom"/>
       <attr-item tags="acc"/>
       <attr-item tags="dat"/>
@@ -30,6 +37,12 @@
       <attr-item tags="ND"/>
 
     </def-attr>
+    <def-attr n="a_gen">
+      <attr-item tags="m"/>
+      <attr-item tags="f"/>
+      <attr-item tags="GD"/>
+
+    </def-attr>
 
 
   </section-def-attrs>
@@ -39,20 +52,52 @@
     <def-var n="current_sn_type"/>
   </section-def-vars>
   <section-def-macros>
+    <def-macro n="default_gender1" npar="1">
+          <choose> 
+            <when>
+               <test> 
+                  <equal><clip pos="1" side="sl" part="a_gen"/><lit-tag v="GD"/></equal>
+               </test>
+               <let><clip pos="1" side="tl" part="a_gen"/><lit-tag v="m"/></let>
+            </when> 
+          </choose>
+    </def-macro>
     <def-macro n="conv_case1" npar="1">
           <let><var n="current_sn_type"/><lit-tag v="SN"/></let>
           <choose> 
             <when>
-               <test>
+               <test> <!-- сад<n><sg><ine>/сад<n><m><nn><sg><ine> -->
                   <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ine"/></equal>
                </test>
                <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="prp"/></let>
+               <!-- сад<n><sg><ine>/сад<n><m><nn><sg><prp> -->
                <let><var n="current_sn_type"/><lit-tag v="SN.INE"/></let>
             </when> 
           </choose>
     </def-macro>
   </section-def-macros>
   <section-rules>
+
+    <rule comment="REGLA: pron">
+      <pattern>
+        <pattern-item n="prn"/>
+      </pattern>
+      <action>
+        <call-macro n="default_gender1">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="n" case="caseFirstWord">
+            <tags>
+              <tag><var n="current_sn_type"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
     <rule comment="REGLA: noun">
       <pattern>
@@ -69,6 +114,35 @@
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: adj noun">
+      <pattern>
+        <pattern-item n="adj"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="conv_case1">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="conv_case1">
+          <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk name="a_n" case="caseFirstWord">
+            <tags>
+              <tag><var n="current_sn_type"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>

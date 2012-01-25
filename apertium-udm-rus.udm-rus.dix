@@ -6,16 +6,26 @@
     <sdef n="np"  c="Имя собственное"/>
     <sdef n="f"  c=""/>
     <sdef n="adv"  c=""/>
+    <sdef n="adj"  c=""/>
     <sdef n="itg"  c=""/>
     <sdef n="m"  c=""/>
     <sdef n="ant"  c=""/>
     <sdef n="nn"  c=""/>
     <sdef n="aa"  c=""/>
-
+    <sdef n="prn"  c=""/>
+    <sdef n="p1"  c=""/>
+    <sdef n="p2"  c=""/>
+    <sdef n="p3"  c=""/>
+    <sdef n="GD"  c=""/>
+    <sdef n="sg"  c=""/>
+    <sdef n="pers"  c=""/>
     <sdef n="cm"  c=""/>
     <sdef n="sent"  c=""/>
   </sdefs>
   <section id="main" type="standard">
+
+    <e><p><l>со<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/></l><r>prpers<s n="prn"/><s n="pers"/><s n="p3"/><s n="GD"/><s n="sg"/></r></p></e>
+
     <!-- Раздел: Имя Существительное -->
     <e><p><l>пуны<s n="n"/></l><r>собака<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
     <e><p><l>Маша<s n="np"/><s n="ant"/><s n="f"/></l><r>Маша<s n="np"/><s n="ant"/><s n="f"/></r></p></e>
@@ -24,6 +34,9 @@
     <e><p><l>урам<s n="n"/></l><r>улица<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 
     <e><p><l>кытын<s n="adv"/><s n="itg"/></l><r>где<s n="adv"/><s n="itg"/></r></p></e>
+    <e><p><l>али<s n="adv"/></l><r>сейчас<s n="adv"/></r></p></e>
+
+    <e><p><l>чебер<s n="adj"/></l><r>красивый<s n="adj"/></r></p></e>
 
     <!-- Раздел: Предлог -->
     <e><p><l>но<s n="cnjcoo"/></l><r>и<s n="cnjcoo"/></r></p></e>

@@ -4,6 +4,7 @@ Multichar_Symbols
 %<n%>   ! Имя существительное · Noun
 %<dat%> !
 %<gen%> !
+%<adj%> !
 
 %<prn%>
 %<np%>
@@ -59,6 +60,7 @@ Narechija ;
 Mestomenija ; 
 Glagoly ;
 Punktuacija ;
+Prilagatelnoe ;
 
 LEXICON PRON-PERS-P1-SG
 
@@ -223,6 +225,11 @@ LEXICON NUMBER
 %<sg%>: CASE-ED ;
 %<pl%>:%>%{j%}ос CASE-MNZH ;
 
+
+LEXICON A1
+
+%<adj%>: # ; 
+
 LEXICON N1
 
 %<n%>: NUMBER ; 
@@ -265,6 +272,7 @@ LEXICON Mestomenija
 LEXICON Narechija
 
 кытын ADV-ITG ; ! "где" 
+али ADV ; ! ""
 
 LEXICON Soobstvennoe
 
@@ -329,6 +337,11 @@ LEXICON Punktuacija
 %?%<sent%>:%? # ; 
 %'%<apos%>:%' # ;
 %"%<sent%>:%" # ;
+
+
+LEXICON Prilagatelnoe
+
+чебер A1 ; ! ""
 
 LEXICON Nouns
 
