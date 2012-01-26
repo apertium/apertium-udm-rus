@@ -2,6 +2,9 @@
 <!-- -*- nxml -*- -->
 <transfer default="chunk">
   <section-def-cats>
+    <def-cat n="prop">
+      <cat-item tags="np.*"/>
+    </def-cat>
     <def-cat n="nom">
       <cat-item tags="n.*"/>
     </def-cat>
@@ -136,6 +139,44 @@
             </when> 
           </choose>
     </def-macro>
+    <def-macro n="concord2" npar="2">
+          <!-- First we set the number of the three modifiers as the same as the head noun (TODO: SG for numerals) -->
+          <let><clip pos="2" side="tl" part="a_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
+          <let><clip pos="2" side="tl" part="a_gen"/><clip pos="1" side="tl" part="a_gen"/></let>
+
+      
+          <choose> 
+            <when> <!-- When the number of the head noun is plural, set the gender of the modifiers to mfn -->
+               <test> 
+                    <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
+               </test>
+               <choose>
+                 <when>
+                   <test>
+                     <not><equal><clip pos="2" side="tl" part="a_num"/><lit-tag v="num"/></equal></not>
+                   </test>
+                   <let><clip pos="2" side="tl" part="a_gen"/><lit-tag v="mfn"/></let>
+                 </when>
+                 <otherwise>
+                   <let><clip pos="2" side="tl" part="a_gen"/><clip pos="1" side="tl" part="a_gen"/></let>
+                 </otherwise>
+               </choose>
+            </when>
+          </choose> 
+          <choose> 
+            <when> <!-- Numbers get singular  -->
+               <test> 
+                    <equal><clip pos="2" side="tl" part="a_num"/><lit-tag v="num"/></equal>
+               </test>
+               <let><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="sg"/></let>
+            </when>
+          </choose> 
+
+               <!--Set the case of the modifiers to the same as the head. -->
+               <let><clip pos="2" side="tl" part="a_cas"/><clip pos="1" side="tl" part="a_cas"/></let>
+
+    </def-macro>
+
     <def-macro n="concord4" npar="4">
           <!-- First we set the number of the three modifiers as the same as the head noun (TODO: SG for numerals) -->
           <let><clip pos="2" side="tl" part="a_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
@@ -237,6 +278,15 @@
                <!-- сад<n><sg><ine>/сад<n><m><nn><sg><prp> -->
                <let><var n="current_sn_type"/><lit-tag v="SN.INS"/></let>
             </when> 
+            <when>
+               <test> <!-- сад<n><sg><ine>/сад<n><m><nn><sg><ine> -->
+                  <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="abl"/></equal>
+               </test>
+               <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="gen"/></let>
+               <!-- сад<n><sg><ine>/сад<n><m><nn><sg><prp> -->
+               <let><var n="current_sn_type"/><lit-tag v="SN.ABL"/></let>
+            </when> 
+
 
           </choose>
     </def-macro>
@@ -309,6 +359,30 @@
       </action>
     </rule>
 
+    <rule comment="REGLA: proper noun">
+      <pattern>
+        <pattern-item n="prop"/>
+      </pattern>
+      <action>
+        <call-macro n="conv_case1">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="n" case="caseFirstWord">
+            <tags>
+              <tag><var n="current_sn_type"/></tag>
+                <tag><clip pos="1" side="tl" part="a_gen"/></tag>
+                <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
     <rule comment="REGLA: noun">
       <pattern>
         <pattern-item n="nom"/>
@@ -326,6 +400,38 @@
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: adj noun">
+      <pattern>
+        <pattern-item n="adj"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="conv_case1">
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="concord2">
+          <with-param pos="2"/>
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="a_n" case="caseFirstWord">
+            <tags>
+              <tag><var n="current_sn_type"/></tag>
+                <tag><clip pos="2" side="tl" part="a_gen"/></tag>
+                <tag><clip pos="2" side="tl" part="a_nbr"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
@@ -376,41 +482,6 @@
       </action>
     </rule>
 
-
-    <rule comment="REGLA: adj noun">
-      <pattern>
-        <pattern-item n="adj"/>
-        <pattern-item n="nom"/>
-      </pattern>
-      <action>
-        <call-macro n="conv_case1">
-          <with-param pos="1"/>
-        </call-macro>
-        <call-macro n="conv_case1">
-          <with-param pos="2"/>
-        </call-macro><!--
-        <call-macro n="concord1">
-          <with-param pos="2"/>
-          <with-param pos="1"/>
-        </call-macro>-->
-        <out>
-          <chunk name="a_n" case="caseFirstWord">
-            <tags>
-              <tag><var n="current_sn_type"/></tag>
-                <tag><clip pos="1" side="tl" part="a_gen"/></tag>
-                <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-            <b pos="1"/>
-            <lu>
-              <clip pos="2" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
 
 <!-- start -->
 

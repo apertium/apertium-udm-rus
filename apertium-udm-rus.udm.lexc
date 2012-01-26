@@ -83,6 +83,7 @@ LEXICON CASE
 %<dat%>:%>лы K ;
 %<gen%>:%>лэн K ;
 %<ine%>:%>ын K ;
+%<abl%>:%>лэсь K ;
 
 LEXICON CASE-MNZH
 
@@ -303,7 +304,10 @@ cяpыcь POST-INDECL ;
 LEXICON Sojuzy
  
 но CC ;  ! "и"
+оло CC ;  ! "или"
+нош CC ;  ! "а"
 ден CS ; ! ""
+куке CS ; ! "когда"
 
 LEXICON Mestomenija 
 
@@ -332,6 +336,7 @@ LEXICON Narechija
 а%<qst%>:а # ;
 
 кытын ADV-ITG ; ! "где" 
+куке ADV-ITG ; ! "когда" 
 али ADV ; ! ""
 туж ADV ; ! ""
 шудо ADV ; ! ""
@@ -340,6 +345,8 @@ LEXICON Narechija
 котьку ADV ; ! ""
 
 ик ADV ; ! ""
+собере ADV ; ! "затем"
+ӝог ADV ; ! "быстро"
 
 LEXICON Soobstvennoe
 
@@ -395,6 +402,7 @@ LEXICON Prilagatelnoe
 шуныт A1 ; ! ""
 кезьыт A1 ; ! ""
 пичи A1 ; ! ""
+бадӟым A1 ; ! ""
 
 LEXICON Nouns
 
@@ -423,6 +431,7 @@ LEXICON Nouns
 йыр N1 ; ! ""
 ву N1 ; ! ""
 нылпи N1 ; ! ""
+адями N1 ; ! ""
 
 
 LEXICON Punktuacija
@@ -436,4 +445,4 @@ LEXICON Punktuacija
 ,%<cm%>:, # ;
 %?%<sent%>:%? # ; 
 %'%<apos%>:%' # ;
-%"%<sent%>:%" # ;
+!%"%<sent%>:%" # ;

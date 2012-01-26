@@ -23,7 +23,7 @@ LIST Nom = nom ;
 LIST Ine = ine ; 
 LIST Ins = ins ; 
 
-LIST Odushevjonnyj = "нылпи" ; 
+LIST Odushevljonnyj = "нылпи" "пуны" (np ant) (n aa) ; 
 
 SET N-MOD = Det | A | Num ;
 
@@ -35,7 +35,7 @@ SELECT N ;
 SELECT Det (0 Det OR Pron) (1 N-MOD OR N);
     ## Пунылы кельше та кык пичи нылпиосын шудыны
 
-REMOVE Ine IF (0 Odushevjonnyj);
+REMOVE Ine IF (0 Odushevljonnyj);
     ## Пунылы кельше та кык пичи нылпиосын шудыны
 
 SELECT conneg IF (*-1 neg BARRIER V OR Nom OR (","));

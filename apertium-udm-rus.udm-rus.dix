@@ -3,6 +3,7 @@
   <sdefs>
     <sdef n="n"  c="Имя существительное"/>
     <sdef n="cnjcoo"  c="Союз"/>
+    <sdef n="cnjsub"  c="Союз"/>
     <sdef n="np"  c="Имя собственное"/>
     <sdef n="f"  c=""/>
     <sdef n="adv"  c=""/>
@@ -52,6 +53,10 @@
   <section id="main" type="standard">
     <!-- Раздел: Союзы -->
     <e><p><l>но<s n="cnjcoo"/></l><r>и<s n="cnjcoo"/></r></p></e>
+    <e><p><l>оло<s n="cnjcoo"/></l><r>или<s n="cnjcoo"/></r></p></e>
+    <e><p><l>нош<s n="cnjcoo"/></l><r>а<s n="cnjcoo"/></r></p></e>
+
+    <e><p><l>куке<s n="cnjsub"/></l><r>когда<s n="cnjsub"/></r></p></e>
 
     <e><p><l>а<s n="qst"/></l><r>ли<s n="part"/></r></p></e>
 
@@ -76,22 +81,29 @@
     <e><p><l>валэктон<s n="n"/></l><r>ответ<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
     <e><p><l>корка<s n="n"/></l><r>дом<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
     <e><p><l>нылпи<s n="n"/></l><r>ребёнок<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
+    <e><p><l>адями<s n="n"/></l><r>человек<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
 
     <e><p><l>куара<s n="n"/></l><r>звук<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
     <e><p><l>куара<s n="n"/></l><r>голос<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
 
     <e><p><l>пияш<s n="n"/></l><r>мальчик<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
     <e><p><l>писпу<s n="n"/></l><r>дерево<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
+    <e><p><l>ки<s n="n"/></l><r>рука<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
+    <e><p><l>ву<s n="n"/></l><r>вода<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
 
     <e><p><l>Маша<s n="np"/><s n="ant"/><s n="f"/></l><r>Маша<s n="np"/><s n="ant"/><s n="f"/></r></p></e>
     <e><p><l>Ваня<s n="np"/><s n="ant"/><s n="m"/></l><r>Ваня<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
 
     <e><p><l>кытын<s n="adv"/><s n="itg"/></l><r>где<s n="adv"/><s n="itg"/></r></p></e>
+    <e><p><l>куке<s n="adv"/><s n="itg"/></l><r>когда<s n="adv"/><s n="itg"/></r></p></e>
+
     <e><p><l>али<s n="adv"/></l><r>сейчас<s n="adv"/></r></p></e>
     <e><p><l>туж<s n="adv"/></l><r>очень<s n="adv"/></r></p></e>
     <e><p><l>туннэ<s n="adv"/></l><r>сегодня<s n="adv"/></r></p></e>
     <e><p><l>котьку<s n="adv"/></l><r>всегда<s n="adv"/></r></p></e>
     <e><p><l>ик<s n="adv"/></l><r>же<s n="part"/></r></p></e>
+    <e><p><l>собере<s n="adv"/></l><r>затем<s n="adv"/></r></p></e>
+    <e><p><l>ӝог<s n="adv"/></l><r>быстро<s n="adv"/></r></p></e>
 
     <e><p><l>шудо<s n="adv"/></l><r>счастливый<s n="adj"/><s n="short"/></r></p><par n="gen_num"/></e>
     <e><p><l>шуныт<s n="adv"/></l><r>тёплый<s n="adj"/><s n="short"/></r></p><par n="gen_num"/></e>
@@ -104,6 +116,7 @@
     <e><p><l>шуныт<s n="adj"/></l><r>тёплый<s n="adj"/></r></p><par n="gen_num"/></e>
     <e><p><l>кезьыт<s n="adj"/></l><r>холодный<s n="adj"/></r></p><par n="gen_num"/></e>
     <e><p><l>пичи<s n="adj"/></l><r>маленький<s n="adj"/></r></p><par n="gen_num"/></e>
+    <e><p><l>бадӟым<s n="adj"/></l><r>большой<s n="adj"/></r></p><par n="gen_num"/></e>
 
 
     <e><p><l>сиыны<s n="v"/><s n="tv"/></l><r>есть<s n="vblex"/></r></p></e>
@@ -137,6 +150,9 @@
     <e><p><l>луыны<s n="v"/><s n="tv"/></l><r>быть<s n="vblex"/><s n="imperf"/></r></p></e>
     <e><p><l>кылзӥськыны<s n="v"/><s n="tv"/></l><r>вслушиваться<s n="vblex"/><s n="imperf"/></r></p></e>
     <e><p><l>кельшыны<s n="v"/><s n="tv"/></l><r>нравиться<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>бызьыны<s n="v"/><s n="tv"/></l><r>бежать<s n="vblex"/><s n="perf"/></r></p></e>
+    <e><p><l>ватскыны<s n="v"/><s n="tv"/></l><r>прятаться<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>вераськыны<s n="v"/><s n="tv"/></l><r>говорить<s n="vblex"/><s n="imperf"/></r></p></e>
 
 
     <e><p><l>уг<s n="v"/><s n="neg"/></l><r>не<s n="adv"/></r></p></e>
