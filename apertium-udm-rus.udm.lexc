@@ -205,6 +205,14 @@ LEXICON NUM
 LEXICON GLAGOL-1-TV
 %<v%>%<tv%>%<inf%>:%>ыны # ;
 %<v%>%<tv%>%<conneg%>:%>%{E%} # ;
+
+%<v%>%<tv%>%<past%>%<p1%>%<sg%>:%>ӥ # ; 
+%<v%>%<tv%>%<past%>%<p2%>%<sg%>:%>ӥд # ; 
+%<v%>%<tv%>%<past%>%<p3%>%<sg%>:%>ӥз # ; 
+%<v%>%<tv%>%<past%>%<p1%>%<pl%>:%>ӥм # ; 
+%<v%>%<tv%>%<past%>%<p2%>%<pl%>:%>ӥды # ; 
+%<v%>%<tv%>%<past%>%<p3%>%<pl%>:%>ӥзы # ; 
+
 GLAGOL-TV-BOTH ;
 
 LEXICON GLAGOL-TV-BOTH
