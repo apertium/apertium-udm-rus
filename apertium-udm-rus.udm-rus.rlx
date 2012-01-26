@@ -23,7 +23,7 @@ LIST Nom = nom ;
 LIST Ine = ine ; 
 LIST Ins = ins ; 
 
-LIST Odushevljonnyj = "нылпи" "пуны" (np ant) (n aa) ; 
+LIST Odushevljonnyj = "пинал" "нылпи" "пуны" (np ant) (n aa) ; 
 
 SET N-MOD = Det | A | Num ;
 
