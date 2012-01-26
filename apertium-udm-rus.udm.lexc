@@ -220,6 +220,11 @@ LEXICON GLAGOL-2-TV
 %<v%>%<tv%>%<conneg%>:%>ы # ;
 GLAGOL-TV-BOTH ;
 
+LEXICON GLAGOL-VAN
+
+%<v%>%<pres%>%<p3%>%<sg%>:вань # ;
+%<v%>%<past%>%<p3%>%<sg%>:вал # ;
+
 LEXICON GLAGOL-UG  ! отрицательные формы
 
 %<v%>%<neg%>%<pres%>%<p1%>%<sg%>:уг # ; 
@@ -344,6 +349,7 @@ LEXICON Narechija
 шуныт ADV ; ! ""
 котьку ADV ; ! ""
 ноку ADV ; ! ""
+толон ADV ; ! ""
 
 ик ADV ; ! ""
 собере ADV ; ! "затем"
@@ -357,7 +363,10 @@ LEXICON Soobstvennoe
 LEXICON Glagoly
 
 уг: GLAGOL-UG ;
+вань: GLAGOL-VAN ; 
 
+сиыны:си GLAGOL-1-TV ; ! "есть"
+луыны:лу GLAGOL-1-TV ; ! "быть"
 тодыны:тод GLAGOL-1-TV ; ! "знать"
 !кыpӟаны:кыpӟа GLAGOL-2-TV ; ! "петь"
 шудыны:шуд GLAGOL-1-TV ; ! "играть"
@@ -376,7 +385,6 @@ LEXICON Glagoly
 утчаны:утч GLAGOL-2-TV ; ! "искать"
 утчаськыны:утчаськ GLAGOL-1-TV ; ! "разыскивать"
 тыршыны:тырш GLAGOL-1-TV ; ! "стараться"
-сиыны:си GLAGOL-1-TV ; ! "есть"
 серекъяны:серекъя GLAGOL-2-TV ; ! "смеяться"
 пытсаны:пытса GLAGOL-2-TV ; ! "закрыть"
 пырыны:пыр GLAGOL-1-TV ; ! "заходить"
@@ -385,7 +393,6 @@ LEXICON Glagoly
 малпаны:малпа GLAGOL-2-TV ; ! "думать"
 лыктыны:лыкт GLAGOL-1-TV ; ! "приходить"
 лыдъяськыны:лыдъяськ GLAGOL-1-TV ; ! "считать"
-луыны:лу GLAGOL-1-TV ; ! "быть"
 кылзӥськыны:кылзӥськ GLAGOL-1-TV ; ! "вслушиваться"
 кельшыны:кельш GLAGOL-1-TV ; ! "нравиться"
 изьыны:изь GLAGOL-1-TV ; ! "спать" 

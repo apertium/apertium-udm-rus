@@ -8,6 +8,7 @@
     <sdef n="f"  c=""/>
     <sdef n="adv"  c=""/>
     <sdef n="imperf"  c=""/>
+    <sdef n="vbser"  c=""/>
     <sdef n="post"  c=""/>
     <sdef n="perf"  c=""/>
     <sdef n="dual"  c=""/>
@@ -92,6 +93,7 @@
     <e><p><l>писпу<s n="n"/></l><r>дерево<s n="n"/><s n="nt"/><s n="nn"/></r></p></e>
     <e><p><l>ки<s n="n"/></l><r>рука<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
     <e><p><l>ву<s n="n"/></l><r>вода<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
+    <e><p><l>анай<s n="n"/></l><r>мама<s n="n"/><s n="f"/><s n="nn"/></r></p></e> <!-- check 'nn' ? -->
 
     <e><p><l>Маша<s n="np"/><s n="ant"/><s n="f"/></l><r>Маша<s n="np"/><s n="ant"/><s n="f"/></r></p></e>
     <e><p><l>Ваня<s n="np"/><s n="ant"/><s n="m"/></l><r>Ваня<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
@@ -107,6 +109,7 @@
     <e><p><l>собере<s n="adv"/></l><r>затем<s n="adv"/></r></p></e>
     <e><p><l>ӝог<s n="adv"/></l><r>быстро<s n="adv"/></r></p></e>
     <e><p><l>ноку<s n="adv"/></l><r>никогда<s n="adv"/></r></p></e>
+    <e><p><l>толон<s n="adv"/></l><r>вчера<s n="adv"/></r></p></e>
 
     <e><p><l>шудо<s n="adv"/></l><r>счастливый<s n="adj"/><s n="short"/></r></p><par n="gen_num"/></e>
     <e><p><l>шуныт<s n="adv"/></l><r>тёплый<s n="adj"/><s n="short"/></r></p><par n="gen_num"/></e>
@@ -123,6 +126,7 @@
 
 
     <e><p><l>сиыны<s n="v"/><s n="tv"/></l><r>есть<s n="vblex"/></r></p></e>
+    <e><p><l>вань<s n="v"/></l><r>быть<s n="vbser"/></r></p></e>
     <e><p><l>быгатыны<s n="v"/><s n="tv"/></l><r>мочь<s n="vbmod"/><s n="dual"/><s n="tv"/></r></p></e>
 
     <e><p><l>тодыны<s n="v"/><s n="tv"/></l><r>знать<s n="vblex"/><s n="imperf"/></r></p></e>
@@ -150,7 +154,7 @@
     <e><p><l>малпаны<s n="v"/><s n="tv"/></l><r>думать<s n="vblex"/><s n="imperf"/></r></p></e>
     <e><p><l>лыктыны<s n="v"/><s n="tv"/></l><r>приходить<s n="vblex"/><s n="imperf"/></r></p></e>
     <e><p><l>лыдъяськыны<s n="v"/><s n="tv"/></l><r>считать<s n="vblex"/><s n="imperf"/></r></p></e>
-    <e><p><l>луыны<s n="v"/><s n="tv"/></l><r>быть<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>луыны<s n="v"/><s n="tv"/></l><r>быть<s n="vbser"/><s n="imperf"/></r></p></e>
     <e><p><l>кылзӥськыны<s n="v"/><s n="tv"/></l><r>вслушиваться<s n="vblex"/><s n="imperf"/></r></p></e>
     <e><p><l>кельшыны<s n="v"/><s n="tv"/></l><r>нравиться<s n="vblex"/><s n="imperf"/></r></p></e>
     <e><p><l>бызьыны<s n="v"/><s n="tv"/></l><r>бежать<s n="vblex"/><s n="perf"/></r></p></e>

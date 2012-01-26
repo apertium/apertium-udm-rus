@@ -26,6 +26,10 @@
       <cat-item tags="adj"/>
       <cat-item tags="adj.*"/>
     </def-cat>
+    <def-cat n="vrb_past">
+      <cat-item tags="v.*.past.*"/>
+      <cat-item tags="v.past.*"/>
+    </def-cat>
     <def-cat n="vrb_pres">
       <cat-item tags="v.*.pres.*"/>
     </def-cat>
@@ -59,6 +63,7 @@
     <def-attr n="a_verb">
       <attr-item tags="v"/>
       <attr-item tags="vblex"/>
+      <attr-item tags="vbser"/>
       <attr-item tags="vbmod"/>
     </def-attr>
     <def-attr n="a_num">
@@ -290,17 +295,6 @@
 
           </choose>
     </def-macro>
-    <def-macro n="add_ne_particle" npar="1">
-          <choose> 
-            <when>
-               <test> <!--  -->
-                  <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ine"/></equal>
-               </test>
-               <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="prp"/></let>
-               <!--  -->
-            </when> 
-          </choose>
-    </def-macro>
     <def-macro n="conv_tense1" npar="1">
           <choose> 
             <when>
@@ -327,6 +321,9 @@
                   </test>
                   <let><clip pos="1" side="tl" part="a_nbr"/><concat><lit-tag v="mfn"/><clip pos="1" side="sl" part="a_nbr"/></concat></let>
                 </when> 
+                <otherwise> <!-- default to 'm', should really be GD here, then a tag on the verb to concord in interchunk -->
+                  <let><clip pos="1" side="tl" part="a_nbr"/><concat><lit-tag v="m"/><clip pos="1" side="sl" part="a_nbr"/></concat></let>
+                </otherwise>
 
 
               </choose>
@@ -484,6 +481,29 @@
 
 
 <!-- start -->
+
+    <rule comment="TODO ...">
+      <pattern>
+        <pattern-item n="vrb_past"/>
+      </pattern>
+      <action>
+        <call-macro n="conv_tense1">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="v" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.FIN"/></tag>
+
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
     <rule comment="TODO ...">
       <pattern>
