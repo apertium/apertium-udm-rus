@@ -32,3 +32,6 @@ Rules
 %{j%}:ъ <=> :Soglasnye %>: _ ;
 
 
+"after vowel"
+%{j%}:0 <=> :Glasnye %>: _ ;
+

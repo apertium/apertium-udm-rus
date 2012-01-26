@@ -6,9 +6,13 @@
       <cat-item tags="SN"/>
       <cat-item tags="SN.*"/>
     </def-cat>
-    <def-cat n="SN_LOC">
-      <cat-item tags="SN.INE"/>
-      <cat-item tags="SN.INE.*"/>
+    <def-cat n="SV_FIN">
+      <cat-item tags="SV.FIN"/>
+      <cat-item tags="SV.FIN.*"/>
+    </def-cat>
+    <def-cat n="SV_INF">
+      <cat-item tags="SV.INF"/>
+      <cat-item tags="SV.INF.*"/>
     </def-cat>
     <def-cat n="SENT">
       <cat-item tags="SENT"/>
@@ -21,6 +25,10 @@
     </def-cat>
   </section-def-cats>
   <section-def-attrs>
+    <def-attr n="a_sn_type">
+      <attr-item tags="SN.INS"/>
+      <attr-item tags="SN.LOC"/>
+    </def-attr>
     <def-attr n="a_nbr">
       <attr-item tags="sg"/>
       <attr-item tags="pl"/>
@@ -46,15 +54,45 @@
   </section-def-attrs>
   <section-def-vars>
     <def-var n="number"/>
-    <def-var n="POST"/>
+    <def-var n="PREP"/> <!-- this is our current preposition -->
   </section-def-vars>
   <section-def-macros>
-    <def-macro n="test1" npar="1">
-      <let>
-        <var n="POST"/>
-        <lit v=""/>
-      </let>
+    <def-macro n="check_and_set_prep1" npar="1"> <!-- npar = number of parameters -->
+          <let><var n="PREP"/><lit v=""/></let>
+          <choose> 
+            <when>
+               <test> 
+                  <equal><clip pos="1" part="a_sn_type"/><lit-tag v="SN.LOC"/></equal>
+               </test>
+               <let><var n="PREP"/>
+                 <concat>
+                  <lit v="^prep"/>
+                  <lit-tag  v="pr"/>
+                  <lit v="{"/>
+                  <lit v="^в"/>
+                  <lit-tag  v="pr"/>
+                  <lit v="$}$ "/>
+                </concat>
+               </let>
+            </when> 
+            <when>
+               <test> 
+                  <equal><clip pos="1" part="a_sn_type"/><lit-tag v="SN.INS"/></equal>
+               </test>
+               <let><var n="PREP"/>
+                 <concat>
+                  <lit v="^prep"/>
+                  <lit-tag  v="pr"/>
+                  <lit v="{"/>
+                  <lit v="^с"/>
+                  <lit-tag  v="pr"/>
+                  <lit v="$}$ "/>
+                </concat>
+               </let>
+            </when> 
+          </choose>
     </def-macro>
+
     <def-macro n="concord1" npar="2"> <!-- npar = number of parameters -->
           <choose> 
             <when>
@@ -77,21 +115,16 @@
   <section-rules>
 
 
-    <rule comment="REGLA: SN_LOC">
+    <rule comment="REGLA: SN">
       <pattern>
-        <pattern-item n="SN_LOC"/>
+        <pattern-item n="SN"/>
       </pattern>
       <action>
+        <call-macro n="check_and_set_prep1">
+          <with-param pos="1"/>
+        </call-macro>
         <out>
-          <chunk>
-            <lit v="prep"/>
-            <lit-tag  v="pr"/>
-            <lit v="{"/>
-            <lit v="^в"/>
-            <lit-tag  v="pr"/>
-            <lit v="$}"/>
-          </chunk>
-          <b/>
+          <var n="PREP"/>
           <chunk>
             <clip pos="1" part="lem"/>
             <clip pos="1" part="tags"/>
@@ -100,7 +133,6 @@
         </out>
       </action>
     </rule>
-
 
     <rule comment="REGLA: SN ADV SA">
       <pattern>
@@ -135,6 +167,39 @@
       </action>
     </rule>
 
+
+    <rule comment="REGLA: SV.FIN SN SV.INF">
+      <pattern>
+        <pattern-item n="SV_FIN"/>
+        <pattern-item n="SN"/>
+        <pattern-item n="SV_INF"/>
+      </pattern>
+      <action>
+        <call-macro n="check_and_set_prep1">
+          <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk>
+            <clip pos="1" part="lem"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="3" part="lem"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+          </chunk>
+          <b pos="2"/>
+          <var n="PREP"/>
+          <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
     <rule comment="REGLA: SN ADV ADV SA">
       <pattern>

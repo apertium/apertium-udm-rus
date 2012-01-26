@@ -18,10 +18,14 @@
     <sdef n="part"  c=""/>
     <sdef n="qst"  c=""/>
     <sdef n="itg"  c=""/>
+    <sdef n="num"  c=""/>
+    <sdef n="dem"  c=""/>
+    <sdef n="det"  c=""/>
     <sdef n="m"  c=""/>
     <sdef n="mf"  c=""/>
     <sdef n="nt"  c=""/>
     <sdef n="ant"  c=""/>
+    <sdef n="neg"  c=""/>
     <sdef n="nn"  c=""/>
     <sdef n="aa"  c=""/>
     <sdef n="prn"  c=""/>
@@ -37,11 +41,12 @@
     <sdef n="cm"  c=""/>
     <sdef n="guio"  c=""/>
     <sdef n="sent"  c=""/>
+    <sdef n="CD"  c=""/>
   </sdefs>
   <pardefs>
     <pardef n="gen_num">
        <e r="RL"><p><l></l><r></r></p></e>
-      <e r="LR"><p><l></l><r><s n="GD"/><s n="ND"/></r></p></e>
+      <e r="LR"><p><l></l><r><s n="GD"/><s n="ND"/><s n="CD"/></r></p></e>
     </pardef>
   </pardefs>
   <section id="main" type="standard">
@@ -70,6 +75,7 @@
     <e><p><l>куазь<s n="n"/></l><r>погода<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
     <e><p><l>валэктон<s n="n"/></l><r>ответ<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
     <e><p><l>корка<s n="n"/></l><r>дом<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
+    <e><p><l>нылпи<s n="n"/></l><r>ребёнок<s n="n"/><s n="m"/><s n="aa"/></r></p></e>
 
     <e><p><l>куара<s n="n"/></l><r>звук<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
     <e><p><l>куара<s n="n"/></l><r>голос<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
@@ -90,9 +96,15 @@
     <e><p><l>шудо<s n="adv"/></l><r>счастливый<s n="adj"/><s n="short"/></r></p><par n="gen_num"/></e>
     <e><p><l>шуныт<s n="adv"/></l><r>тёплый<s n="adj"/><s n="short"/></r></p><par n="gen_num"/></e>
 
+    <e><p><l>кык<s n="num"/></l><r>два<s n="num"/></r></p><par n="gen_num"/></e>
+
+    <e><p><l>та<s n="det"/><s n="dem"/></l><r>этот<s n="det"/><s n="dem"/></r></p><par n="gen_num"/></e>
+
     <e><p><l>чебер<s n="adj"/></l><r>красивый<s n="adj"/></r></p><par n="gen_num"/></e>
     <e><p><l>шуныт<s n="adj"/></l><r>тёплый<s n="adj"/></r></p><par n="gen_num"/></e>
     <e><p><l>кезьыт<s n="adj"/></l><r>холодный<s n="adj"/></r></p><par n="gen_num"/></e>
+    <e><p><l>пичи<s n="adj"/></l><r>маленький<s n="adj"/></r></p><par n="gen_num"/></e>
+
 
     <e><p><l>сиыны<s n="v"/><s n="tv"/></l><r>есть<s n="vblex"/></r></p></e>
     <e><p><l>быгатыны<s n="v"/><s n="tv"/></l><r>мочь<s n="vbmod"/><s n="dual"/><s n="tv"/></r></p></e>
@@ -124,6 +136,10 @@
     <e><p><l>лыдъяськыны<s n="v"/><s n="tv"/></l><r>считать<s n="vblex"/><s n="imperf"/></r></p></e>
     <e><p><l>луыны<s n="v"/><s n="tv"/></l><r>быть<s n="vblex"/><s n="imperf"/></r></p></e>
     <e><p><l>кылзӥськыны<s n="v"/><s n="tv"/></l><r>вслушиваться<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>кельшыны<s n="v"/><s n="tv"/></l><r>нравиться<s n="vblex"/><s n="imperf"/></r></p></e>
+
+
+    <e><p><l>уг<s n="v"/><s n="neg"/></l><r>не<s n="adv"/></r></p></e>
 
 
     <!-- Раздел: Пунктуация -->

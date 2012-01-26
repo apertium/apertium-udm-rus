@@ -7,7 +7,10 @@ Multichar_Symbols
 %<adj%> !
 
 %<prn%>
+%<det%>
+%<num%>
 %<qst%>
+%<dem%>
 %<np%>
 %<cnjcoo%>
 %<cnjsub%>
@@ -20,6 +23,8 @@ Multichar_Symbols
 %<neg%>
 
 %<pres%> 
+%<past%>
+%<fut%>
 
 %<tv%>
 %<iv%>
@@ -49,6 +54,7 @@ Multichar_Symbols
 %{E%}   ! э or е
 %>
 %{j%}   ! 
+%<conneg%>
 
 LEXICON Root
 
@@ -60,6 +66,8 @@ Soobstvennoe ;
 Narechija ; 
 Mestomenija ; 
 Glagoly ;
+Chisla ;
+Determinant ;
 Punktuacija ;
 Prilagatelnoe ;
 
@@ -67,6 +75,37 @@ LEXICON K ! Clitics
 
 %+а%<qst%>:%-а # ;
 # ;
+
+
+LEXICON CASE
+
+%<nom%>: K ;
+%<dat%>:%>лы K ;
+%<gen%>:%>лэн K ;
+%<ine%>:%>ын K ;
+
+LEXICON CASE-MNZH
+
+%<ill%>:%>ы K ;
+%<ins%>:%>ын K ;
+%<acc%>:%>тыз K ; ! Dir/LR
+%<acc%>:%>ыз K ;
+%<pro%>:%>ытӥ K ; ! Dir/LR
+%<pro%>:%>тӥ K ;
+
+LEXICON CASE-ED
+
+%<ill%>:%>%{E%} K ;
+%<ins%>:%>%{E%}н K ;
+%<acc%>:%>%{E%}з K ;
+%<pro%>:%>%{E%}тӥ K ;
+
+LEXICON NUMBER
+
+%<sg%>: CASE ;
+%<pl%>:%>%{j%}ос CASE ;
+%<sg%>: CASE-ED ;
+%<pl%>:%>%{j%}ос CASE-MNZH ;
 
 LEXICON PRON-PERS-P1-SG
 
@@ -141,35 +180,67 @@ LEXICON PRON-ITG-KIN
 %<prn%>%<itg%>%<advl%>:ъя # ; 
 %<prn%>%<itg%>%<approx%>:лань # ; 
 
+LEXICON PRON-DEM-TA ! местоимение "та"
+
+! та тае    талы   таин   талэсь 
+! та таосыз таослы таосын таослэсь
+
+%<prn%>%<dem%>%<sg%>%<nom%>: # ;
+%<prn%>%<dem%>%<pl%>%<nom%>: # ;
+
+LEXICON DET-DEM-TA ! местоимение "та"
+
+! та тае    талы   таин   талэсь 
+! та таосыз таослы таосын таослэсь
+
+%<det%>%<dem%>: # ;
+
+LEXICON NUM 
+
+%<num%>: # ;
+
+
+
 LEXICON GLAGOL-1-TV
+%<v%>%<tv%>%<inf%>:%>ыны # ;
+%<v%>%<tv%>%<conneg%>:%>%{E%} # ;
+GLAGOL-TV-BOTH ;
 
-%<v%>%<tv%>%<inf%>:ыны # ; 
-
-%<v%>%<tv%>%<pres%>%<p1%>%<sg%>:ӥcько # ; 
-%<v%>%<tv%>%<pres%>%<p2%>%<sg%>:ӥcькод # ; 
-%<v%>%<tv%>%<pres%>%<p3%>%<sg%>:э # ; 
-%<v%>%<tv%>%<pres%>%<p1%>%<pl%>:ӥcькомы # ; 
-%<v%>%<tv%>%<pres%>%<p2%>%<pl%>:ӥcькоды # ; 
-%<v%>%<tv%>%<pres%>%<p3%>%<pl%>:о # ; 
+LEXICON GLAGOL-TV-BOTH
+%<v%>%<tv%>%<pres%>%<p1%>%<sg%>:%>ӥcько # ; 
+%<v%>%<tv%>%<pres%>%<p2%>%<sg%>:%>ӥcькод # ; 
+%<v%>%<tv%>%<pres%>%<p3%>%<sg%>:%>%{E%} # ; 
+%<v%>%<tv%>%<pres%>%<p1%>%<pl%>:%>ӥcькомы # ; 
+%<v%>%<tv%>%<pres%>%<p2%>%<pl%>:%>ӥcькоды # ; 
+%<v%>%<tv%>%<pres%>%<p3%>%<pl%>:%>о # ; 
 
 LEXICON GLAGOL-2-TV
-
 %<v%>%<tv%>%<inf%>:аны # ; 
+%<v%>%<tv%>%<conneg%>:%>ы # ;
+GLAGOL-TV-BOTH ;
 
 LEXICON GLAGOL-UG  ! отрицательные формы
 
-%<neg%>%<pres%>%<p1%>%<sg%>:уг # ; 
-%<neg%>%<pres%>%<p2%>%<sg%>:уд # ; 
-%<neg%>%<pres%>%<p3%>%<sg%>:уз # ; 
-%<neg%>%<pres%>%<p1%>%<pl%>:ум # ; 
-%<neg%>%<pres%>%<p2%>%<pl%>:уд # ; 
-%<neg%>%<pres%>%<p3%>%<pl%>:уз # ; 
-%<neg%>%<past%>%<p1%>%<sg%>:ӧй # ; 
-%<neg%>%<past%>%<p2%>%<sg%>:ӧд # ; 
-%<neg%>%<past%>%<p3%>%<sg%>:ӧз # ; 
-%<neg%>%<past%>%<p1%>%<pl%>:ӧм # ; 
-%<neg%>%<past%>%<p2%>%<pl%>:ӧд # ; 
-%<neg%>%<past%>%<p3%>%<pl%>:ӧз # ; 
+%<v%>%<neg%>%<pres%>%<p1%>%<sg%>:уг # ; 
+%<v%>%<neg%>%<pres%>%<p2%>%<sg%>:уд # ; 
+%<v%>%<neg%>%<pres%>%<p3%>%<sg%>:уз # ; 
+%<v%>%<neg%>%<pres%>%<p1%>%<pl%>:ум # ; 
+%<v%>%<neg%>%<pres%>%<p2%>%<pl%>:уд # ; 
+%<v%>%<neg%>%<pres%>%<p3%>%<pl%>:уз # ; 
+
+%<v%>%<neg%>%<past%>%<p1%>%<sg%>:ӧй # ; 
+%<v%>%<neg%>%<past%>%<p2%>%<sg%>:ӧд # ; 
+%<v%>%<neg%>%<past%>%<p3%>%<sg%>:ӧз # ; 
+%<v%>%<neg%>%<past%>%<p1%>%<pl%>:ӧм # ; 
+%<v%>%<neg%>%<past%>%<p2%>%<pl%>:ӧд # ; 
+%<v%>%<neg%>%<past%>%<p3%>%<pl%>:ӧз # ; 
+
+%<v%>%<neg%>%<fut%>%<p1%>%<sg%>:уг # ; 
+%<v%>%<neg%>%<fut%>%<p2%>%<sg%>:уд # ; 
+%<v%>%<neg%>%<fut%>%<p3%>%<sg%>:уз # ; 
+%<v%>%<neg%>%<fut%>%<p1%>%<pl%>:ум # ; 
+%<v%>%<neg%>%<fut%>%<p2%>%<pl%>:уд # ; 
+%<v%>%<neg%>%<fut%>%<p3%>%<pl%>:уз # ; 
 
 LEXICON CC 
 
@@ -191,37 +262,6 @@ LEXICON ADV
 LEXICON POST-INDECL 
 
 %<post%>: # ;
-
-LEXICON CASE
-
-%<nom%>: K ;
-%<dat%>:%>лы K ;
-%<gen%>:%>лэн K ;
-%<ine%>:%>ын K ;
-
-LEXICON CASE-MNZH
-
-%<ill%>:%>ы K ;
-%<ins%>:%>ын K ;
-%<acc%>:%>тыз K ; ! Dir/LR
-%<acc%>:%>ыз K ;
-%<pro%>:%>ытӥ K ; ! Dir/LR
-%<pro%>:%>тӥ K ;
-
-LEXICON CASE-ED
-
-%<ill%>:%>%{E%} K ;
-%<ins%>:%>%{E%}н K ;
-%<acc%>:%>%{E%}з K ;
-%<pro%>:%>%{E%}тӥ K ;
-
-LEXICON NUMBER
-
-%<sg%>: CASE ;
-%<pl%>:%>%{j%}ос CASE ;
-%<sg%>: CASE-ED ;
-%<pl%>:%>%{j%}ос CASE-MNZH ;
-
 
 LEXICON NP-ANT-F
 
@@ -277,6 +317,16 @@ LEXICON Mestomenija
 тӥ PRON-PERS-P2-PL ; 
 соос PRON-PERS-P3-PL ; 
 
+та PRON-DEM-TA ; 
+
+LEXICON Determinant
+
+та DET-DEM-TA ; 
+
+LEXICON Chisla
+
+кык NUM ;
+
 LEXICON Narechija
 
 а%<qst%>:а # ;
@@ -302,19 +352,19 @@ LEXICON Glagoly
 
 тодыны:тод GLAGOL-1-TV ; ! "знать"
 !кыpӟаны:кыpӟа GLAGOL-2-TV ; ! "петь"
-шудыны:шуд GLAGOL-1-TV;  ! "играть"
+шудыны:шуд GLAGOL-1-TV ; ! "играть"
 адӟыны:адӟ GLAGOL-1-TV ; ! "видеть"
-шуыны:шу GLAGOL-1-TV;  ! "сказать"
+шуыны:шу GLAGOL-1-TV ; ! "сказать"
 шедьтыны:шедьт GLAGOL-1-TV ; ! "найти"
 учкыны:учк GLAGOL-1-TV ; ! "смотреть"
-улыны:ул GLAGOL-1-TV;  ! "жить"
-кылыны:кыл GLAGOL-1-TV;  ! "услышать"
-кылӥськыны:кылӥськ GLAGOL-1-TV ; ! "слышаться"
+улыны:ул GLAGOL-1-TV ; ! "жить"
+кылыны:кыл GLAGOL-1-TV ; ! "услышать"
+кылӥськыны:кылӥськ GLAGOL-1-IV ! "слышаться"
 карыны:кар GLAGOL-1-TV ; ! "делать"
 быгатыны:быгат GLAGOL-1-TV ; ! "мочь"
-яратыны:ярат GLAGOL-1-TV;  ! "любить"
-юыны:ю GLAGOL-1-TV;  ! "пить"
-юаны:юа GLAGOL-2-TV;  ! "спросить"
+яратыны:ярат GLAGOL-1-TV ; ! "любить"
+юыны:ю GLAGOL-1-TV ; ! "пить"
+юаны:юа GLAGOL-2-TV ; ! "спросить"
 утчаны:утч GLAGOL-2-TV ; ! "искать"
 утчаськыны:утчаськ GLAGOL-1-TV ; ! "разыскивать"
 тыршыны:тырш GLAGOL-1-TV ; ! "стараться"
@@ -326,24 +376,25 @@ LEXICON Glagoly
 мыняны:мыня GLAGOL-2-TV ; ! "улыбаться"
 малпаны:малпа GLAGOL-2-TV ; ! "думать"
 лыктыны:лыкт GLAGOL-1-TV ; ! "приходить"
-лыдъяськыны:лыдъяськ GLAGOL-1-TV;  ! "считать"
+лыдъяськыны:лыдъяськ GLAGOL-1-TV ; ! "считать"
 луыны:лу GLAGOL-1-TV ; ! "быть"
 кылзӥськыны:кылзӥськ GLAGOL-1-TV ; ! "вслушиваться"
-бызьыны:бызь GLAGOL-1-TV ; !
-!кельшыны
-!изьыны
-!дугдыны
-!вуыны
-!вераськыны
-!вераны
-!ватскыны
-!вамышъяны
+кельшыны:кельш GLAGOL-1-TV ; ! "нравиться"
+изьыны:изь GLAGOL-1-TV ; ! "спать" 
+дугдыны:дугд GLAGOL-1-TV ; ! "остановиться"
+вуыны:ву GLAGOL-1-TV ; ! "прибыть"
+вераськыны:вераськ GLAGOL-1-TV ; ! "разговаривать"
+вераны:вер GLAGOL-2-TV ; ! "говорить"
+ватскыны:ватск GLAGOL-1-TV ; ! "спрятаться"
+вамышъяны:вамышъ GLAGOL-2-TV ; ! "шагать"
+бызьыны:бызь GLAGOL-1-TV ; ! "бегать"
 
 LEXICON Prilagatelnoe
 
 чебер A1 ; ! ""
 шуныт A1 ; ! ""
 кезьыт A1 ; ! ""
+пичи A1 ; ! ""
 
 LEXICON Nouns
 
@@ -371,7 +422,7 @@ LEXICON Nouns
 пӧйшур N1 ; ! ""
 йыр N1 ; ! ""
 ву N1 ; ! ""
-
+нылпи N1 ; ! ""
 
 
 LEXICON Punktuacija
@@ -385,4 +436,4 @@ LEXICON Punktuacija
 ,%<cm%>:, # ;
 %?%<sent%>:%? # ; 
 %'%<apos%>:%' # ;
-!%"%<sent%>:%" # ;
+%"%<sent%>:%" # ;

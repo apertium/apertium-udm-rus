@@ -4,8 +4,44 @@ SOFT-DELIMITERS = "<,>" ;
 SETS
 
 LIST N = n ; 
+LIST V = v ;
+LIST Det = det ;
+LIST Pron = prn ;
+LIST Num = num ;
+LIST A = adj ;
+LIST conneg = conneg ;
+list neg = neg ;
+
+LIST sg = sg ;
+LIST pl = pl ;
+	
+LIST p1 = p1 ;
+LIST p2 = p2 ;
+LIST p3 = p3 ;
+
+LIST Nom = nom ;
+LIST Ine = ine ; 
+LIST Ins = ins ; 
+
+LIST Odushevjonnyj = "нылпи" ; 
+
+SET N-MOD = Det | A | Num ;
 
 SECTION
 
 SELECT N ;
   ## 
+
+SELECT Det (0 Det OR Pron) (1 N-MOD OR N);
+    ## Пунылы кельше та кык пичи нылпиосын шудыны
+
+REMOVE Ine IF (0 Odushevjonnyj);
+    ## Пунылы кельше та кык пичи нылпиосын шудыны
+
+SELECT conneg IF (*-1 neg BARRIER V OR Nom OR (","));
+
+REMOVE conneg IF (NOT *-1 neg BARRIER Nom OR (","));
+
+REMOVE pl IF (0 V + p3 + sg )(-1 sg + Nom );
+REMOVE sg IF (0 V + p3 + pl )(-1 pl + Nom );
+

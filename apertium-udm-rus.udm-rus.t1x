@@ -12,9 +12,30 @@
       <cat-item tags="adv"/>
       <cat-item tags="adv.*"/>
     </def-cat>
+    <def-cat n="det">
+      <cat-item tags="det.*"/>
+    </def-cat>
+    <def-cat n="num">
+      <cat-item tags="num"/>
+      <cat-item tags="num.*"/>
+    </def-cat>
     <def-cat n="adj">
       <cat-item tags="adj"/>
       <cat-item tags="adj.*"/>
+    </def-cat>
+    <def-cat n="vrb_pres">
+      <cat-item tags="v.*.pres.*"/>
+    </def-cat>
+    <def-cat n="vrb_inf">
+      <cat-item tags="v.*.inf"/>
+      <cat-item tags="v.*.inf.*"/>
+    </def-cat>
+    <def-cat n="neg">
+      <cat-item tags="v.neg.*"/>
+    </def-cat>
+    <def-cat n="vrb_conneg">
+      <cat-item tags="v.*.conneg"/>
+      <cat-item tags="v.*.conneg.*"/>
     </def-cat>
     <def-cat n="sent">
       <cat-item tags="sent"/>
@@ -32,6 +53,24 @@
     <def-attr n="a_nom">
       <attr-item tags="n"/>
     </def-attr>
+    <def-attr n="a_verb">
+      <attr-item tags="v"/>
+      <attr-item tags="vblex"/>
+      <attr-item tags="vbmod"/>
+    </def-attr>
+    <def-attr n="a_num">
+      <attr-item tags="num"/>
+    </def-attr>
+    <def-attr n="a_aspect">
+      <attr-item tags="imperf"/>
+      <attr-item tags="perf"/>
+      <attr-item tags="dual"/>
+    </def-attr>
+    <def-attr n="a_trans">
+      <attr-item tags="iv"/>
+      <attr-item tags="tv"/>
+
+    </def-attr>
     <def-attr n="a_cas"> <!-- сад<n><sg><ine> -->
       <attr-item tags="nom"/>
       <attr-item tags="acc"/>
@@ -42,17 +81,38 @@
       <attr-item tags="ins"/>
       <attr-item tags="abl"/>
       <attr-item tags="prp"/>
+      <attr-item tags="CD"/>
     </def-attr>
     <def-attr n="a_nbr">
       <attr-item tags="sg"/>
       <attr-item tags="pl"/>
       <attr-item tags="ND"/>
+    </def-attr>
+    <def-attr n="a_pers">
+      <attr-item tags="p1"/>
+      <attr-item tags="p2"/>
+      <attr-item tags="p3"/>
+      <attr-item tags="PD"/>
+    </def-attr>
+    <def-attr n="a_asp">
+      <attr-item tags="perf"/>
+      <attr-item tags="imperf"/>
+      <attr-item tags="dual"/>
+      <attr-item tags="AD"/>
 
     </def-attr>
     <def-attr n="a_gen">
       <attr-item tags="m"/>
+      <attr-item tags="mfn"/>
+      <attr-item tags="nt"/>
       <attr-item tags="f"/>
       <attr-item tags="GD"/>
+    </def-attr>
+    <def-attr n="a_tns">
+      <attr-item tags="fut"/>
+      <attr-item tags="pres"/>
+      <attr-item tags="past"/>
+<!--      <attr-item tags="TD"/> -->
 
     </def-attr>
 
@@ -76,6 +136,88 @@
             </when> 
           </choose>
     </def-macro>
+    <def-macro n="concord4" npar="4">
+          <!-- First we set the number of the three modifiers as the same as the head noun (TODO: SG for numerals) -->
+          <let><clip pos="2" side="tl" part="a_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
+          <let><clip pos="3" side="tl" part="a_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
+          <let><clip pos="4" side="tl" part="a_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
+
+      
+          <choose> 
+            <when> <!-- When the number of the head noun is plural, set the gender of the modifiers to mfn -->
+               <test> 
+
+                    <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
+
+               </test>
+               <choose>
+                 <when>
+                   <test>
+                     <not><equal><clip pos="2" side="tl" part="a_num"/><lit-tag v="num"/></equal></not>
+                   </test>
+                   <let><clip pos="2" side="tl" part="a_gen"/><lit-tag v="mfn"/></let>
+                 </when>
+                 <otherwise>
+                   <let><clip pos="2" side="tl" part="a_gen"/><clip pos="1" side="tl" part="a_gen"/></let>
+                 </otherwise>
+               </choose>
+               <choose>
+                 <when>
+                   <test>
+                     <not><equal><clip pos="3" side="tl" part="a_num"/><lit-tag v="num"/></equal></not>
+                   </test>
+                   <let><clip pos="3" side="tl" part="a_gen"/><lit-tag v="mfn"/></let>
+                 </when>
+                 <otherwise>
+                   <let><clip pos="3" side="tl" part="a_gen"/><clip pos="1" side="tl" part="a_gen"/></let>
+                 </otherwise>
+               </choose>
+               <choose>
+                 <when>
+                   <test>
+                     <not><equal><clip pos="4" side="tl" part="a_num"/><lit-tag v="num"/></equal></not>
+                   </test>
+                   <let><clip pos="4" side="tl" part="a_gen"/><lit-tag v="mfn"/></let>
+                 </when>
+                 <otherwise>
+                   <let><clip pos="4" side="tl" part="a_gen"/><clip pos="1" side="tl" part="a_gen"/></let>
+                 </otherwise>
+               </choose>
+            </when>
+          </choose> 
+          <choose> 
+            <when> <!-- Numbers get singular  -->
+               <test> 
+                    <equal><clip pos="2" side="tl" part="a_num"/><lit-tag v="num"/></equal>
+               </test>
+               <let><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="sg"/></let>
+            </when>
+          </choose> 
+          <choose> 
+            <when> <!-- Numbers get singular  -->
+               <test> 
+                    <equal><clip pos="3" side="tl" part="a_num"/><lit-tag v="num"/></equal>
+               </test>
+               <let><clip pos="3" side="tl" part="a_nbr"/><lit-tag v="sg"/></let>
+            </when>
+          </choose> 
+          <choose> 
+            <when> <!-- Numbers get singular  -->
+               <test> 
+                    <equal><clip pos="4" side="tl" part="a_num"/><lit-tag v="num"/></equal>
+               </test>
+               <let><clip pos="4" side="tl" part="a_nbr"/><lit-tag v="sg"/></let>
+            </when>
+          </choose> 
+
+               <!--Set the case of the modifiers to the same as the head. -->
+   
+
+               <let><clip pos="2" side="tl" part="a_cas"/><clip pos="1" side="tl" part="a_cas"/></let>
+               <let><clip pos="3" side="tl" part="a_cas"/><clip pos="1" side="tl" part="a_cas"/></let>
+               <let><clip pos="4" side="tl" part="a_cas"/><clip pos="1" side="tl" part="a_cas"/></let>
+
+    </def-macro>
     <def-macro n="conv_case1" npar="1">
           <let><var n="current_sn_type"/><lit-tag v="SN"/></let>
           <choose> 
@@ -87,6 +229,58 @@
                <!-- сад<n><sg><ine>/сад<n><m><nn><sg><prp> -->
                <let><var n="current_sn_type"/><lit-tag v="SN.INE"/></let>
             </when> 
+            <when>
+               <test> <!-- сад<n><sg><ine>/сад<n><m><nn><sg><ine> -->
+                  <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ins"/></equal>
+               </test>
+               <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="ins"/></let>
+               <!-- сад<n><sg><ine>/сад<n><m><nn><sg><prp> -->
+               <let><var n="current_sn_type"/><lit-tag v="SN.INS"/></let>
+            </when> 
+
+          </choose>
+    </def-macro>
+    <def-macro n="add_ne_particle" npar="1">
+          <choose> 
+            <when>
+               <test> <!--  -->
+                  <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ine"/></equal>
+               </test>
+               <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="prp"/></let>
+               <!--  -->
+            </when> 
+          </choose>
+    </def-macro>
+    <def-macro n="conv_tense1" npar="1">
+          <choose> 
+            <when>
+               <test> <!-- ^сказать<vblex><perf><pres><p3><sg>$ -->
+                  <and>
+                    <equal><clip pos="1" side="sl" part="a_tns"/><lit-tag v="pres"/></equal>
+                    <equal><clip pos="1" side="tl" part="a_asp"/><lit-tag v="perf"/></equal>
+                  </and>
+               </test>
+               <let><clip pos="1" side="tl" part="a_tns"/><lit-tag v="fut"/></let>
+               <!-- скажу/сказать<vblex><perf><past><p3><sg> -->
+            </when> 
+          </choose>
+          <choose>
+            <when>
+              <test>
+                <equal><clip pos="1" side="sl" part="a_tns"/><lit-tag v="past"/></equal>
+              </test>
+              <let><clip pos="1" side="tl" part="a_pers"/><lit v=""/></let>
+              <choose>
+                <when>
+                  <test>
+                    <equal><clip pos="1" side="sl" part="a_nbr"/><lit-tag v="pl"/></equal>
+                  </test>
+                  <let><clip pos="1" side="tl" part="a_nbr"/><concat><lit-tag v="mfn"/><clip pos="1" side="sl" part="a_nbr"/></concat></let>
+                </when> 
+
+
+              </choose>
+            </when>
           </choose>
     </def-macro>
   </section-def-macros>
@@ -138,6 +332,51 @@
       </action>
     </rule>
 
+    <rule comment="REGLA: det num adj noun">
+      <pattern>
+        <pattern-item n="det"/>
+        <pattern-item n="num"/>
+        <pattern-item n="adj"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="conv_case1">
+          <with-param pos="4"/>
+        </call-macro>
+        <call-macro n="concord4">
+          <with-param pos="4"/>
+          <with-param pos="3"/>
+          <with-param pos="2"/>
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="d_z_a_n" case="caseFirstWord">
+            <tags>
+              <tag><var n="current_sn_type"/></tag>
+                <tag><clip pos="4" side="tl" part="a_gen"/></tag>
+                <tag><clip pos="4" side="tl" part="a_nbr"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b pos="2"/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+            <b pos="3"/>
+            <lu>
+              <clip pos="4" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
     <rule comment="REGLA: adj noun">
       <pattern>
         <pattern-item n="adj"/>
@@ -173,7 +412,138 @@
       </action>
     </rule>
 
+<!-- start -->
 
+    <rule comment="TODO ...">
+      <pattern>
+        <pattern-item n="vrb_pres"/>
+      </pattern>
+      <action>
+        <call-macro n="conv_tense1">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="v" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.FIN"/></tag>
+
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="vbinf">
+      <pattern>
+        <pattern-item n="vrb_inf"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="v" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.INF"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+
+<!-- end -->
+<!-- start -->
+
+    <rule comment="TODO ...">
+      <pattern>
+        <pattern-item n="vrb_pres"/>
+        <pattern-item n="vrb_pres"/>
+      </pattern>
+      <action>
+        <call-macro n="conv_tense1">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="v" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.FIN"/></tag>
+
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+<!-- start -->
+
+
+    <rule comment="conneg verb gets person/number from neg verb">
+      <pattern>
+        <pattern-item n="neg"/>
+      </pattern>
+      <action>
+
+        <out>
+          <chunk name="neg" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.NEG"/></tag>
+            </tags>
+            <lu>
+              <lit v="не"/>
+              <lit-tag v="adv"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="conneg verb gets person/number from neg verb">
+      <pattern>
+        <pattern-item n="neg"/>
+        <pattern-item n="vrb_conneg"/>
+      </pattern>
+      <action>
+        <call-macro n="conv_tense1">
+          <with-param pos="1"/>
+        </call-macro>
+
+        <out>
+          <chunk name="neg_v" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.FIN"/></tag>
+            </tags>
+            <lu>
+              <lit v="не"/>
+              <lit-tag v="adv"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="a_verb"/>
+              <clip pos="2" side="tl" part="a_aspect"/>
+              <clip pos="2" side="tl" part="a_trans"/>
+              <clip pos="1" side="tl" part="a_tns"/>
+              <clip pos="1" side="tl" part="a_pers"/>
+              <clip pos="1" side="tl" part="a_gen"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+
+<!-- end -->
     <rule comment="REGLA: ADJ">
       <pattern>
         <pattern-item n="adj"/>
