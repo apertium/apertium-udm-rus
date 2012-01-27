@@ -33,17 +33,30 @@ Multichar_Symbols
 %<p2%>
 %<p3%>
 
+%<px1sg%>
+%<px2sg%>
+%<px3sg%>
+%<px1pl%>
+%<px2pl%>
+%<px3pl%>
+
 %<f%>
 %<m%>
 
 %<nom%>
 %<gen%>
-%<dat%>
 %<acc%>
-%<abe%>
 %<abl%>
+%<dat%>
 %<ins%>
+%<abe%>
 %<advl%>
+%<ine%>
+%<ill%>
+%<elt%>
+%<egr%>
+%<trm%>
+%<pro%>
 %<approx%>
 
 %<sent%>
@@ -54,6 +67,8 @@ Multichar_Symbols
 %{E%}   ! э or е
 %>
 %{j%}   ! 
+%{s%}   ! 
+%{t%}   ! 
 %<conneg%>
 
 LEXICON Root
@@ -77,36 +92,185 @@ LEXICON K ! Clitics
 # ;
 
 
-LEXICON CASE
+LEXICON CASESG
+%<nom%>:%> K ; ! гурт
+%<nom%>%<px1sg%>:%>%{E%} K ; ! гуртэ
+%<nom%>%<px2sg%>:%>%{E%}д K ; ! гуртэд
+%<nom%>%<px3sg%>:%>%{E%}з K ; ! гуртэз
+%<nom%>%<px1pl%>:%>мы K ; ! гуртмы
+%<nom%>%<px2pl%>:%>ты K ; ! гуртты
+%<nom%>%<px3pl%>:%>сы K ; ! гуртсы
 
-%<nom%>: K ;
-%<dat%>:%>лы K ;
-%<gen%>:%>лэн K ;
-%<ine%>:%>ын K ;
-%<abl%>:%>лэсь K ;
+%<gen%>:%>лэн K ; ! гуртлэн
+%<gen%>%<px1sg%>:%>%{E%}лэн K ; ! гуртэлэн
+%<gen%>%<px2sg%>:%>%{E%}длэн K ; ! гуртэдлэн
+%<gen%>%<px3sg%>:%>%{E%}злэн K ; ! гуртэзлэн
+%<gen%>%<px1pl%>:%>мылэн K ; ! гуртмылэн
+%<gen%>%<px2pl%>:%>тылэн K ; ! гурттылэн
+%<gen%>%<px3pl%>:%>сылэн K ; ! гуртсылэн
 
-LEXICON CASE-MNZH
+%<acc%>:%>%{E%}з K ; ! гуртэз
+%<acc%>%<px1sg%>:%>ме K ; ! гуртме
+%<acc%>%<px2sg%>:%>%{t%}э K ; ! гурттэ
+%<acc%>%<px3sg%>:%>%{s%}э K ; ! гуртсэ
+%<acc%>%<px1pl%>:%>мес K ; ! гуртмес
+%<acc%>%<px2pl%>:%>%{t%}эс K ; ! гурттэс
+%<acc%>%<px3pl%>:%>%{s%}эс K ; ! гуртсэс
 
-%<ill%>:%>ы K ;
+%<abl%>:%>лэсь K ; ! гуртэз
+%<abl%>%<px1sg%>:%>%{E%}лэсь K ; ! гуртэлэсь
+%<abl%>%<px2sg%>:%>%{E%}длэсь K ; ! гуртэдлэсь
+%<abl%>%<px3sg%>:%>%{E%}злэсь K ; ! гуртэзлэсь
+%<abl%>%<px1pl%>:%>мы K ; ! гуртъёсмы
+%<abl%>%<px2pl%>:%>%{t%}ыэс K ; ! гуртъёсты
+%<abl%>%<px3pl%>:%>%{s%}эс K ; ! гуртъёссы
+
+LEXICON CASEPL
+%<nom%>:%> K ; ! гуртъёс
+%<nom%>%<px1sg%>:%>ы K ; ! гуртъёсы
+%<nom%>%<px2sg%>:%>ыд K ; ! гуртъёсыд
+%<nom%>%<px3sg%>:%>ыз K ; ! гуртъёсыд
+%<nom%>%<px1pl%>:%>мы K ; ! гуртъёсмы
+%<nom%>%<px2pl%>:%>ты K ; ! гуртъёсты
+%<nom%>%<px3pl%>:%>сы K ; ! гуртъёссы
+
+%<gen%>:%>лэн K ; ! гуртъёслэн
+%<gen%>%<px1sg%>:%>ылэн K ; ! гуртэлэн
+%<gen%>%<px2sg%>:%>ыдлэн K ; ! гуртэдлэн
+%<gen%>%<px3sg%>:%>ызлэн K ; ! гуртэзлэн
+%<gen%>%<px1pl%>:%>мылэн K ; ! гуртъёсмылэн
+%<gen%>%<px2pl%>:%>тылэн K ; ! гуртъёстылэн
+%<gen%>%<px3pl%>:%>сылэн K ; ! гуртъёссылэн
+
+%<acc%>:%>ты K ; ! гуртъёсты ! Dir/LR
+%<acc%>:%>ыз K ; ! гуртъёсыз
+%<acc%>%<px1sg%>:%>ме K ; ! гуртъёсме
+%<acc%>%<px2sg%>:%>тэ K ; ! гуртъёстэ
+%<acc%>%<px3sg%>:%>сэ K ; ! гуртъёссэ
+%<acc%>%<px1pl%>:%>мес K ; ! гуртъёсмес
+%<acc%>%<px2pl%>:%>тэс K ; ! гуртъёстэс
+%<acc%>%<px3pl%>:%>сэс K ; ! гуртъёссэс
+
+%<abl%>:%>ты K ; ! гуртъёсты ! Dir/LR
+%<abl%>%<px1sg%>:%>ме K ; ! гуртме
+%<abl%>%<px2sg%>:%>%{t%}э K ; ! гурттэ
+%<abl%>%<px3sg%>:%>%{s%}э K ; ! гуртсэ
+%<abl%>%<px1pl%>:%>мес K ; ! гуртъёсмес
+%<abl%>%<px2pl%>:%>тэс K ; ! гуртъётэс
+%<abl%>%<px3pl%>:%>сэс K ; ! гуртъёсэс
+
+LEXICON TEST0001
+%<ins%>:%> K ;
+%<ins%>%<px1sg%>:%> K ;
+%<ins%>%<px2sg%>:%> K ;
+%<ins%>%<px3sg%>:%> K ;
+%<ins%>%<px1pl%>:%> K ;
+%<ins%>%<px2pl%>:%> K ;
+%<ins%>%<px3pl%>:%> K ;
+
+%<ins%>:%>%{E%}н K ;
+%<ins%>%<px1sg%>:%> K ;
+%<ins%>%<px2sg%>:%> K ;
+%<ins%>%<px3sg%>:%> K ;
+%<ins%>%<px1pl%>:%> K ;
+%<ins%>%<px2pl%>:%> K ;
+%<ins%>%<px3pl%>:%> K ;
+
+
+LEXICON TEST0001
+
 %<ins%>:%>ын K ;
-%<acc%>:%>тыз K ; ! Dir/LR
-%<acc%>:%>ыз K ;
-%<pro%>:%>ытӥ K ; ! Dir/LR
+%<ins%>%<px1sg%>:%>%{E%}нetc K ;
+%<ins%>%<px2sg%>:%>%{E%}н K ;
+%<ins%>%<px3sg%>:%>%{E%}н K ;
+%<ins%>%<px1pl%>:%>%{E%}н K ;
+%<ins%>%<px2pl%>:%>%{E%}н K ;
+%<ins%>%<px3pl%>:%>%{E%}н K ;
+
+%<ins%>:%>%{E%}н K ;
+%<ins%>%<px1sg%>:%>%{E%}н K ;
+%<ins%>%<px2sg%>:%>%{E%}н K ;
+%<ins%>%<px3sg%>:%>%{E%}н K ;
+%<ins%>%<px1pl%>:%>%{E%}н K ;
+%<ins%>%<px2pl%>:%>%{E%}н K ;
+%<ins%>%<px3pl%>:%>%{E%}н K ;
+
+
+LEXICON CASECOMMON
+%<nom%>:%> K ; ! гурт
+%<nom%>%<px1sg%>:%>%{E%} K ; ! гуртэ
+%<nom%>%<px2sg%>:%>%{E%}д K ; ! гуртэд
+%<nom%>%<px3sg%>:%>%{E%}з K ; ! гуртэз
+%<nom%>%<px1pl%>:%>мы K ; ! гуртъёсмы
+%<nom%>%<px2pl%>:%>ты K ; ! гуртъёсты
+%<nom%>%<px3pl%>:%>сы K ; ! гуртъёссы
+
+%<gen%>:лэн K ; ! гуртлэн
+%<gen%>%<px1sg%>%{E%}лэн: K ; ! гуртэ
+%<gen%>%<px2sg%>%{E%}длэн: K ; ! гуртэд
+%<gen%>%<px3sg%>%{E%}злэн: K ; ! гуртэз
+%<gen%>%<px1pl%>мылэн: K ; ! гуртъёсмы
+%<gen%>%<px2pl%>тылэн: K ; ! гуртъёсты
+%<gen%>%<px3pl%>сылэн: K ; ! гуртъёссы
+
+%<abl%>:%>лэсь K ;
+%<dat%>:%>лы K ;
+
+%<abe%>:%>тэк K ;
+%<advl%>:%>%{j%}я K ;
+%<ine%>:%>ын K ;
+
+%<ela%>:%>ысь K ;
+%<egr%>:%>ысен K ;
+%<trm%>:%>озь K ;
+%<pro%>:%>этӥ K ; ! Dir/LR
 %<pro%>:%>тӥ K ;
+%<approx%>:%>лань K ;
+
 
 LEXICON CASE-ED
 
-%<ill%>:%>%{E%} K ;
-%<ins%>:%>%{E%}н K ;
 %<acc%>:%>%{E%}з K ;
-%<pro%>:%>%{E%}тӥ K ;
+
+%<ill%>:%>%{E%} K ;
+
+LEXICON CASE-MNZH
+
+%<acc%>:%>ты K ; ! Dir/LR
+%<acc%>:%>ыз K ;
+%<ins%>:%>ын K ;
+%<ill%>:%>ы K ;
+
+LEXICON TEST1-MNZH
+
+%<ine%>:%>ын K ;
+%<ill%>:%>ы K ;
+%<ela%>:%>ы K ;
+%<egr%>:%>ы K ;
+%<trm%>:%>ы K ;
+%<ins%>:%>ын K ;
+%<acc%>:%>ты K ; ! Dir/LR
+%<acc%>:%>ыз K ;
+%<pro%>:%>этӥ K ; ! Dir/LR
+%<pro%>:%>тӥ K ;
+
+LEXICON TEST1-ED
+
+%<ine%>:%>ын K ;
+%<ill%>:%>%{E%} K ;
+%<ela%>:%>ысь K ;
+%<egr%>:%>ысен K ;
+%<trm%>:%>озь K ;
+%<pro%>:%>этӥ K ; ! Dir/LR
+%<pro%>:%>тӥ K ;
+%<approx%>:%>лань K ;
 
 LEXICON NUMBER
 
-%<sg%>: CASE ;
-%<pl%>:%>%{j%}ос CASE ;
-%<sg%>: CASE-ED ;
-%<pl%>:%>%{j%}ос CASE-MNZH ;
+!%<sg%>: CASECOMMON ;
+!%<pl%>:%>%{j%}ос CASECOMMON ;
+%<sg%>: CASESG ;
+%<pl%>:%>%{j%}ос CASEPL ;
 
 LEXICON PRON-PERS-P1-SG
 
