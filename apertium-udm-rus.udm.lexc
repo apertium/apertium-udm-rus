@@ -180,7 +180,7 @@ LEXICON TEST0001
 LEXICON TEST0001
 
 %<ins%>:%>ын K ;
-%<ins%>%<px1sg%>:%>%{E%}нetc K ;
+%<ins%>%<px1sg%>:%>%{E%}н K ;
 %<ins%>%<px2sg%>:%>%{E%}н K ;
 %<ins%>%<px3sg%>:%>%{E%}н K ;
 %<ins%>%<px1pl%>:%>%{E%}н K ;
@@ -213,6 +213,8 @@ LEXICON CASECOMMON
 %<gen%>%<px2pl%>тылэн: K ; ! гуртъёсты
 %<gen%>%<px3pl%>сылэн: K ; ! гуртъёссы
 
+LEXICON CASE-COMMON
+
 %<abl%>:%>лэсь K ;
 %<dat%>:%>лы K ;
 
@@ -226,7 +228,7 @@ LEXICON CASECOMMON
 %<pro%>:%>этӥ K ; ! Dir/LR
 %<pro%>:%>тӥ K ;
 %<approx%>:%>лань K ;
-
+%<ins%>:%>ын K ;
 
 LEXICON CASE-ED
 
@@ -269,6 +271,8 @@ LEXICON NUMBER
 
 !%<sg%>: CASECOMMON ;
 !%<pl%>:%>%{j%}ос CASECOMMON ;
+%<sg%>: CASE-COMMON ;
+%<pl%>:%>%{j%}ос CASE-COMMON ;
 %<sg%>: CASESG ;
 %<pl%>:%>%{j%}ос CASEPL ;
 
@@ -279,6 +283,7 @@ LEXICON PRON-PERS-P1-SG
 LEXICON PRON-PERS-P2-SG
 
 %<prn%>%<pers%>%<p2%>%<sg%>%<nom%>: # ;
+%<prn%>%<pers%>%<p2%>%<sg%>%<acc%>:э # ;
 
 LEXICON PRON-PERS-P3-SG
 
@@ -395,6 +400,7 @@ GLAGOL-TV-BOTH ;
 LEXICON GLAGOL-VAN
 
 %<v%>%<pres%>%<p3%>%<sg%>:вань # ;
+%<v%>%<neg%>%<pres%>%<p3%>%<sg%>:ӧвӧл # ;
 %<v%>%<past%>%<p3%>%<sg%>:вал # ;
 
 LEXICON GLAGOL-UG  ! отрицательные формы
@@ -458,6 +464,11 @@ LEXICON N1
 
 %<n%>: NUMBER ; 
 
+LEXICON N1-KORKA
+
+%<n%>: NUMBER ; 
+%<n%>%<sg%>%<ine%>:%>н # ;
+
 LEXICON POST-DECL
 
 %<post%>: NUMBER ;
@@ -477,6 +488,7 @@ cяpыcь POST-INDECL ;
 ӵош POST-INDECL ; 
 
 дор POST-DECL ;
+кузя POST-INDECL ;
 
 LEXICON Sojuzy
  
@@ -507,6 +519,8 @@ LEXICON Determinant
 LEXICON Chisla
 
 кык NUM ;
+вить NUM ;
+куать NUM ;
 
 LEXICON Narechija
 
@@ -583,6 +597,7 @@ LEXICON Prilagatelnoe
 кезьыт A1 ; ! ""
 пичи A1 ; ! ""
 бадӟым A1 ; ! ""
+вуж A1 ; ! ""
 
 LEXICON Nouns
 
@@ -590,7 +605,7 @@ LEXICON Nouns
 сад N1 ; ! ""
 куазь N1 ; ! ""
 урам N1 ; ! ""
-корка N1 ; ! ""
+корка N1-KORKA ; ! ""
 пияш N1 ; ! ""
 нылаш N1 ; ! ""
 пинал N1 ; ! ""
@@ -612,6 +627,9 @@ LEXICON Nouns
 ву N1 ; ! ""
 нылпи N1 ; ! ""
 адями N1 ; ! ""
+йыр N1 ; ! ""
+ар N1 ; ! ""
+сузэр N1 ; ! ""
 
 
 LEXICON Punktuacija

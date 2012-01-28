@@ -182,6 +182,73 @@
 
     </def-macro>
 
+    <def-macro n="concord3" npar="3">
+          <!-- First we set the number of the three modifiers as the same as the head noun (TODO: SG for numerals) -->
+          <let><clip pos="2" side="tl" part="a_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
+          <let><clip pos="3" side="tl" part="a_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
+
+      
+          <choose> 
+            <when> <!-- When the number of the head noun is plural, set the gender of the modifiers to mfn -->
+               <test> 
+
+                    <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
+
+               </test>
+               <choose>
+                 <when>
+                   <test>
+                     <not><equal><clip pos="2" side="tl" part="a_num"/><lit-tag v="num"/></equal></not>
+                   </test>
+                   <let><clip pos="2" side="tl" part="a_gen"/><lit-tag v="mfn"/></let>
+                 </when>
+                 <otherwise>
+                   <let><clip pos="2" side="tl" part="a_gen"/><clip pos="1" side="tl" part="a_gen"/></let>
+                 </otherwise>
+               </choose>
+               <choose>
+                 <when>
+                   <test>
+                     <not><equal><clip pos="3" side="tl" part="a_num"/><lit-tag v="num"/></equal></not>
+                   </test>
+                   <let><clip pos="3" side="tl" part="a_gen"/><lit-tag v="mfn"/></let>
+                 </when>
+                 <otherwise>
+                   <let><clip pos="3" side="tl" part="a_gen"/><clip pos="1" side="tl" part="a_gen"/></let>
+                 </otherwise>
+               </choose>
+            </when>
+            <otherwise>
+                   <let><clip pos="2" side="tl" part="a_gen"/><clip pos="1" side="tl" part="a_gen"/></let>
+                   <let><clip pos="3" side="tl" part="a_gen"/><clip pos="1" side="tl" part="a_gen"/></let>
+
+            </otherwise>
+          </choose> 
+          <choose> 
+            <when> <!-- Numbers get singular  -->
+               <test> 
+                    <equal><clip pos="2" side="tl" part="a_num"/><lit-tag v="num"/></equal>
+               </test>
+               <let><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="sg"/></let>
+            </when>
+          </choose> 
+          <choose> 
+            <when> <!-- Numbers get singular  -->
+               <test> 
+                    <equal><clip pos="3" side="tl" part="a_num"/><lit-tag v="num"/></equal>
+               </test>
+               <let><clip pos="3" side="tl" part="a_nbr"/><lit-tag v="sg"/></let>
+            </when>
+          </choose> 
+
+               <!--Set the case of the modifiers to the same as the head. -->
+   
+
+               <let><clip pos="2" side="tl" part="a_cas"/><clip pos="1" side="tl" part="a_cas"/></let>
+               <let><clip pos="3" side="tl" part="a_cas"/><clip pos="1" side="tl" part="a_cas"/></let>
+
+    </def-macro>
+
     <def-macro n="concord4" npar="4">
           <!-- First we set the number of the three modifiers as the same as the head noun (TODO: SG for numerals) -->
           <let><clip pos="2" side="tl" part="a_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
@@ -429,6 +496,44 @@
             <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: adj adj noun">
+      <pattern>
+        <pattern-item n="adj"/>
+        <pattern-item n="adj"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="conv_case1">
+          <with-param pos="3"/>
+        </call-macro>
+        <call-macro n="concord3">
+          <with-param pos="3"/>
+          <with-param pos="2"/>
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="a_a_n" case="caseFirstWord">
+            <tags>
+              <tag><var n="current_sn_type"/></tag>
+                <tag><clip pos="3" side="tl" part="a_gen"/></tag>
+                <tag><clip pos="3" side="tl" part="a_nbr"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>

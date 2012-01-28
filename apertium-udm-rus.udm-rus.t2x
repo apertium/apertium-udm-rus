@@ -28,6 +28,7 @@
     <def-attr n="a_sn_type">
       <attr-item tags="SN.INS"/>
       <attr-item tags="SN.LOC"/>
+      <attr-item tags="SN.INE"/>
       <attr-item tags="SN.ABL"/>
     </def-attr>
     <def-attr n="a_nbr">
@@ -76,6 +77,23 @@
                 </concat>
                </let>
             </when> 
+            <when>
+               <test> 
+                  <equal><clip pos="1" part="a_sn_type"/><lit-tag v="SN.INE"/></equal>
+               </test>
+               <let><var n="PREP"/>
+                 <concat>
+                  <lit v="^prep"/>
+                  <lit-tag  v="pr"/>
+                  <lit v="{"/>
+                  <lit v="^в"/>
+                  <lit-tag  v="pr"/>
+                  <lit v="$}$ "/>
+                </concat>
+               </let>
+            </when> 
+
+
             <when>
                <test> 
                   <equal><clip pos="1" part="a_sn_type"/><lit-tag v="SN.INS"/></equal>
