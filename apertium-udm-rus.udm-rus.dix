@@ -118,6 +118,7 @@
     <e><p><l>ӝог<s n="adv"/></l><r>быстро<s n="adv"/></r></p></e>
     <e><p><l>ноку<s n="adv"/></l><r>никогда<s n="adv"/></r></p></e>
     <e><p><l>толон<s n="adv"/></l><r>вчера<s n="adv"/></r></p></e>
+    <e><p><l>озьы<s n="adv"/></l><r>так<s n="adv"/></r></p></e>
 
     <e><p><l>шудо<s n="adv"/></l><r>счастливый<s n="adj"/><s n="short"/></r></p><par n="gen_num"/></e>
     <e><p><l>шуныт<s n="adv"/></l><r>тёплый<s n="adj"/><s n="short"/></r></p><par n="gen_num"/></e>
@@ -134,6 +135,8 @@
     <e><p><l>пичи<s n="adj"/></l><r>маленький<s n="adj"/></r></p><par n="gen_num"/></e>
     <e><p><l>бадӟым<s n="adj"/></l><r>большой<s n="adj"/></r></p><par n="gen_num"/></e>
     <e><p><l>вуж<s n="adj"/></l><r>старый<s n="adj"/></r></p><par n="gen_num"/></e>
+    <e><p><l>умой<s n="adj"/></l><r>хороший<s n="adj"/></r></p><par n="gen_num"/></e>
+    <e><p><l>матэ<s n="adj"/></l><r>близкий<s n="adj"/></r></p><par n="gen_num"/></e>
 
 
     <e><p><l>сиыны<s n="v"/><s n="tv"/></l><r>есть<s n="vblex"/></r></p></e>
@@ -164,6 +167,7 @@
     <e><p><l>мыняны<s n="v"/><s n="tv"/></l><r>улыбаться<s n="vblex"/><s n="imperf"/></r></p></e>
     <e><p><l>малпаны<s n="v"/><s n="tv"/></l><r>думать<s n="vblex"/><s n="imperf"/></r></p></e>
     <e><p><l>лыктыны<s n="v"/><s n="tv"/></l><r>приходить<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>лыктыны<s n="v"/><s n="tv"/></l><r>подходить<s n="vblex"/><s n="imperf"/></r></p></e>
     <e><p><l>лыдъяськыны<s n="v"/><s n="tv"/></l><r>считать<s n="vblex"/><s n="imperf"/></r></p></e>
     <e><p><l>луыны<s n="v"/><s n="tv"/></l><r>быть<s n="vbser"/><s n="imperf"/></r></p></e>
     <e><p><l>кылзӥськыны<s n="v"/><s n="tv"/></l><r>вслушиваться<s n="vblex"/><s n="imperf"/></r></p></e>

@@ -7,6 +7,7 @@ Multichar_Symbols
 %<adj%> !
 
 %<prn%>
+%<comp%>
 %<det%>
 %<num%>
 %<qst%>
@@ -93,7 +94,7 @@ LEXICON K ! Clitics
 
 
 LEXICON CASESG
-%<nom%>:%> K ; ! гурт
+%<nom%>: K ; ! гурт
 %<nom%>%<px1sg%>:%>%{E%} K ; ! гуртэ
 %<nom%>%<px2sg%>:%>%{E%}д K ; ! гуртэд
 %<nom%>%<px3sg%>:%>%{E%}з K ; ! гуртэз
@@ -215,6 +216,8 @@ LEXICON CASECOMMON
 
 LEXICON CASE-COMMON
 
+%<nom%>:%> K ; ! гурт
+%<gen%>:лэн K ; ! гуртлэн
 %<abl%>:%>лэсь K ;
 %<dat%>:%>лы K ;
 
@@ -374,6 +377,7 @@ LEXICON NUM
 LEXICON GLAGOL-1-TV
 %<v%>%<tv%>%<inf%>:%>ыны # ;
 %<v%>%<tv%>%<conneg%>:%>%{E%} # ;
+%<v%>%<tv%>%<pprs%>%<adv%>:%>ыса # ;
 
 %<v%>%<tv%>%<past%>%<p1%>%<sg%>:%>ӥ # ; 
 %<v%>%<tv%>%<past%>%<p2%>%<sg%>:%>ӥд # ; 
@@ -459,6 +463,7 @@ LEXICON NP-ANT-M
 LEXICON A1
 
 %<adj%>: # ; 
+%<adj%>%<comp%>:%>гес # ; 
 
 LEXICON N1
 
@@ -538,6 +543,7 @@ LEXICON Narechija
 толон ADV ; ! ""
 
 ик ADV ; ! ""
+озьы ADV ; ! ""
 собере ADV ; ! "затем"
 ӝог ADV ; ! "быстро"
 
@@ -598,6 +604,8 @@ LEXICON Prilagatelnoe
 пичи A1 ; ! ""
 бадӟым A1 ; ! ""
 вуж A1 ; ! ""
+матэ A1 ; ! ""
+умой A1 ; ! ""
 
 LEXICON Nouns
 
