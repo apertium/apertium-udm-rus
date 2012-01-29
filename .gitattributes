@@ -5,6 +5,7 @@
 /Makefile.am -text
 /NEWS -text
 /README -text
+/TODO -text svneol=unset#application/octet-stream
 /apertium-udm-rus.rus-udm.lrx -text
 /apertium-udm-rus.rus-udm.rlx -text
 /apertium-udm-rus.rus-udm.t1x -text
@@ -24,7 +25,8 @@
 /autogen.sh -text
 /configure.ac -text
 /modes.xml -text
+/ohvat.sh -text
 /rus-udm.prob -text svneol=unset#unset
-text/fin.txt -text
+text/rus.txt -text svneol=unset#application/octet-stream
 text/udm.txt -text svneol=unset#application/octet-stream
 /udm-rus.prob -text svneol=unset#unset
