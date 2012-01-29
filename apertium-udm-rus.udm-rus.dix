@@ -8,6 +8,7 @@
     <sdef n="f"  c=""/>
     <sdef n="adv"  c=""/>
     <sdef n="imperf"  c=""/>
+    <sdef n="ind"  c=""/>
     <sdef n="vbser"  c=""/>
     <sdef n="post"  c=""/>
     <sdef n="pr"  c=""/>
@@ -74,6 +75,8 @@
     <e><p><l>ма<s n="prn"/><s n="itg"/></l><r>что<s n="prn"/><s n="itg"/></r></p></e>
     <e><p><l>кин<s n="prn"/><s n="itg"/></l><r>кто<s n="prn"/><s n="itg"/></r></p></e>
 
+    <e><p><l>номыр<s n="prn"/><s n="ind"/></l><r>ничто<s n="prn"/><s n="ind"/></r></p></e>
+
     <!-- Раздел: Имя Существительное -->
     <e><p><l>пуны<s n="n"/></l><r>собака<s n="n"/><s n="f"/><s n="aa"/></r></p></e>
     <e><p><l>сад<s n="n"/></l><r>сад<s n="n"/><s n="m"/><s n="nn"/></r></p></e>
@@ -119,6 +122,7 @@
     <e><p><l>ноку<s n="adv"/></l><r>никогда<s n="adv"/></r></p></e>
     <e><p><l>толон<s n="adv"/></l><r>вчера<s n="adv"/></r></p></e>
     <e><p><l>озьы<s n="adv"/></l><r>так<s n="adv"/></r></p></e>
+    <e><p><l>нокытын<s n="adv"/></l><r>негде<s n="adv"/></r></p></e>
 
     <e><p><l>шудо<s n="adv"/></l><r>счастливый<s n="adj"/><s n="short"/></r></p><par n="gen_num"/></e>
     <e><p><l>шуныт<s n="adv"/></l><r>тёплый<s n="adj"/><s n="short"/></r></p><par n="gen_num"/></e>

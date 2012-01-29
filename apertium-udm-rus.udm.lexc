@@ -361,6 +361,12 @@ LEXICON PRON-DEM-TA ! местоимение "та"
 %<prn%>%<dem%>%<sg%>%<nom%>: # ;
 %<prn%>%<dem%>%<pl%>%<nom%>: # ;
 
+LEXICON PRON-IND ! местоимение "та"
+
+
+%<prn%>%<ind%>%<sg%>: CASE-ED ;
+
+
 LEXICON DET-DEM-TA ! местоимение "та"
 
 ! та тае    талы   таин   талэсь 
@@ -399,6 +405,7 @@ LEXICON GLAGOL-TV-BOTH
 LEXICON GLAGOL-2-TV
 %<v%>%<tv%>%<inf%>:аны # ; 
 %<v%>%<tv%>%<conneg%>:%>ы # ;
+%<v%>%<tv%>%<pprs%>%<adv%>:%>ыса # ;
 GLAGOL-TV-BOTH ;
 
 LEXICON GLAGOL-VAN
@@ -494,6 +501,7 @@ cяpыcь POST-INDECL ;
 
 дор POST-DECL ;
 кузя POST-INDECL ;
+котыр POST-INDECL ;
 
 LEXICON Sojuzy
  
@@ -516,6 +524,7 @@ LEXICON Mestomenija
 соос PRON-PERS-P3-PL ; 
 
 та PRON-DEM-TA ; 
+номыр PRON-IND ; 
 
 LEXICON Determinant
 
@@ -544,6 +553,7 @@ LEXICON Narechija
 
 ик ADV ; ! ""
 озьы ADV ; ! ""
+нокытын ADV ; ! ""
 собере ADV ; ! "затем"
 ӝог ADV ; ! "быстро"
 
@@ -638,6 +648,7 @@ LEXICON Nouns
 йыр N1 ; ! ""
 ар N1 ; ! ""
 сузэр N1 ; ! ""
+котыр N1 ; ! ""
 
 
 LEXICON Punktuacija
