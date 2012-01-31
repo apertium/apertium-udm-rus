@@ -110,15 +110,15 @@ CXPXSG ;
 CXPXPL ;
 
 LEXICON PRECX
-%<nom:%>э CXPXSG ;
-%<nom:%> CXPXPL ; ! also for other cases?
-%<ins:%>ены CXPX ;
-%<ine:%>а CXPX ;
-%<ill:%>а CXPX ;
-%<ela:%>ысьти CXPX ;
-%<egr:%>ысьены CXPX ;
-%<tra:%>ети CXPX ;
-%<ter:%>озьа CXPX ;
+%<nom%>:%>э CXPXSG ;
+%<nom%>:%> CXPXPL ; ! also for other cases?
+%<ins%>:%>ены CXPX ;
+%<ine%>:%>а CXPX ;
+%<ill%>:%>а CXPX ;
+%<ela%>:%>ысьти CXPX ;
+%<egr%>:%>ысьены CXPX ;
+%<tra%>:%>ети CXPX ;
+%<ter%>:%>озьа CXPX ;
 
 
 LEXICON PREPX
@@ -290,9 +290,9 @@ LEXICON PRON-DEM-TA ! местоимение "та"
 %<prn%>%<dem%>%<sg%>%<nom%>: # ;
 %<prn%>%<dem%>%<pl%>%<nom%>: # ;
 
-! LEXICON PRON-IND ! местоимение "та"
-! 
-! %<prn%>%<ind%>%<sg%>: CASE ;
+LEXICON PRON-IND ! местоимение "та"
+
+%<prn%>%<ind%>%<sg%>: CASE ;
 
 
 LEXICON DET-DEM-TA ! местоимение "та"
@@ -512,7 +512,7 @@ LEXICON Glagoly
 учкыны:учк GLAGOL-1-TV ; ! "смотреть"
 улыны:ул GLAGOL-1-TV ; ! "жить"
 кылыны:кыл GLAGOL-1-TV ; ! "услышать"
-кылӥськыны:кылӥськ GLAGOL-1-IV ! "слышаться"
+кылӥськыны:кылӥськ GLAGOL-1-IV ;! "слышаться"
 карыны:кар GLAGOL-1-TV ; ! "делать"
 быгатыны:быгат GLAGOL-1-TV ; ! "мочь"
 яратыны:ярат GLAGOL-1-TV ; ! "любить"
