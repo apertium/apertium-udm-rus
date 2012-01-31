@@ -121,16 +121,6 @@ LEXICON PRECX
 %<ter:%>озьа CXPX ;
 
 
-LEXICON POSTCX
-%<acc%>:%>э K;
-%<gen%>:%>ляqэн K;
-%<abl%>:%>лэсь K;
-%<dat%>:%>лы K;
-%<abe%>:%>тэк K;
-%<adc%>:%>ъя K;
-%<apr%>:%>лань K;
-%<prl%>:%>озь K;
-
 LEXICON PREPX
 %<px1sg%>%<acc%>:%>э K;
 %<px1sg%>%<gen%>:%>ляqэн K;
