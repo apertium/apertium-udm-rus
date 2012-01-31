@@ -126,6 +126,9 @@ LEXICON CASESG
 %<abl%>%<px2pl%>:%>%{t%}ыэс K ; ! гуртъёсты
 %<abl%>%<px3pl%>:%>%{s%}эс K ; ! гуртъёссы
 
+%<ill%>:%>%{E%} K ;
+
+
 LEXICON CASEPL
 %<nom%>:%> K ; ! гуртъёс
 %<nom%>%<px1sg%>:%>ы K ; ! гуртъёсы
@@ -160,44 +163,33 @@ LEXICON CASEPL
 %<abl%>%<px2pl%>:%>тэс K ; ! гуртъётэс
 %<abl%>%<px3pl%>:%>сэс K ; ! гуртъёсэс
 
-LEXICON TEST0001
-%<ins%>:%> K ;
-%<ins%>%<px1sg%>:%> K ;
-%<ins%>%<px2sg%>:%> K ;
-%<ins%>%<px3sg%>:%> K ;
-%<ins%>%<px1pl%>:%> K ;
-%<ins%>%<px2pl%>:%> K ;
-%<ins%>%<px3pl%>:%> K ;
-
-%<ins%>:%>%{E%}н K ;
-%<ins%>%<px1sg%>:%> K ;
-%<ins%>%<px2sg%>:%> K ;
-%<ins%>%<px3sg%>:%> K ;
-%<ins%>%<px1pl%>:%> K ;
-%<ins%>%<px2pl%>:%> K ;
-%<ins%>%<px3pl%>:%> K ;
-
-
-LEXICON TEST0001
-
 %<ins%>:%>ын K ;
-%<ins%>%<px1sg%>:%>%{E%}н K ;
-%<ins%>%<px2sg%>:%>%{E%}н K ;
-%<ins%>%<px3sg%>:%>%{E%}н K ;
-%<ins%>%<px1pl%>:%>%{E%}н K ;
-%<ins%>%<px2pl%>:%>%{E%}н K ;
-%<ins%>%<px3pl%>:%>%{E%}н K ;
-
-%<ins%>:%>%{E%}н K ;
-%<ins%>%<px1sg%>:%>%{E%}н K ;
-%<ins%>%<px2sg%>:%>%{E%}н K ;
-%<ins%>%<px3sg%>:%>%{E%}н K ;
-%<ins%>%<px1pl%>:%>%{E%}н K ;
-%<ins%>%<px2pl%>:%>%{E%}н K ;
-%<ins%>%<px3pl%>:%>%{E%}н K ;
+%<ill%>:%>ы K ;
 
 
-LEXICON CASECOMMON
+
+
+
+! LEXICON TEST0001
+! 
+! %<ins%>:%>ын K ;
+! %<ins%>%<px1sg%>:%>%{E%}н K ;
+! %<ins%>%<px2sg%>:%>%{E%}н K ;
+! %<ins%>%<px3sg%>:%>%{E%}н K ;
+! %<ins%>%<px1pl%>:%>%{E%}н K ;
+! %<ins%>%<px2pl%>:%>%{E%}н K ;
+! %<ins%>%<px3pl%>:%>%{E%}н K ;
+! 
+! %<ins%>:%>%{E%}н K ;
+! %<ins%>%<px1sg%>:%>%{E%}н K ;
+! %<ins%>%<px2sg%>:%>%{E%}н K ;
+! %<ins%>%<px3sg%>:%>%{E%}н K ;
+! %<ins%>%<px1pl%>:%>%{E%}н K ;
+! %<ins%>%<px2pl%>:%>%{E%}н K ;
+! %<ins%>%<px3pl%>:%>%{E%}н K ;
+
+
+LEXICON CASE-COMMON
 %<nom%>:%> K ; ! гурт
 %<nom%>%<px1sg%>:%>%{E%} K ; ! гуртэ
 %<nom%>%<px2sg%>:%>%{E%}д K ; ! гуртэд
@@ -214,10 +206,6 @@ LEXICON CASECOMMON
 %<gen%>%<px2pl%>тылэн: K ; ! гуртъёсты
 %<gen%>%<px3pl%>сылэн: K ; ! гуртъёссы
 
-LEXICON CASE-COMMON
-
-%<nom%>:%> K ; ! гурт
-%<gen%>:лэн K ; ! гуртлэн
 %<abl%>:%>лэсь K ;
 %<dat%>:%>лы K ;
 
@@ -233,49 +221,13 @@ LEXICON CASE-COMMON
 %<approx%>:%>лань K ;
 %<ins%>:%>ын K ;
 
-LEXICON CASE-ED
 
-%<acc%>:%>%{E%}з K ;
-
-%<ill%>:%>%{E%} K ;
-
-LEXICON CASE-MNZH
-
-%<acc%>:%>ты K ; ! Dir/LR
-%<acc%>:%>ыз K ;
-%<ins%>:%>ын K ;
-%<ill%>:%>ы K ;
-
-LEXICON TEST1-MNZH
-
-%<ine%>:%>ын K ;
-%<ill%>:%>ы K ;
-%<ela%>:%>ы K ;
-%<egr%>:%>ы K ;
-%<trm%>:%>ы K ;
-%<ins%>:%>ын K ;
-%<acc%>:%>ты K ; ! Dir/LR
-%<acc%>:%>ыз K ;
-%<pro%>:%>этӥ K ; ! Dir/LR
-%<pro%>:%>тӥ K ;
-
-LEXICON TEST1-ED
-
-%<ine%>:%>ын K ;
-%<ill%>:%>%{E%} K ;
-%<ela%>:%>ысь K ;
-%<egr%>:%>ысен K ;
-%<trm%>:%>озь K ;
-%<pro%>:%>этӥ K ; ! Dir/LR
-%<pro%>:%>тӥ K ;
-%<approx%>:%>лань K ;
 
 LEXICON NUMBER
 
-!%<sg%>: CASECOMMON ;
-!%<pl%>:%>%{j%}ос CASECOMMON ;
 %<sg%>: CASE-COMMON ;
 %<pl%>:%>%{j%}ос CASE-COMMON ;
+
 %<sg%>: CASESG ;
 %<pl%>:%>%{j%}ос CASEPL ;
 
@@ -364,7 +316,7 @@ LEXICON PRON-DEM-TA ! местоимение "та"
 LEXICON PRON-IND ! местоимение "та"
 
 
-%<prn%>%<ind%>%<sg%>: CASE-ED ;
+%<prn%>%<ind%>%<sg%>: CASESG ;
 
 
 LEXICON DET-DEM-TA ! местоимение "та"
