@@ -132,12 +132,60 @@ LEXICON POSTCX
 %<prl%>:%>озь K;
 
 LEXICON PREPX
-%<px1sg%>: POSTCX;
-%<px2sg%>:%>д POSTCX;
-%<px3sg%>:%>з POSTCX;
-%<px1pl%>:%>мы POSTCX;
-%<px2pl%>:%>ды POSTCX;
-%<px3pl%>:%>зы POSTCX;
+%<px1sg%>%<acc%>:%>э K;
+%<px1sg%>%<gen%>:%>ляqэн K;
+%<px1sg%>%<abl%>:%>лэсь K;
+%<px1sg%>%<dat%>:%>лы K;
+%<px1sg%>%<abe%>:%>тэк K;
+%<px1sg%>%<adc%>:%>ъя K;
+%<px1sg%>%<apr%>:%>лань K;
+%<px1sg%>%<prl%>:%>озь K;
+
+%<px2sg%>%<acc%>:%>дэ K;
+%<px2sg%>%<gen%>:%>дляqэн K;
+%<px2sg%>%<abl%>:%>длэсь K;
+%<px2sg%>%<dat%>:%>длы K;
+%<px2sg%>%<abe%>:%>дтэк K;
+%<px2sg%>%<adc%>:%>дъя K;
+%<px2sg%>%<apr%>:%>длань K;
+%<px2sg%>%<prl%>:%>дозь K;
+
+%<px3sg%>%<acc%>:%>зэ K;
+%<px3sg%>%<gen%>:%>зляqэн K;
+%<px3sg%>%<abl%>:%>злэсь K;
+%<px3sg%>%<dat%>:%>злы K;
+%<px3sg%>%<abe%>:%>зтэк K;
+%<px3sg%>%<adc%>:%>зъя K;
+%<px3sg%>%<apr%>:%>злань K;
+%<px3sg%>%<prl%>:%>зозь K;
+
+%<px1pl%>%<acc%>:%>мыэ K;
+%<px1pl%>%<gen%>:%>мыляqэн K;
+%<px1pl%>%<abl%>:%>мылэсь K;
+%<px1pl%>%<dat%>:%>мылы K;
+%<px1pl%>%<abe%>:%>мытэк K;
+%<px1pl%>%<adc%>:%>мыъя K;
+%<px1pl%>%<apr%>:%>мылань K;
+%<px1pl%>%<prl%>:%>мыозь K;
+
+%<px2pl%>%<acc%>:%>дыэ K;
+%<px2pl%>%<gen%>:%>дыляqэн K;
+%<px2pl%>%<abl%>:%>дылэсь K;
+%<px2pl%>%<dat%>:%>дылы K;
+%<px2pl%>%<abe%>:%>дытэк K;
+%<px2pl%>%<adc%>:%>дыъя K;
+%<px2pl%>%<apr%>:%>дылань K;
+%<px2pl%>%<prl%>:%>дыозь K;
+
+%<px3pl%>%<acc%>:%>зыэ K;
+%<px3pl%>%<gen%>:%>зыляqэн K;
+%<px3pl%>%<abl%>:%>зылэсь K;
+%<px3pl%>%<dat%>:%>зылы K;
+%<px3pl%>%<abe%>:%>зытэк K;
+%<px3pl%>%<adc%>:%>зыъя K;
+%<px3pl%>%<apr%>:%>зылань K;
+%<px3pl%>%<prl%>:%>зыозь K;
+
 
 
 
