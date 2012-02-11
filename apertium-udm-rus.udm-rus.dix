@@ -29,6 +29,7 @@
     <sdef n="mf"  c=""/>
     <sdef n="nt"  c=""/>
     <sdef n="ant"  c=""/>
+    <sdef n="top"  c=""/>
     <sdef n="neg"  c=""/>
     <sdef n="nn"  c=""/>
     <sdef n="aa"  c=""/>
@@ -117,6 +118,7 @@
     <e><p><l>система<s n="n"/></l><r>система<s n="n"/><s n="f"/><s n="nn"/></r></p></e>
     <e><p><l>анай<s n="n"/></l><r>мама<s n="n"/><s n="f"/><s n="nn"/></r></p></e> <!-- check 'nn' ? -->
 
+    <e><p><l>Россия<s n="np"/><s n="top"/></l><r>Россия<s n="np"/><s n="top"/><s n="f"/></r></p></e>
     <e><p><l>Маша<s n="np"/><s n="ant"/><s n="f"/></l><r>Маша<s n="np"/><s n="ant"/><s n="f"/></r></p></e>
     <e><p><l>Ваня<s n="np"/><s n="ant"/><s n="m"/></l><r>Ваня<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
 

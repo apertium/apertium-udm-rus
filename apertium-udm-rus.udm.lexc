@@ -401,6 +401,9 @@ LEXICON NP-ANT-M
 
 %<np%>%<ant%>%<m%>: NUMBER ;
 
+LEXICON NP-TOP-Я
+
+%<np%>%<top%>: NUMBER ;
 
 LEXICON A1
 
@@ -496,6 +499,13 @@ LEXICON Narechija
 ог ADV ; ! "около"
 
 LEXICON Soobstvennoe
+
+Россия:Росси NP-TOP-Я ; 
+Удмуртия:Удмурти NP-TOP-Я ; 
+Турция:Турци NP-TOP-Я ; 
+Чувашия:Чуваши NP-TOP-Я ; 
+Сирия:Сири NP-TOP-Я ; 
+Башкирия:Башкири NP-TOP-Я ; 
 
 Маша NP-ANT-F ;
 Ваня NP-ANT-M ;
