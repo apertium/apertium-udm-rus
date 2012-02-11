@@ -65,6 +65,7 @@
 
     <e><p><l>ӵош<s n="post"/></l><r>вместе<s n="adv"/></r></p></e>
     <e><p><l>кузя<s n="post"/></l><r>по<s n="pr"/></r></p></e>
+    <e><p><l>ог<s n="adv"/></l><r>около<s n="pr"/></r></p></e>
 
     <e><p><l>мон<s n="prn"/><s n="pers"/><s n="p1"/><s n="sg"/></l><r>prpers<s n="prn"/><s n="pers"/><s n="p1"/><s n="mf"/><s n="sg"/></r></p></e>
     <e><p><l>тон<s n="prn"/><s n="pers"/><s n="p2"/><s n="sg"/></l><r>prpers<s n="prn"/><s n="pers"/><s n="p2"/><s n="mf"/><s n="sg"/></r></p></e>
@@ -140,6 +141,7 @@
     <e><p><l>кык<s n="num"/></l><r>два<s n="num"/></r></p><par n="gen_num"/></e>
     <e><p><l>вить<s n="num"/></l><r>пять<s n="num"/></r></p><par n="gen_num"/></e>
     <e><p><l>куать<s n="num"/></l><r>шесть<s n="num"/></r></p><par n="gen_num"/></e>
+    <e><p><l>сюрс<s n="num"/></l><r>тысяча<s n="num"/><s n="f"/><s n="nn"/></r></p></e>
 
     <e><p><l>та<s n="det"/><s n="dem"/></l><r>этот<s n="det"/><s n="dem"/></r></p><par n="gen_num"/></e>
 

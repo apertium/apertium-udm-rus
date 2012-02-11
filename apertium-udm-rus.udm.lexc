@@ -318,6 +318,7 @@ LEXICON GLAGOL-1
 %<inf%>:%>ыны # ;
 %<conneg%>:%>%{E%} # ;
 %<pprs%>%<adv%>:%>ыса # ;
+%<pprs%>%<actv%>:%>ӥсь # ; ! деепричастие
 
 %<past%>%<p1%>%<sg%>:%>ӥ # ; 
 %<past%>%<p2%>%<sg%>:%>ӥд # ; 
@@ -469,6 +470,7 @@ LEXICON Chisla
 кык NUM ;
 вить NUM ;
 куать NUM ;
+сюрс NUM ;
 
 LEXICON Narechija
 
@@ -490,6 +492,8 @@ LEXICON Narechija
 нокытын ADV ; ! ""
 собере ADV ; ! "затем"
 ӝог ADV ; ! "быстро"
+
+ог ADV ; ! "около"
 
 LEXICON Soobstvennoe
 
