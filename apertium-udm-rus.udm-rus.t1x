@@ -166,18 +166,34 @@
                 </concat>
               </let>
             </when>
-                
-                   
+          </choose>
+
+          <choose>
+            <when>
+              <test><equal><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="ND"/></equal></test>
+              <let><clip pos="2" side="tl" part="a_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
+            </when>
+          </choose>
+          <choose>
+            <when>
+              <test><equal><clip pos="2" side="tl" part="a_gen"/><lit-tag v="GD"/></equal></test>
+              <let><clip pos="2" side="tl" part="a_gen"/><clip pos="1" side="tl" part="a_gen"/></let>
+            </when>
           </choose>
           <!-- First we set the number of the three modifiers as the same as the head noun (TODO: SG for numerals) -->
+<!--
           <let><clip pos="2" side="tl" part="a_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
           <let><clip pos="2" side="tl" part="a_gen"/><clip pos="1" side="tl" part="a_gen"/></let>
+-->
 
       
           <choose> 
             <when> <!-- When the number of the head noun is plural, set the gender of the modifiers to mfn -->
                <test> 
+                 <or>
+                    <equal><clip pos="1" side="tl" part="a_gen"/><lit-tag v="mfn"/></equal> <!-- from bidix -->
                     <equal><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="pl"/></equal>
+                 </or>
                </test>
                <choose>
                  <when>
@@ -238,9 +254,38 @@
               </let>
             </when>
            </choose>                
+
+          <choose>
+            <when>
+              <test><equal><clip pos="3" side="tl" part="a_nbr"/><lit-tag v="ND"/></equal></test>
+              <let><clip pos="3" side="tl" part="a_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
+            </when>
+          </choose>
+          <choose>
+            <when>
+              <test><equal><clip pos="3" side="tl" part="a_gen"/><lit-tag v="GD"/></equal></test>
+              <let><clip pos="3" side="tl" part="a_gen"/><clip pos="1" side="tl" part="a_gen"/></let>
+            </when>
+          </choose>
+
+          <choose>
+            <when>
+              <test><equal><clip pos="2" side="tl" part="a_nbr"/><lit-tag v="ND"/></equal></test>
+              <let><clip pos="2" side="tl" part="a_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
+            </when>
+          </choose>
+          <choose>
+            <when>
+              <test><equal><clip pos="2" side="tl" part="a_gen"/><lit-tag v="GD"/></equal></test>
+              <let><clip pos="2" side="tl" part="a_gen"/><clip pos="1" side="tl" part="a_gen"/></let>
+            </when>
+          </choose>
+
           <!-- First we set the number of the three modifiers as the same as the head noun (TODO: SG for numerals) -->
+<!--
           <let><clip pos="2" side="tl" part="a_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
           <let><clip pos="3" side="tl" part="a_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
+-->
 
       
           <choose> 
@@ -261,6 +306,7 @@
                    <let><clip pos="2" side="tl" part="a_gen"/><clip pos="1" side="tl" part="a_gen"/></let>
                  </otherwise>
                </choose>
+
                <choose>
                  <when>
                    <test>
@@ -273,10 +319,20 @@
                  </otherwise>
                </choose>
             </when>
-            <otherwise>
-                   <let><clip pos="2" side="tl" part="a_gen"/><clip pos="1" side="tl" part="a_gen"/></let>
-                   <let><clip pos="3" side="tl" part="a_gen"/><clip pos="1" side="tl" part="a_gen"/></let>
 
+            <otherwise>
+          <choose>
+            <when>
+              <test><equal><clip pos="2" side="tl" part="a_gen"/><lit-tag v="GD"/></equal></test>
+              <let><clip pos="2" side="tl" part="a_gen"/><clip pos="1" side="tl" part="a_gen"/></let>
+            </when>
+          </choose>
+          <choose>
+            <when>
+              <test><equal><clip pos="3" side="tl" part="a_gen"/><lit-tag v="GD"/></equal></test>
+              <let><clip pos="3" side="tl" part="a_gen"/><clip pos="1" side="tl" part="a_gen"/></let>
+            </when>
+          </choose>
             </otherwise>
           </choose> 
           <choose> 
@@ -462,7 +518,7 @@
                <test> <!-- ^сказать<vblex><perf><pres><p3><sg>$ -->
                   <and>
                     <equal><clip pos="1" side="sl" part="a_tns"/><lit-tag v="pres"/></equal>
-                    <equal><clip pos="1" side="tl" part="a_asp"/><lit-tag v="perf"/></equal>
+                    <equal><clip pos="1" side="tl" part="a_aspect"/><lit-tag v="perf"/></equal>
                   </and>
                </test>
                <let><clip pos="1" side="tl" part="a_tns"/><lit-tag v="fut"/></let>
@@ -634,6 +690,110 @@
       </action>
     </rule>
 
+    <rule comment="REGLA: num noun">
+      <pattern>
+        <pattern-item n="num"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="conv_case1">
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="concord2">
+          <with-param pos="2"/>
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="z_n" case="caseFirstWord">
+            <tags>
+              <tag><var n="current_sn_type"/></tag>
+                <tag><clip pos="2" side="tl" part="a_gen"/></tag>
+                <tag><clip pos="2" side="tl" part="a_nbr"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: num num noun">
+      <pattern>
+        <pattern-item n="num"/>
+        <pattern-item n="num"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="conv_case1">
+          <with-param pos="3"/>
+        </call-macro>
+        <call-macro n="concord3">
+          <with-param pos="3"/>
+          <with-param pos="2"/>
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="z_z_n" case="caseFirstWord">
+            <tags>
+              <tag><var n="current_sn_type"/></tag>
+                <tag><clip pos="3" side="tl" part="a_gen"/></tag>
+                <tag><clip pos="3" side="tl" part="a_nbr"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b pos="2"/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+
+    <rule comment="REGLA: det noun">
+      <pattern>
+        <pattern-item n="det"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="conv_case1">
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="concord2">
+          <with-param pos="2"/>
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="d_n" case="caseFirstWord">
+            <tags>
+              <tag><var n="current_sn_type"/></tag>
+                <tag><clip pos="2" side="tl" part="a_gen"/></tag>
+                <tag><clip pos="2" side="tl" part="a_nbr"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
     <rule comment="REGLA: det num adj noun">
       <pattern>
         <pattern-item n="det"/>
@@ -748,31 +908,6 @@
 
 <!-- end -->
 <!-- start -->
-
-    <rule comment="TODO ...">
-      <pattern>
-        <pattern-item n="vrb_pres"/>
-        <pattern-item n="vrb_pres"/>
-      </pattern>
-      <action>
-        <call-macro n="conv_tense1">
-          <with-param pos="1"/>
-        </call-macro>
-        <out>
-          <chunk name="v" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="SV.FIN"/></tag>
-
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-
 <!-- start -->
 
 

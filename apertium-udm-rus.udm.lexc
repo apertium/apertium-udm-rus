@@ -318,9 +318,10 @@ LEXICON GLAGOL-1-TV
 
 LEXICON GLAGOL-1
 %<inf%>:%>ыны # ;
-%<conneg%>:%>%{E%} # ;
 %<pprs%>%<adv%>:%>ыса # ;
 %<pprs%>%<actv%>:%>%{I%}сь # ; ! деепричастие
+
+%<conneg%>:%>%{E%} # ;
 
 %<past%>%<p1%>%<sg%>:%>%{I%} # ; 
 %<past%>%<p2%>%<sg%>:%>%{I%}д # ; 
@@ -338,6 +339,13 @@ LEXICON GLAGOL-TV-BOTH
 %<pres%>%<p1%>%<pl%>:%>%{I%}cькомы # ; 
 %<pres%>%<p2%>%<pl%>:%>%{I%}cькоды # ; 
 %<pres%>%<p3%>%<pl%>:%>о # ; 
+
+%<conneg%>%<pres%>%<p1%>%<sg%>:%>%{I%}cькы # ; 
+%<conneg%>%<pres%>%<p2%>%<sg%>:%>%{I%}cькы # ; 
+%<conneg%>%<pres%>%<p3%>%<sg%>:%>%{E%} # ; 
+%<conneg%>%<pres%>%<p1%>%<pl%>:%>%{I%}cькe # ; 
+%<conneg%>%<pres%>%<p2%>%<pl%>:%>%{I%}cькe # ; 
+%<conneg%>%<pres%>%<p3%>%<pl%>:%>о # ; 
 
 LEXICON GLAGOL-2-TV
 %<v%>%<tv%>%<inf%>:аны # ; 
@@ -367,12 +375,12 @@ LEXICON GLAGOL-UG  ! отрицательные формы
 %<v%>%<neg%>%<past%>%<p2%>%<pl%>:ӧд # ; 
 %<v%>%<neg%>%<past%>%<p3%>%<pl%>:ӧз # ; 
 
-%<v%>%<neg%>%<fut%>%<p1%>%<sg%>:уг # ; 
-%<v%>%<neg%>%<fut%>%<p2%>%<sg%>:уд # ; 
-%<v%>%<neg%>%<fut%>%<p3%>%<sg%>:уз # ; 
-%<v%>%<neg%>%<fut%>%<p1%>%<pl%>:ум # ; 
-%<v%>%<neg%>%<fut%>%<p2%>%<pl%>:уд # ; 
-%<v%>%<neg%>%<fut%>%<p3%>%<pl%>:уз # ; 
+!%<v%>%<neg%>%<fut%>%<p1%>%<sg%>:уг # ; 
+!%<v%>%<neg%>%<fut%>%<p2%>%<sg%>:уд # ; 
+!%<v%>%<neg%>%<fut%>%<p3%>%<sg%>:уз # ; 
+!%<v%>%<neg%>%<fut%>%<p1%>%<pl%>:ум # ; 
+!%<v%>%<neg%>%<fut%>%<p2%>%<pl%>:уд # ; 
+!%<v%>%<neg%>%<fut%>%<p3%>%<pl%>:уз # ; 
 
 LEXICON CC 
 
@@ -481,6 +489,8 @@ LEXICON Chisla
 вить NUM ;
 куать NUM ;
 сюрс NUM ;
+дас NUM ;
+витьтон NUM ;
 
 LEXICON Narechija
 
