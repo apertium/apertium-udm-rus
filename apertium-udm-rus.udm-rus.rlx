@@ -12,8 +12,8 @@ LIST A = adj ;
 LIST conneg = conneg ;
 list neg = neg ;
 
-LIST sg = sg ;
-LIST pl = pl ;
+LIST Sg = sg ;
+LIST Pl = pl ;
 	
 LIST p1 = p1 ;
 LIST p2 = p2 ;
@@ -29,9 +29,6 @@ SET N-MOD = Det | A | Num ;
 
 SECTION
 
-SELECT N ;
-  ## 
-
 SELECT Det (0 Det OR Pron) (1 N-MOD OR N);
     ## Пунылы кельше та кык пичи нылпиосын шудыны
 
@@ -42,6 +39,8 @@ SELECT conneg IF (*-1 neg BARRIER V OR Nom OR (","));
 
 REMOVE conneg IF (NOT *-1 neg BARRIER Nom OR (","));
 
-REMOVE pl IF (0 V + p3 + sg )(-1 sg + Nom );
-REMOVE sg IF (0 V + p3 + pl )(-1 pl + Nom );
+REMOVE Pl IF (0 V + p3 + Sg )(-1 Sg + Nom );
+REMOVE Sg IF (0 V + p3 + Pl )(-1 Pl + Nom );
 
+SELECT A (-1 A) (0C A OR N) (1C N) ; 
+    ## Дышетскиз Удмурт кун университетын но Москваысь литературая институтын.

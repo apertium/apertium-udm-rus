@@ -51,7 +51,7 @@ Multichar_Symbols
 %<dat%>
 %<ins%>
 %<abe%>
-%<advl%>
+%<adc%>
 %<ine%>
 %<ill%>
 %<ela%>
@@ -64,13 +64,14 @@ Multichar_Symbols
 %<cm%>
 %<apos%>
 %<guio%>
+%<conneg%>
 
 %{E%}   ! э or е
+%{I%}   ! и or ӥ
 %>
 %{j%}   ! 
 %{s%}   ! 
 %{t%}   ! 
-%<conneg%>
 
 LEXICON Root
 
@@ -188,7 +189,8 @@ LEXICON CASE
 %<dat%>:%>лы K ;
 %<ins%>:%>эн K ;
 %<abe%>:%>тэк K ;
-%<adc%>:%>ъя K ;
+!%<adc%>:%>ъя K ;
+%<adc%>:%>я K ;
 %<ine%>:%>ын K ;
 %<ill%>:%>%{E%} K ;
 %<ela%>:%>ысь K ;
@@ -226,7 +228,7 @@ LEXICON PRON-PERS-P3-SG
 %<prn%>%<pers%>%<p3%>%<sg%>%<dat%>:ы # ;
 %<prn%>%<pers%>%<p3%>%<sg%>%<ins%>:ин # ;
 %<prn%>%<pers%>%<p3%>%<sg%>%<abe%>:тэк # ;
-%<prn%>%<pers%>%<p3%>%<sg%>%<advl%>:я # ;
+%<prn%>%<pers%>%<p3%>%<sg%>%<adc%>:я # ;
 %<prn%>%<pers%>%<p3%>%<sg%>%<approx%>:лань # ;
 
 LEXICON PRON-PERS-P1-PL
@@ -247,7 +249,7 @@ LEXICON PRON-PERS-P3-PL
 %<prn%>%<pers%>%<p3%>%<pl%>%<dat%>:лы # ;
 %<prn%>%<pers%>%<p3%>%<pl%>%<ins%>:ын # ;
 %<prn%>%<pers%>%<p3%>%<pl%>%<abe%>:тэк # ;
-%<prn%>%<pers%>%<p3%>%<pl%>%<advl%>:ъя # ;
+%<prn%>%<pers%>%<p3%>%<pl%>%<adc%>:ъя # ;
 %<prn%>%<pers%>%<p3%>%<pl%>%<approx%>:лань # ;
 
 
@@ -260,7 +262,7 @@ LEXICON PRON-ITG-MA
 %<prn%>%<itg%>%<dat%>:малы # ;
 %<prn%>%<itg%>%<ins%>:маин # ;
 %<prn%>%<itg%>%<abe%>:матэк # ;
-%<prn%>%<itg%>%<advl%>:мая # ;
+%<prn%>%<itg%>%<adc%>:мая # ;
 %<prn%>%<itg%>%<ine%>:кытын # ;
 %<prn%>%<itg%>%<ill%>:кытчы # ;
 %<prn%>%<itg%>%<ela%>:кытысь # ;
@@ -279,7 +281,7 @@ LEXICON PRON-ITG-KIN
 %<prn%>%<itg%>%<ins%>:эн # ; 
 %<prn%>%<itg%>%<abe%>:тэк # ; 
 %<prn%>%<itg%>%<abl%>:лэсь # ; 
-%<prn%>%<itg%>%<advl%>:ъя # ; 
+%<prn%>%<itg%>%<adc%>:ъя # ; 
 %<prn%>%<itg%>%<approx%>:лань # ; 
 
 LEXICON PRON-DEM-TA ! местоимение "та"
@@ -318,23 +320,23 @@ LEXICON GLAGOL-1
 %<inf%>:%>ыны # ;
 %<conneg%>:%>%{E%} # ;
 %<pprs%>%<adv%>:%>ыса # ;
-%<pprs%>%<actv%>:%>ӥсь # ; ! деепричастие
+%<pprs%>%<actv%>:%>%{I%}сь # ; ! деепричастие
 
-%<past%>%<p1%>%<sg%>:%>ӥ # ; 
-%<past%>%<p2%>%<sg%>:%>ӥд # ; 
-%<past%>%<p3%>%<sg%>:%>ӥз # ; 
-%<past%>%<p1%>%<pl%>:%>ӥм # ; 
-%<past%>%<p2%>%<pl%>:%>ӥды # ; 
-%<past%>%<p3%>%<pl%>:%>ӥзы # ; 
+%<past%>%<p1%>%<sg%>:%>%{I%} # ; 
+%<past%>%<p2%>%<sg%>:%>%{I%}д # ; 
+%<past%>%<p3%>%<sg%>:%>%{I%}з # ; 
+%<past%>%<p1%>%<pl%>:%>%{I%}м # ; 
+%<past%>%<p2%>%<pl%>:%>%{I%}ды # ; 
+%<past%>%<p3%>%<pl%>:%>%{I%}зы # ; 
 
 GLAGOL-TV-BOTH ;
 
 LEXICON GLAGOL-TV-BOTH
-%<pres%>%<p1%>%<sg%>:%>ӥcько # ; 
-%<pres%>%<p2%>%<sg%>:%>ӥcькод # ; 
+%<pres%>%<p1%>%<sg%>:%>%{I%}cько # ; 
+%<pres%>%<p2%>%<sg%>:%>%{I%}cькод # ; 
 %<pres%>%<p3%>%<sg%>:%>%{E%} # ; 
-%<pres%>%<p1%>%<pl%>:%>ӥcькомы # ; 
-%<pres%>%<p2%>%<pl%>:%>ӥcькоды # ; 
+%<pres%>%<p1%>%<pl%>:%>%{I%}cькомы # ; 
+%<pres%>%<p2%>%<pl%>:%>%{I%}cькоды # ; 
 %<pres%>%<p3%>%<pl%>:%>о # ; 
 
 LEXICON GLAGOL-2-TV
@@ -400,6 +402,11 @@ LEXICON NP-ANT-F
 LEXICON NP-ANT-M
 
 %<np%>%<ant%>%<m%>: NUMBER ;
+
+LEXICON NP-TOP
+
+%<np%>%<top%>: NUMBER ;
+
 
 LEXICON NP-TOP-Я
 
@@ -507,6 +514,9 @@ LEXICON Soobstvennoe
 Сирия:Сири NP-TOP-Я ; 
 Башкирия:Башкири NP-TOP-Я ; 
 
+Татарстан:Татарстан NP-TOP ; 
+Москва:Москва NP-TOP ; 
+
 Маша NP-ANT-F ;
 Ваня NP-ANT-M ;
 
@@ -554,6 +564,8 @@ LEXICON Glagoly
 вамышъяны:вамышъ GLAGOL-2-TV ; ! "шагать"
 бызьыны:бызь GLAGOL-1-TV ; ! "бегать"
 кылдыны:кылд GLAGOL-1-TV ; ! "строить, возникнуть"
+дышетыны:дышет GLAGOL-1-TV ; ! 
+дышетскыны:дышетск GLAGOL-1-TV ; ! 
 
 LEXICON Prilagatelnoe
 
@@ -566,6 +578,7 @@ LEXICON Prilagatelnoe
 матэ A1 ; ! ""
 умой A1 ; ! ""
 удмурт A1 ; ! ""
+кун A1 ; ! ""
 
 LEXICON Nouns
 !сэрег:сэре2г N1 ; ! "corner"
@@ -630,6 +643,8 @@ LEXICON Nouns
 кун N1 ; ! "страна"
 кыл N1 ; ! "язык"
 кылбур N1 ; ! "стих"
+институт N1 ; ! "институт"
+литература N1 ; ! "литература"
 
 
 LEXICON Punktuacija

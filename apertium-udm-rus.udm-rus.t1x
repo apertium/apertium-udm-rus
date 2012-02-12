@@ -112,12 +112,20 @@
 
     </def-attr>
     <def-attr n="a_gen">
+      <attr-item tags="m.nn"/> <!-- maybe problematic 'удмурт кылэз' → 'удмуртский язык' -->
+      <attr-item tags="m.aa"/>
       <attr-item tags="m"/>
       <attr-item tags="mfn"/>
       <attr-item tags="nt"/>
       <attr-item tags="f"/>
       <attr-item tags="GD"/>
     </def-attr>
+
+    <def-attr n="a_anim">
+      <attr-item tags="nn"/>
+      <attr-item tags="aa"/>
+    </def-attr>
+
     <def-attr n="a_tns">
       <attr-item tags="fut"/>
       <attr-item tags="pres"/>
@@ -196,9 +204,40 @@
                <!--Set the case of the modifiers to the same as the head. -->
                <let><clip pos="2" side="tl" part="a_cas"/><clip pos="1" side="tl" part="a_cas"/></let>
 
+          <choose>
+            <when>
+              <test> 
+                <and>
+                  <not>
+                    <equal><clip pos="2" side="tl" part="a_cas"/><lit-tag v="acc"/></equal>
+                  </not>
+                  <or>
+                    <equal><clip pos="2" side="tl" part="a_gen"/><lit-tag v="m.nn"/></equal>
+                    <equal><clip pos="2" side="tl" part="a_gen"/><lit-tag v="m.aa"/></equal>
+                  </or>
+                </and>
+              </test>
+              <let> 
+                <clip pos="2" side="tl" part="a_anim"/>
+                <lit v=""/>
+              </let>
+            </when>
+          </choose>            
     </def-macro>
 
     <def-macro n="concord3" npar="3">
+          <choose>
+            <when>
+              <test><equal><clip pos="2" side="sl" part="a_adj"/><lit-tag v="pprs"/></equal></test>
+              <let> 
+                <clip pos="2" side="tl" part="whole"/>
+                <concat>
+                  <clip pos="2" side="tl" part="whole"/>
+                  <lit-tag v="GD.ND.CD"/>
+                </concat>
+              </let>
+            </when>
+           </choose>                
           <!-- First we set the number of the three modifiers as the same as the head noun (TODO: SG for numerals) -->
           <let><clip pos="2" side="tl" part="a_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
           <let><clip pos="3" side="tl" part="a_nbr"/><clip pos="1" side="tl" part="a_nbr"/></let>
@@ -262,6 +301,45 @@
 
                <let><clip pos="2" side="tl" part="a_cas"/><clip pos="1" side="tl" part="a_cas"/></let>
                <let><clip pos="3" side="tl" part="a_cas"/><clip pos="1" side="tl" part="a_cas"/></let>
+
+          <choose>
+            <when>
+              <test> 
+                <and>
+                  <not>
+                    <equal><clip pos="2" side="tl" part="a_cas"/><lit-tag v="acc"/></equal>
+                  </not>
+                  <or>
+                    <equal><clip pos="2" side="tl" part="a_gen"/><lit-tag v="m.nn"/></equal>
+                    <equal><clip pos="2" side="tl" part="a_gen"/><lit-tag v="m.aa"/></equal>
+                  </or>
+                </and>
+              </test>
+              <let> 
+                <clip pos="2" side="tl" part="a_anim"/>
+                <lit v=""/>
+              </let>
+            </when>
+          </choose>     
+          <choose>
+            <when>
+              <test> 
+                <and>
+                  <not>
+                    <equal><clip pos="3" side="tl" part="a_cas"/><lit-tag v="acc"/></equal>
+                  </not>
+                  <or>
+                    <equal><clip pos="3" side="tl" part="a_gen"/><lit-tag v="m.nn"/></equal>
+                    <equal><clip pos="3" side="tl" part="a_gen"/><lit-tag v="m.aa"/></equal>
+                  </or>
+                </and>
+              </test>
+              <let> 
+                <clip pos="3" side="tl" part="a_anim"/>
+                <lit v=""/>
+              </let>
+            </when>
+          </choose>     
 
     </def-macro>
 
