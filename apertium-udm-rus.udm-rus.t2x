@@ -27,6 +27,7 @@
   <section-def-attrs>
     <def-attr n="a_sn_type">
       <attr-item tags="SN.INS"/>
+      <attr-item tags="SN.ILL"/>
       <attr-item tags="SN.LOC"/>
       <attr-item tags="SN.INE"/>
       <attr-item tags="SN.ABL"/>
@@ -52,19 +53,122 @@
       <attr-item tags="ins"/>
       <attr-item tags="loc"/>
       <attr-item tags="abl"/>
+      <attr-item tags="prp"/>
     </def-attr>
+
+    <def-attr n="a_pos">
+      <attr-item tags="px1sg"/>
+      <attr-item tags="px2sg"/>
+      <attr-item tags="px3sg"/>
+      <attr-item tags="px1pl"/>
+      <attr-item tags="px2pl"/>
+      <attr-item tags="px3pl"/>
+    </def-attr>
+
+
   </section-def-attrs>
   <section-def-vars>
     <def-var n="number"/>
+    <def-var n="gender" v="&lt;m&gt;"/>
     <def-var n="PREP"/> <!-- this is our current preposition -->
+    <def-var n="POSS"/> <!-- this is our current possessive -->
   </section-def-vars>
   <section-def-macros>
+    <def-macro n="reset_case_poss1" npar="1">
+          <let><var n="POSS"/><lit v=""/></let>
+          <let><var n="PREP"/><lit v=""/></let>
+    </def-macro>
+    <def-macro n="check_and_set_poss1" npar="1"> <!-- npar = number of parameters -->
+          <let><var n="POSS"/><lit v=""/></let>
+          <choose> 
+            <when>
+               <test> 
+                  <and>
+                    <equal><clip pos="1" part="a_pos"/><lit-tag v="px3sg"/></equal>
+                    <equal><var n="gender"/><lit-tag v="m"/></equal>
+                  </and>
+               </test>
+               <let><var n="POSS"/>
+                 <concat>
+                  <lit v="^poss"/>
+                  <lit-tag  v="det.pos"/>
+                  <lit v="{"/>
+                  <lit v="^его"/>
+                  <lit-tag  v="det.pos"/>
+                  <lit v="$}$ "/>
+                </concat>
+               </let>
+            </when> 
+            <when>
+               <test> 
+                  <and>
+                    <equal><clip pos="1" part="a_pos"/><lit-tag v="px3sg"/></equal>
+                    <equal><var n="gender"/><lit-tag v="f"/></equal>
+                  </and>
+               </test>
+               <let><var n="POSS"/>
+                 <concat>
+                  <lit v="^poss"/>
+                  <lit-tag  v="det.pos"/>
+                  <lit v="{"/>
+                  <lit v="^её"/>
+                  <lit-tag  v="det.pos"/>
+                  <lit v="$}$ "/>
+                </concat>
+               </let>
+            </when> 
+
+            <when>
+               <test> 
+                  <and>
+                    <equal><clip pos="1" part="a_pos"/><lit-tag v="px2sg"/></equal>
+                    <equal><clip pos="1" part="a_nbr"/><lit-tag v="pl"/></equal>
+                  </and>
+               </test>
+               <let><var n="POSS"/>
+                 <concat>
+                  <lit v="^poss"/>
+                  <lit-tag  v="det.pos"/>
+                  <lit v="{"/>
+                  <lit v="^твой"/>
+                  <lit-tag  v="det.pos.mfn"/>
+                  <clip pos="1" part="a_nbr"/>
+                  <clip pos="1" part="a_cas"/>
+                  <lit v="$}$ "/>
+                </concat>
+               </let>
+            </when> 
+
+            <when>
+               <test> 
+                    <equal><clip pos="1" part="a_pos"/><lit-tag v="px2sg"/></equal>
+               </test>
+               <let><var n="POSS"/>
+                 <concat>
+                  <lit v="^poss"/>
+                  <lit-tag  v="det.pos"/>
+                  <lit v="{"/>
+                  <lit v="^твой"/>
+                  <lit-tag  v="det.pos"/>
+                  <clip pos="1" part="a_gen"/>
+                  <clip pos="1" part="a_nbr"/>
+                  <clip pos="1" part="a_cas"/>
+                  <lit v="$}$ "/>
+                </concat>
+               </let>
+            </when> 
+
+          </choose>
+    </def-macro>
     <def-macro n="check_and_set_prep1" npar="1"> <!-- npar = number of parameters -->
           <let><var n="PREP"/><lit v=""/></let>
           <choose> 
             <when>
                <test> 
+                 <or>
                   <equal><clip pos="1" part="a_sn_type"/><lit-tag v="SN.LOC"/></equal>
+                  <equal><clip pos="1" part="a_sn_type"/><lit-tag v="SN.ILL"/></equal>
+                 </or>
                </test>
                <let><var n="PREP"/>
                  <concat>
@@ -158,14 +262,21 @@
         <call-macro n="check_and_set_prep1">
           <with-param pos="1"/>
         </call-macro>
+        <call-macro n="check_and_set_poss1">
+          <with-param pos="1"/>
+        </call-macro>
         <out>
           <var n="PREP"/>
+          <var n="POSS"/>
           <chunk>
             <clip pos="1" part="lem"/>
             <clip pos="1" part="tags"/>
             <clip pos="1" part="chcontent"/>
           </chunk>
         </out>
+        <call-macro n="reset_case_poss1">
+          <with-param pos="1"/>
+        </call-macro>
       </action>
     </rule>
 

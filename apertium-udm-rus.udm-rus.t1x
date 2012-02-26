@@ -87,6 +87,7 @@
       <attr-item tags="dat"/>
       <attr-item tags="gen"/>
       <attr-item tags="ine"/>
+      <attr-item tags="ill"/>
       <attr-item tags="loc"/>
       <attr-item tags="ins"/>
       <attr-item tags="abl"/>
@@ -119,6 +120,15 @@
       <attr-item tags="nt"/>
       <attr-item tags="f"/>
       <attr-item tags="GD"/>
+    </def-attr>
+
+    <def-attr n="a_pos">
+      <attr-item tags="px1sg"/>
+      <attr-item tags="px2sg"/>
+      <attr-item tags="px3sg"/>
+      <attr-item tags="px1pl"/>
+      <attr-item tags="px2pl"/>
+      <attr-item tags="px3pl"/>
     </def-attr>
 
     <def-attr n="a_anim">
@@ -481,9 +491,20 @@
                <let><clip pos="4" side="tl" part="a_cas"/><clip pos="1" side="tl" part="a_cas"/></let>
 
     </def-macro>
+    <def-macro n="conv_poss1" npar="1">
+       <let><clip pos="1" side="tl" part="a_pos"/><lit v=""/></let>
+    </def-macro>
     <def-macro n="conv_case1" npar="1">
           <let><var n="current_sn_type"/><lit-tag v="SN"/></let>
           <choose> 
+            <when>
+               <test> <!-- сад<n><sg><ine>/сад<n><m><nn><sg><ine> -->
+                  <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ill"/></equal>
+               </test>
+               <let><clip pos="1" side="tl" part="a_cas"/><lit-tag v="prp"/></let>
+               <!-- сад<n><sg><ine>/сад<n><m><nn><sg><prp> -->
+               <let><var n="current_sn_type"/><lit-tag v="SN.ILL"/></let>
+            </when> 
             <when>
                <test> <!-- сад<n><sg><ine>/сад<n><m><nn><sg><ine> -->
                   <equal><clip pos="1" side="sl" part="a_cas"/><lit-tag v="ine"/></equal>
@@ -605,12 +626,17 @@
         <call-macro n="conv_case1">
           <with-param pos="1"/>
         </call-macro>
+        <call-macro n="conv_poss1">
+          <with-param pos="1"/>
+        </call-macro>
         <out>
           <chunk name="n" case="caseFirstWord">
             <tags>
               <tag><var n="current_sn_type"/></tag>
                 <tag><clip pos="1" side="tl" part="a_gen"/></tag>
                 <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
+                <tag><clip pos="1" side="tl" part="a_cas"/></tag>
+                <tag><clip pos="1" side="sl" part="a_pos"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>

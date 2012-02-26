@@ -333,18 +333,18 @@ LEXICON GLAGOL-1
 GLAGOL-TV-BOTH ;
 
 LEXICON GLAGOL-TV-BOTH
-%<pres%>%<p1%>%<sg%>:%>%{I%}cько # ; 
-%<pres%>%<p2%>%<sg%>:%>%{I%}cькод # ; 
+%<pres%>%<p1%>%<sg%>:%>%{I%}сько # ; 
+%<pres%>%<p2%>%<sg%>:%>%{I%}ськод # ; 
 %<pres%>%<p3%>%<sg%>:%>%{E%} # ; 
-%<pres%>%<p1%>%<pl%>:%>%{I%}cькомы # ; 
-%<pres%>%<p2%>%<pl%>:%>%{I%}cькоды # ; 
+%<pres%>%<p1%>%<pl%>:%>%{I%}ськомы # ; 
+%<pres%>%<p2%>%<pl%>:%>%{I%}ськоды # ; 
 %<pres%>%<p3%>%<pl%>:%>о # ; 
 
-%<conneg%>%<pres%>%<p1%>%<sg%>:%>%{I%}cькы # ; 
-%<conneg%>%<pres%>%<p2%>%<sg%>:%>%{I%}cькы # ; 
+%<conneg%>%<pres%>%<p1%>%<sg%>:%>%{I%}ськы # ; 
+%<conneg%>%<pres%>%<p2%>%<sg%>:%>%{I%}ськы # ; 
 %<conneg%>%<pres%>%<p3%>%<sg%>:%>%{E%} # ; 
-%<conneg%>%<pres%>%<p1%>%<pl%>:%>%{I%}cькe # ; 
-%<conneg%>%<pres%>%<p2%>%<pl%>:%>%{I%}cькe # ; 
+%<conneg%>%<pres%>%<p1%>%<pl%>:%>%{I%}ськe # ; 
+%<conneg%>%<pres%>%<p2%>%<pl%>:%>%{I%}ськe # ; 
 %<conneg%>%<pres%>%<p3%>%<pl%>:%>о # ; 
 
 LEXICON GLAGOL-2-TV
@@ -447,8 +447,8 @@ LEXICON Poslelogy
 валче POST-INDECL ; 
 дыpъя POST-INDECL ; 
 кyзя POST-INDECL ; 
-cямен POST-INDECL ; 
-cяpыcь POST-INDECL ; 
+сямен POST-INDECL ; 
+сяpысь POST-INDECL ; 
 ӵоже POST-INDECL ; 
 ӵош POST-INDECL ; 
 
