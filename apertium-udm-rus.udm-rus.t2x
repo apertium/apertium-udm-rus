@@ -344,6 +344,9 @@
             <clip pos="2" part="chcontent"/>
           </chunk>
         </out>
+        <call-macro n="reset_case_poss1">
+          <with-param pos="1"/>
+        </call-macro>
       </action>
     </rule>
 

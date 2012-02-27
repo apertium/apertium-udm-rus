@@ -24,7 +24,6 @@ Rules
 "Archiphoneme I"
 %{I%}:ӥ <=> [ д | з | л | н | с | т | у ] %>: _ ;
 
-
 "Delete soft sign"
 ь:0 <=> _ %>: ;
 

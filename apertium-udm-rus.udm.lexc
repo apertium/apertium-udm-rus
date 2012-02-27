@@ -183,11 +183,11 @@ LEXICON PREPX
 LEXICON CASE
 
 %<nom%>: K ; 
-%<acc%>:%>эз K ;
+%<acc%>:%>%{E%}з K ;
 %<gen%>:%>лэн K ; 
 %<abl%>:%>лэсь K ;
 %<dat%>:%>лы K ;
-%<ins%>:%>эн K ;
+%<ins%>:%>%{E%}н K ;
 %<abe%>:%>тэк K ;
 !%<adc%>:%>ъя K ;
 %<adc%>:%>я K ;
@@ -196,7 +196,7 @@ LEXICON CASE
 %<ela%>:%>ысь K ;
 %<egr%>:%>ысен K ;
 %<ter%>:%>озь K ;
-%<prl%>:%>этӥ K ;
+%<prl%>:%>%{E%}тӥ K ;
 %<apr%>:%>лань K ;
 
 LEXICON NUMBER
@@ -312,7 +312,6 @@ LEXICON NUM
 LEXICON GLAGOL-1-IV
 %<v%>%<iv%>: GLAGOL-1 ;
 
-
 LEXICON GLAGOL-1-TV
 %<v%>%<tv%>: GLAGOL-1 ;
 
@@ -330,12 +329,21 @@ LEXICON GLAGOL-1
 %<past%>%<p2%>%<pl%>:%>%{I%}ды # ; 
 %<past%>%<p3%>%<pl%>:%>%{I%}зы # ; 
 
+%<pres%>%<p3%>%<sg%>:%>%{E%} # ; 
 GLAGOL-TV-BOTH ;
+
+LEXICON GLAGOL-2-TV
+%<v%>%<tv%>%<inf%>:аны # ; 
+%<v%>%<tv%>%<conneg%>:%>ы # ;
+%<v%>%<tv%>%<pprs%>%<adv%>:%>ыса # ;
+%<v%>%<tv%>: GLAGOL-TV-BOTH ;
+%<v%>%<tv%>%<pres%>%<p3%>%<sg%>:%> # ; 
+
+
 
 LEXICON GLAGOL-TV-BOTH
 %<pres%>%<p1%>%<sg%>:%>%{I%}сько # ; 
 %<pres%>%<p2%>%<sg%>:%>%{I%}ськод # ; 
-%<pres%>%<p3%>%<sg%>:%>%{E%} # ; 
 %<pres%>%<p1%>%<pl%>:%>%{I%}ськомы # ; 
 %<pres%>%<p2%>%<pl%>:%>%{I%}ськоды # ; 
 %<pres%>%<p3%>%<pl%>:%>о # ; 
@@ -347,11 +355,6 @@ LEXICON GLAGOL-TV-BOTH
 %<conneg%>%<pres%>%<p2%>%<pl%>:%>%{I%}ськe # ; 
 %<conneg%>%<pres%>%<p3%>%<pl%>:%>о # ; 
 
-LEXICON GLAGOL-2-TV
-%<v%>%<tv%>%<inf%>:аны # ; 
-%<v%>%<tv%>%<conneg%>:%>ы # ;
-%<v%>%<tv%>%<pprs%>%<adv%>:%>ыса # ;
-GLAGOL-TV-BOTH ;
 
 LEXICON GLAGOL-VAN
 
@@ -576,6 +579,7 @@ LEXICON Glagoly
 кылдыны:кылд GLAGOL-1-TV ; ! "строить, возникнуть"
 дышетыны:дышет GLAGOL-1-TV ; ! 
 дышетскыны:дышетск GLAGOL-1-TV ; ! 
+серекъяны:серекъя GLAGOL-2-TV ; ! "смеяться"
 
 LEXICON Prilagatelnoe
 
