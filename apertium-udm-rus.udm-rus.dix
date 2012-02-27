@@ -47,11 +47,17 @@
     <sdef n="cm"  c=""/>
     <sdef n="guio"  c=""/>
     <sdef n="sent"  c=""/>
+    <sdef n="pred"  c=""/>
     <sdef n="CD"  c=""/>
   </sdefs>
   <pardefs>
+    <pardef n="adj_gen_num">
+      <e r="RL"><p><l></l><r></r></p></e>
+      <e r="LR"><p><l></l><r><s n="GD"/><s n="ND"/><s n="CD"/></r></p></e>
+      <e r="LR"><p><l><s n="pred"/><s n="pl"/></l><r><s n="GD"/><s n="pl"/><s n="CD"/></r></p></e>
+    </pardef>
     <pardef n="gen_num">
-       <e r="RL"><p><l></l><r></r></p></e>
+      <e r="RL"><p><l></l><r></r></p></e>
       <e r="LR"><p><l></l><r><s n="GD"/><s n="ND"/><s n="CD"/></r></p></e>
     </pardef>
   </pardefs>
@@ -146,6 +152,7 @@
     <e><p><l>озьы<s n="adv"/></l><r>так<s n="adv"/></r></p></e>
     <e><p><l>нокытын<s n="adv"/></l><r>негде<s n="adv"/></r></p></e>
 
+    <e><p><l>шудо<s n="adj"/></l><r>счастливый<s n="adj"/></r></p><par n="adj_gen_num"/></e>
     <e><p><l>шудо<s n="adv"/></l><r>счастливый<s n="adj"/><s n="short"/></r></p><par n="gen_num"/></e>
     <e><p><l>шуныт<s n="adv"/></l><r>тёплый<s n="adj"/><s n="short"/></r></p><par n="gen_num"/></e>
 

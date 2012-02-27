@@ -306,6 +306,8 @@ LEXICON DET-DEM-TA ! местоимение "та"
 
 LEXICON NUM 
 
+! number+на+(мы,ды,зы) it's a way to say "(some number) of (we, you-pl, they)
+
 %<num%>: # ;
 
 
@@ -426,6 +428,7 @@ LEXICON NP-TOP-Я
 LEXICON A1
 
 %<adj%>: # ; 
+%<adj%>%<pred%>%<pl%>:%>%{E%}сь # ; 
 %<adj%>%<comp%>:%>гес # ; 
 
 LEXICON N1
@@ -593,6 +596,7 @@ LEXICON Prilagatelnoe
 умой A1 ; ! ""
 удмурт A1 ; ! ""
 кун A1 ; ! ""
+шудо A1 ; ! ""
 
 LEXICON Nouns
 !сэрег:сэре2г N1 ; ! "corner"
