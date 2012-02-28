@@ -25,7 +25,7 @@ Rules
 %{I%}:ӥ <=> [ д | з | л | н | с | т | у ] %>: _ ;
 
 "Delete soft sign"
-ь:0 <=> _ %>: ;
+ь:0 <=> _ %>: [ :Glasnye | :Soglasnye ] ;
 
 "Delete short i"
 й:0 <=> _ %>: %{E%}: ;
