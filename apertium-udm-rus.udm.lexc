@@ -531,6 +531,7 @@ LEXICON Chisla
 LEXICON Narechija
 
 а%<qst%>:а # ;
+шат%<qst%>:шат # ;
 
 кытын ADV-ITG ; ! "где" 
 куке ADV-ITG ; ! "когда" 
@@ -703,6 +704,7 @@ LEXICON Nouns
 мугор N2 ; ! "тело"
 зарни N1 ; ! "золото"
 шунды N1 ; ! "солнце"
+пушка N1 ; ! ""
 
 LEXICON Punktuacija
 
