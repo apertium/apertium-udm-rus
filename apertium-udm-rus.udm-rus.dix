@@ -152,6 +152,9 @@
     <e><p><l>ӝог<s n="adv"/></l><r>быстро<s n="adv"/></r></p></e>
     <e><p><l>ноку<s n="adv"/></l><r>никогда<s n="adv"/></r></p></e>
     <e><p><l>толон<s n="adv"/></l><r>вчера<s n="adv"/></r></p></e>
+    <e><p><l>ни<s n="adv"/></l><r>ещё<s n="adv"/></r></p></e>
+    <e><p><l>ни<s n="adv"/></l><r>уже<s n="adv"/></r></p></e>
+    <e><p><l>гинэ<s n="adv"/></l><r>только<s n="adv"/></r></p></e>
     <e><p><l>озьы<s n="adv"/></l><r>так<s n="adv"/></r></p></e>
     <e><p><l>нокытын<s n="adv"/></l><r>негде<s n="adv"/></r></p></e>
 
@@ -180,6 +183,8 @@
     <e><p><l>матэ<s n="adj"/></l><r>близкий<s n="adj"/></r></p><par n="gen_num"/></e>
     <e><p><l>удмурт<s n="adj"/></l><r>удмуртский<s n="adj"/></r></p><par n="gen_num"/></e>
     <e><p><l>кун<s n="adj"/></l><r>государственный<s n="adj"/></r></p><par n="gen_num"/></e>
+    <e><p><l>визьтэм<s n="adj"/></l><r>глупый<s n="adj"/></r></p><par n="gen_num"/></e>
+    <e><p><l>визьтэм<s n="adj"/></l><r>бестолковый<s n="adj"/></r></p><par n="gen_num"/></e>
 
 
     <e><p><l>сиыны<s n="v"/><s n="tv"/></l><r>есть<s n="vblex"/></r></p></e>

@@ -111,19 +111,30 @@ CXPXSG ;
 CXPXPL ;
 
 LEXICON PRECX
-%<nom%>:%>э CXPXSG ;
+%<nom%>:%>%{E%} CXPXSG ;
 %<nom%>:%> CXPXPL ; ! also for other cases?
-%<ins%>:%>ены CXPX ;
+%<ins%>:%>%{E%}ны CXPX ;
 %<ine%>:%>а CXPX ;
 %<ill%>:%>а CXPX ;
 %<ela%>:%>ысьти CXPX ;
 %<egr%>:%>ысьены CXPX ;
-%<tra%>:%>ети CXPX ;
+%<tra%>:%>%{E%}ти CXPX ;
+%<ter%>:%>озьа CXPX ;
+
+LEXICON PRECX-2 
+%<nom%>:%>ы CXPXSG ;
+%<nom%>:%> CXPXPL ; ! also for other cases?
+%<ins%>:%>%{E%}ны CXPX ;
+%<ine%>:%>а CXPX ;
+%<ill%>:%>а CXPX ;
+%<ela%>:%>ысьти CXPX ;
+%<egr%>:%>ысьены CXPX ;
+%<tra%>:%>%{E%}ти CXPX ;
 %<ter%>:%>озьа CXPX ;
 
 
 LEXICON PREPX
-%<px1sg%>%<acc%>:%>э K;
+%<px1sg%>%<acc%>:%>%{E%} K;
 %<px1sg%>%<gen%>:%>лялэн K;
 %<px1sg%>%<abl%>:%>лэсь K;
 %<px1sg%>%<dat%>:%>лы K;
@@ -177,9 +188,6 @@ LEXICON PREPX
 %<px3pl%>%<apr%>:%>зылань K;
 %<px3pl%>%<prl%>:%>зыозь K;
 
-
-
-
 LEXICON CASE
 
 %<nom%>: K ; 
@@ -209,6 +217,19 @@ LEXICON NUMBER
 
 %<sg%>: PRECX ;
 %<pl%>:%>%{j%}ос PRECX ;
+
+LEXICON NUMBER-2
+
+%<sg%>: CASE ;
+%<pl%>:%>%{j%}ос CASE ;
+
+%<sg%>: PREPX ;
+%<pl%>:%>%{j%}ос PREPX ;
+
+%<sg%>: PRECX-2 ;
+%<pl%>:%>%{j%}ос PRECX ;
+
+
 
 LEXICON PRON-PERS-P1-SG
 
@@ -443,6 +464,12 @@ LEXICON N1-KORKA
 %<n%>: NUMBER ; 
 %<n%>%<sg%>%<ine%>:%>н # ;
 
+LEXICON N2
+
+%<n%>: NUMBER-2 ; 
+
+
+
 LEXICON POST-DECL
 
 %<post%>: NUMBER ;
@@ -515,6 +542,8 @@ LEXICON Narechija
 котьку ADV ; ! ""
 ноку ADV ; ! ""
 толон ADV ; ! ""
+ни ADV ; ! "ещё / уже"
+гинэ ADV ; ! "только"
 
 ик ADV ; ! ""
 озьы ADV ; ! ""
@@ -602,6 +631,7 @@ LEXICON Prilagatelnoe
 удмурт A1 ; ! ""
 кун A1 ; ! ""
 шудо A1 ; ! ""
+визьтэм A1 ; ! ""
 
 LEXICON Nouns
 !сэрег:сэре2г N1 ; ! "corner"
@@ -670,7 +700,7 @@ LEXICON Nouns
 институт N1 ; ! "институт"
 литература N1 ; ! "литература"
 факультет N1 ; !
-мугор N1 ; ! "тело"
+мугор N2 ; ! "тело"
 зарни N1 ; ! "золото"
 шунды N1 ; ! "солнце"
 

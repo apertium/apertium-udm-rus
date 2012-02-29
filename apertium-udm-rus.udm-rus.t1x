@@ -646,6 +646,7 @@
       </action>
     </rule>
 
+
     <rule comment="REGLA: adj noun">
       <pattern>
         <pattern-item n="adj"/>
@@ -659,12 +660,17 @@
           <with-param pos="2"/>
           <with-param pos="1"/>
         </call-macro>
+        <call-macro n="conv_poss1">
+          <with-param pos="2"/>
+        </call-macro>
         <out>
           <chunk name="a_n" case="caseFirstWord">
             <tags>
               <tag><var n="current_sn_type"/></tag>
                 <tag><clip pos="2" side="tl" part="a_gen"/></tag>
                 <tag><clip pos="2" side="tl" part="a_nbr"/></tag>
+                <tag><clip pos="2" side="tl" part="a_cas"/></tag>
+                <tag><clip pos="2" side="sl" part="a_pos"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -672,6 +678,48 @@
             <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: adv adj noun">
+      <pattern>
+        <pattern-item n="adv"/>
+        <pattern-item n="adj"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <call-macro n="conv_case1">
+          <with-param pos="3"/>
+        </call-macro>
+        <call-macro n="concord2">
+          <with-param pos="3"/>
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="conv_poss1">
+          <with-param pos="3"/>
+        </call-macro>
+        <out>
+          <chunk name="adv_a_n" case="caseFirstWord">
+            <tags>
+              <tag><var n="current_sn_type"/></tag>
+                <tag><clip pos="3" side="tl" part="a_gen"/></tag>
+                <tag><clip pos="3" side="tl" part="a_nbr"/></tag>
+                <tag><clip pos="3" side="tl" part="a_cas"/></tag>
+                <tag><clip pos="3" side="sl" part="a_pos"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
+            </lu>
+            <b pos="2"/>
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
