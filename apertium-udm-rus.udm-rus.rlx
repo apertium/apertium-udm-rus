@@ -12,6 +12,9 @@ LIST A = adj ;
 LIST conneg = conneg ;
 list neg = neg ;
 
+LIST TV = tv ;
+LIST IV = iv ;
+
 LIST Sg = sg ;
 LIST Pl = pl ;
 	
@@ -20,10 +23,13 @@ LIST p2 = p2 ;
 LIST p3 = p3 ;
 
 LIST Nom = nom ;
+LIST Acc = acc ;
 LIST Ine = ine ; 
 LIST Ins = ins ; 
 
 LIST Odushevljonnyj = "пинал" "нылпи" "пуны" (np ant) (n aa) ; 
+
+LIST CLB = sent ; 
 
 SET N-MOD = Det | A | Num ;
 
@@ -42,5 +48,8 @@ REMOVE conneg IF (NOT *-1 neg BARRIER Nom OR (","));
 REMOVE Pl IF (0 V + p3 + Sg )(-1 Sg + Nom );
 REMOVE Sg IF (0 V + p3 + Pl )(-1 Pl + Nom );
 
-SELECT A (-1 A) (0C A OR N) (1C N) ; 
+SELECT A IF (-1 A) (0C A OR N) (1C N) ; 
     ## Дышетскиз Удмурт кун университетын но Москваысь литературая институтын.
+
+REMOVE Acc IF (NOT -1* TV BARRIER CLB) (NOT 1* TV BARRIER CLB);
+    ## Изь ни, зарние!

@@ -19,6 +19,7 @@
     <sdef n="vbmod"  c=""/>
     <sdef n="v"  c=""/>
     <sdef n="tv"  c=""/>
+    <sdef n="iv"  c=""/>
     <sdef n="part"  c=""/>
     <sdef n="qst"  c=""/>
     <sdef n="itg"  c=""/>
@@ -225,7 +226,7 @@
     <e><p><l>бызьыны<s n="v"/><s n="tv"/></l><r>бежать<s n="vblex"/><s n="perf"/></r></p></e>
     <e><p><l>ватскыны<s n="v"/><s n="tv"/></l><r>прятаться<s n="vblex"/><s n="imperf"/></r></p></e>
     <e><p><l>вераськыны<s n="v"/><s n="tv"/></l><r>говорить<s n="vblex"/><s n="imperf"/></r></p></e>
-    <e><p><l>изьыны<s n="v"/><s n="tv"/></l><r>спать<s n="vblex"/><s n="imperf"/></r></p></e>
+    <e><p><l>изьыны<s n="v"/><s n="iv"/></l><r>спать<s n="vblex"/><s n="imperf"/></r></p></e>
     <e><p><l>дугдыны<s n="v"/><s n="tv"/></l><r>перестать<s n="vblex"/><s n="imperf"/></r></p></e>
     <e><p><l>дышетскыны<s n="v"/><s n="tv"/></l><r>учиться<s n="vblex"/><s n="imperf"/></r></p></e>
     <e><p><l>серекъяны<s n="v"/><s n="tv"/></l><r>смеяться<s n="vblex"/><s n="imperf"/></r></p></e>

@@ -358,21 +358,33 @@ LEXICON GLAGOL-1
 %<pres%>%<p1%>%<pl%>:%>%{I%}ськомы # ; 
 %<pres%>%<p2%>%<pl%>:%>%{I%}ськоды # ; 
 %<pres%>%<p3%>%<pl%>:%>о # ; 
-GLAGOL-TV-BOTH ;
+GLAGOL-BOTH ;
+
+LEXICON GLAGOL-2-COMMON
+
+%<inf%>:аны # ; 
+%<conneg%>:%>ы # ;
+%<pprs%>%<adv%>:%>ыса # ;
+GLAGOL-BOTH ;
+%<pres%>%<p1%>%<sg%>:%>сько # ; 
+%<pres%>%<p2%>%<sg%>:%>ськод # ; 
+%<pres%>%<p3%>%<sg%>:%> # ; 
+%<pres%>%<p1%>%<pl%>:%>ськомы # ; 
+%<pres%>%<p2%>%<pl%>:%>ськоды # ; 
+%<pres%>%<p3%>%<pl%>:%>о # ; 
+
+%<imp%>%<p2%>%<sg%>:%> # ;
+%<imp%>%<p2%>%<pl%>:%>лэ # ;
+
+LEXICON GLAGOL-2-IV
+
+%<v%>%<iv%>: GLAGOL-2-COMMON ;
 
 LEXICON GLAGOL-2-TV
-%<v%>%<tv%>%<inf%>:аны # ; 
-%<v%>%<tv%>%<conneg%>:%>ы # ;
-%<v%>%<tv%>%<pprs%>%<adv%>:%>ыса # ;
-%<v%>%<tv%>: GLAGOL-TV-BOTH ;
-%<v%>%<tv%>%<pres%>%<p1%>%<sg%>:%>сько # ; 
-%<v%>%<tv%>%<pres%>%<p2%>%<sg%>:%>ськод # ; 
-%<v%>%<tv%>%<pres%>%<p3%>%<sg%>:%> # ; 
-%<v%>%<tv%>%<pres%>%<p1%>%<pl%>:%>ськомы # ; 
-%<v%>%<tv%>%<pres%>%<p2%>%<pl%>:%>ськоды # ; 
-%<v%>%<tv%>%<pres%>%<p3%>%<pl%>:%>о # ; 
 
-LEXICON GLAGOL-TV-BOTH
+%<v%>%<tv%>: GLAGOL-2-COMMON ; 
+
+LEXICON GLAGOL-BOTH
 
 %<conneg%>%<pres%>%<p1%>%<sg%>:%>%{I%}ськы # ; 
 %<conneg%>%<pres%>%<p2%>%<sg%>:%>%{I%}ськы # ; 
@@ -380,7 +392,6 @@ LEXICON GLAGOL-TV-BOTH
 %<conneg%>%<pres%>%<p1%>%<pl%>:%>%{I%}ськe # ; 
 %<conneg%>%<pres%>%<p2%>%<pl%>:%>%{I%}ськe # ; 
 %<conneg%>%<pres%>%<p3%>%<pl%>:%>о # ; 
-
 
 LEXICON GLAGOL-VAN
 
@@ -604,7 +615,7 @@ LEXICON Glagoly
 лыдъяськыны:лыдъяськ GLAGOL-1-TV ; ! "считать"
 кылзӥськыны:кылзӥськ GLAGOL-1-TV ; ! "вслушиваться"
 кельшыны:кельш GLAGOL-1-TV ; ! "нравиться"
-изьыны:изь GLAGOL-2-TV ; ! "спать" 
+изьыны:изь GLAGOL-2-IV ; ! "спать" 
 дугдыны:дугд GLAGOL-1-TV ; ! "остановиться"
 вуыны:ву GLAGOL-1-TV ; ! "прибыть"
 вераськыны:вераськ GLAGOL-1-TV ; ! "разговаривать"

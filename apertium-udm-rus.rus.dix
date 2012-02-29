@@ -10457,6 +10457,7 @@
     </pardef>
     <pardef n="сп/ать__vblex_imperf">
       <e><p>          <l>ать</l><r>ать<s n="vblex"/><s n="imperf"/><s n="inf"/></r></p></e>
+      <e><p>          <l>и</l><r>ать<s n="vblex"/><s n="imperf"/><s n="imp"/><s n="p2"/><s n="sg"/></r></p></e>
       <e><p>          <l>ите</l><r>ать<s n="vblex"/><s n="imperf"/><s n="imp"/><s n="p2"/><s n="pl"/></r></p></e>
       <e><p>          <l>авш</l><r>ать<s n="vblex"/><s n="imperf"/><s n="pp"/><s n="actv"/></r></p><par n="BASE__английск/ий"/></e>
       <e><p>          <l>ал</l><r>ать<s n="vblex"/><s n="imperf"/><s n="past"/><s n="m"/><s n="sg"/></r></p></e>
