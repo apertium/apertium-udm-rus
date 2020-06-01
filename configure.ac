@@ -7,7 +7,6 @@ AC_PROG_AWK
 
 m4_define([required_apertium_version], [3.2.0])
 PKG_CHECK_MODULES(APERTIUM,   apertium >= required_apertium_version, [], [PKG_CHECK_MODULES(APERTIUM,   apertium-3.2 >= required_apertium_version)])
-                          
 
 AC_PATH_PROG(HFSTLEXC, hfst-lexc, no)
 if test x$ac_cv_path_HFSTLEXC = x
@@ -49,26 +48,26 @@ then
   AC_MSG_ERROR([You don't have cg-proc installed.])
 fi
 
-AC_PATH_PROG(LRXCOMP, apertium-lrx-comp, no)
+AC_PATH_PROG(LRXCOMP, lrx-comp, no)
 if test x$ac_cv_path_LRXCOMP = x
 then
-  AC_MSG_ERROR([You don't have apertium-lrx-comp installed.])
+  AC_MSG_ERROR([You don't have lrx-comp installed.])
 fi
 if test x$ac_cv_path_LRXCOMP = xno
 then
-  AC_MSG_ERROR([You don't have apertium-lrx-comp installed.])
+  AC_MSG_ERROR([You don't have lrx-comp installed.])
 fi
 
-AC_PATH_PROG(LRXPROC, apertium-lrx-proc, no)
+AC_PATH_PROG(LRXPROC, lrx-proc, no)
 if test x$ac_cv_path_LRXPROC = x
 then
-  AC_MSG_ERROR([You don't have apertium-lrx-proc installed.])
+  AC_MSG_ERROR([You don't have lrx-proc installed.])
 fi
 if test x$ac_cv_path_LRXPROC = xno
 then
-  AC_MSG_ERROR([You don't have apertium-lrx-proc installed.])
+  AC_MSG_ERROR([You don't have lrx-proc installed.])
 fi
 
+AP_MKINCLUDE
 
 AC_OUTPUT([Makefile])
-
