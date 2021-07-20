@@ -1,0 +1,10 @@
+[G5ORigd7MOel#0] ^@университет\<pl\><n><adc>$ ^ли<part>$
+[/G5ORigd7MOel]
+[PJvD5OdjEeN-#0] ^его<det><pos>$ ^@йыр\<sg\><n><nom>$
+[/PJvD5OdjEeN-]
+[UX5nmzaB9vOA#0] ^@Удмуртия\<top\>\<pl\><np><nom>$ ^ли<part>$
+[/UX5nmzaB9vOA]
+[jOcjurPGQF6i#0] ^в<pr>$ ^@Россия\<top\>\<sg\><np><prp>$ ^ли<part>$
+[/jOcjurPGQF6i]
+[ly8TzR28izWv#0] ^в<pr>$ ^твой<det><pos><prp>$ ^@ар\<sg\><n><prp>$ ^ли<part>$
+[/ly8TzR28izWv]

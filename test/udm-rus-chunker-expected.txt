@@ -1,0 +1,10 @@
+[G5ORigd7MOel#0] ^n<SN><px1sg>{^@университет\<pl\><n><adc>$}$ ^default<default>{^ли<part>$}$
+[/G5ORigd7MOel]
+[PJvD5OdjEeN-#0] ^n<SN><nom><px3sg>{^@йыр\<sg\><n><nom>$}$
+[/PJvD5OdjEeN-]
+[UX5nmzaB9vOA#0] ^n<SN>{^@Удмуртия\<top\>\<pl\><np><nom>$}$ ^default<default>{^ли<part>$}$
+[/UX5nmzaB9vOA]
+[jOcjurPGQF6i#0] ^n<SN><INE>{^@Россия\<top\>\<sg\><np><prp>$}$ ^default<default>{^ли<part>$}$
+[/jOcjurPGQF6i]
+[ly8TzR28izWv#0] ^n<SN><ILL><prp><px2sg>{^@ар\<sg\><n><prp>$}$ ^default<default>{^ли<part>$}$
+[/ly8TzR28izWv]

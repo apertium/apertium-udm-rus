@@ -224,7 +224,7 @@
   <mode name="rus-udm" install="yes">
     <pipeline>
       <program name="lt-proc">
-        <file name="rus-udm.automorf.hfst"/>
+        <file name="rus-udm.automorf.bin"/>
       </program>
       <program name="apertium-tagger -g $2">
         <file name="rus-udm.prob"/>

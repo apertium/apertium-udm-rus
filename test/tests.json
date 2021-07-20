@@ -1,0 +1,10 @@
+{
+    "rus-udm": {
+        "input": "rus-udm-input.txt",
+        "mode": "rus-udm"
+    },
+    "udm-rus": {
+        "input": "udm-rus-input.txt",
+        "mode": "udm-rus"
+    }
+}

@@ -1,0 +1,10 @@
+[G5ORigd7MOel#0] ^университет\<pl\><n><px1sg><adc>+а<qst>$
+[/G5ORigd7MOel]
+[PJvD5OdjEeN-#0] ^йыр\<sg\><n><nom><px3sg>$
+[/PJvD5OdjEeN-]
+[UX5nmzaB9vOA#0] ^Удмуртия\<top\>\<pl\><np><nom>+а<qst>$
+[/UX5nmzaB9vOA]
+[jOcjurPGQF6i#0] ^Россия\<top\>\<sg\><np><ine>+а<qst>$
+[/jOcjurPGQF6i]
+[ly8TzR28izWv#0] ^ар\<sg\><n><ill><px2sg>+а<qst>$
+[/ly8TzR28izWv]

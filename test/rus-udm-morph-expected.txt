@@ -1,0 +1,20 @@
+[1PhdNnV8EvDG#0] ^–/–<guio>$
+[/1PhdNnV8EvDG]
+[JqFGvPK5EgJx#0] ^быстрыт/*быстрыт$
+[/JqFGvPK5EgJx]
+[RFhQkEwit45r#0] ^старым/старое<n><nt><nn><pl><dat>/старое<n><nt><nn><sg><ins>/старый<adj><sint><m><an><sg><ins>/старый<adj><sint><nt><an><sg><ins>/старый<adj><sint><mfn><an><pl><dat>$ ^исхудавшыеннжесся/*исхудавшыеннжесся$
+[/RFhQkEwit45r]
+[Rg61K_h3kJDf#0] ^юркнозисаёзт/*юркнозисаёзт$
+[/Rg61K_h3kJDf]
+[TA3LE5LZLrGq#0] ^окружающую/окружать<vblex><impf><pprs><actv><f><an><sg><acc>/окружающий<adj><sint><f><an><sg><acc>$ ^средус/*средус$
+[/TA3LE5LZLrGq]
+[UvFoRh8_BeLq#0] ^дарственных/дарственная<n><f><nn><pl><prp>/дарственная<n><f><nn><pl><gen>/дарственный<adj><sint><mfn><an><pl><gen>/дарственный<adj><sint><mfn><an><pl><prp>/дарственный<adj><sint><mfn><aa><pl><acc>$ ^запо/*запо$
+[/UvFoRh8_BeLq]
+[ijMf3ecDLzOn#0] ^"/"<sent>$
+[/ijMf3ecDLzOn]
+[kNDtzxnyIl_s#0] ^224%/224%<num><percent>$
+[/kNDtzxnyIl_s]
+[o76WKFqRod4W#0] ^окружающую среду/окружающая среда<n><f><nn><sg><acc>$
+[/o76WKFqRod4W]
+[qp0vp0IqsVcD#0] ^опрятного/опрятный<adj><sint><m><an><sg><gen>/опрятный<adj><sint><m><aa><sg><acc>/опрятный<adj><sint><nt><an><sg><gen>$ ^человн/*человн$
+[/qp0vp0IqsVcD]
